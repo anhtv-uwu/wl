@@ -1,0 +1,47 @@
+name: Update Wordlist
+
+on:
+  schedule:
+    # Every Monday at 00:00 UTC
+    - cron: '0 0 * * 1'
+  workflow_dispatch: # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Setup GitHub CLI
+        run: |
+          gh --version
+
+      - name: Build wordlist
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bash scripts/build.sh .
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git diff --stat
+          echo "changed=$(git diff --quiet && echo 'false' || echo 'true')" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          LINES=$(wc -l < wordlist.txt)
+          git add wordlist.txt
+          git commit -m "Update wordlist ($LINES entries) - $(date -u +%Y-%m-%d)"
+          git push
