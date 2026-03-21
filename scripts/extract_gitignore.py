@@ -6,11 +6,14 @@ not just templates. This gives us paths developers ACTUALLY use in production.
 """
 
 import json
+import os
 import re
 import sys
 import time
 import urllib.request
 import urllib.error
+
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
 # Search queries to find diverse .gitignore files across tech stacks
 SEARCH_QUERIES = [
@@ -53,11 +56,14 @@ GITIGNORE_IO_TEMPLATES = [
 def github_search(query, per_page=30):
     """Search GitHub for .gitignore files and return their content URLs."""
     url = f"https://api.github.com/search/code?q={urllib.request.quote(query)}&per_page={per_page}"
+    headers = {
+        "User-Agent": "wordlist-builder",
+        "Accept": "application/vnd.github.v3+json",
+    }
+    if GITHUB_TOKEN:
+        headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
     try:
-        req = urllib.request.Request(url, headers={
-            "User-Agent": "wordlist-builder",
-            "Accept": "application/vnd.github.v3+json",
-        })
+        req = urllib.request.Request(url, headers=headers)
         resp = urllib.request.urlopen(req, timeout=15)
         data = json.loads(resp.read())
         return [item.get("url", "") for item in data.get("items", [])]
@@ -77,10 +83,13 @@ def fetch_content(api_url):
     """Fetch file content from GitHub API."""
     try:
         import base64
-        req = urllib.request.Request(api_url, headers={
+        headers = {
             "User-Agent": "wordlist-builder",
             "Accept": "application/vnd.github.v3+json",
-        })
+        }
+        if GITHUB_TOKEN:
+            headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
+        req = urllib.request.Request(api_url, headers=headers)
         resp = urllib.request.urlopen(req, timeout=10)
         data = json.loads(resp.read())
         if data.get("encoding") == "base64" and data.get("content"):
