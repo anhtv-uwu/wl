@@ -168,8 +168,29 @@ api/callback
 build
 phpmyadmin
 clientaccesspolicy.xml
+"activeCommit": 0,
+"activePatchIndex": 2,
+"commits": [
+"content": "/node_modules\n/public/build\n/public/hot\n/public/storage\n/storage/*.key\n/vendor\n.env\n.env.backup\n.env.production\n.phpunit.result.cache\nHomestead.json\nHomestead.yaml\nauth.json\nnpm-debug.log\nyarn-error.log\n/.fleet\n/.idea\n/.vscode\n/public
+"content": "/node_modules\n/public/build\n/public/hot\n/public/storage\n/storage/*.key\n/vendor\n.env\n.env.backup\n.env.production\n.phpunit.result.cache\nHomestead.json\nHomestead.yaml\nauth.json\nnpm-debug.log\nyarn-error.log\n/.fleet\n/.idea\n/.vscode\n/public/build\n"
+"content": "Index: \n===================================================================\n--- \n+++ \n"
+"content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n yarn-error.log\n /.fleet\n /.idea\n /.vscode\n-/public/build\n+/public
+"content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n yarn-error.log\n /.fleet\n /.idea\n /.vscode\n-/public/build\n+/public/images\n"
+"content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n yarn-error.log\n /.fleet\n /.idea\n /.vscode\n-/public/images\n+/public/main
+"content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n yarn-error.log\n /.fleet\n /.idea\n /.vscode\n-/public/images\n+/public/main/images\n"
+"date": 1720283541807,
+"date": 1720283550447,
+"date": 1720360283275,
+"git rm --cached --ignore-unmatch kubeconfig" \
+"name": "Commit-0",
+"patches": [
+"sourceFile": ".gitignore",
 $RECYCLE.BIN
 $tf
+* /server/default
+* /server/default/deploy
+**rto
+**rtol
 *.DesktopClient
 *.DesktopClient/GeneratedArtifacts
 *.DesktopClient/ModelManifest.xml
@@ -180,44 +201,169 @@ $tf
 *.Server/ModelManifest.xml
 *.back.
 *.backup.
+*.chk
+*.dsgn.prm
+*.emc
+*.key
+*.ldb
+*.log
+*.mflow
+*.pem
 *.rs.bk
+*.runs/impl*
+*.runs/impl*/*.bat
+*.runs/impl*/*.html
+*.runs/impl*/*.sh
+*.runs/impl*/*.tcl
+*.runs/impl*/*.txt
+*.runs/impl*/*.xml
+*.runs/synth*
+*.runs/synth*/*.bat
+*.runs/synth*/*.sh
+*.runs/synth*/*.tcl
+*.runs/synth*/*.txt
+*.runs/synth*/*.xdc
+*.runs/synth*/*.xml
+*.si
+*.toolbox
+*.toolbox*.cfg
+*.toolbox*.out
+*.toolbox*.tla
+*.toolbox/*.launch
+*.toolbox/*.log
+*.toolbox/*.pdf
+*.toolbox/*.pmap
+*.toolbox/*.tex
+*.toolbox/*aux
 *.xcodeproj
+*.xcodeproj/*.backup
 *.xcodeproj/project.xcworkspace
 *.xcodeproj/project.xcworkspace/xcuserdata
 *.xcodeproj/xcuserdata
+*.xcuserstate
+*.xcworkspace
+*.xcworkspace/xcuserdata
+*/*
+*/*.runs/impl*
+*/*.runs/impl*/*.bat
+*/*.runs/impl*/*.html
+*/*.runs/impl*/*.sh
+*/*.runs/impl*/*.tcl
+*/*.runs/impl*/*.txt
+*/*.runs/impl*/*.xml
+*/*.runs/synth*
+*/*.runs/synth*/*.bat
+*/*.runs/synth*/*.sh
+*/*.runs/synth*/*.tcl
+*/*.runs/synth*/*.txt
+*/*.runs/synth*/*.xdc
+*/*.runs/synth*/*.xml
+*/*/*/*/prebuilt-mk
+*/*/*/*/prebuilt-mk/Android.mk
+*/*/*/bd/*
+*/*/*/bd/*/*.xdc
+*/*/*/bd/*/hdl
+*/*/*/bd/*/ip
+*/*/*/bd/*/ip/*
+*/*/*/bd/*/ip/*/*.tcl
+*/*/*/bd/*/ip/*/*.vhd
+*/*/*/bd/*/ip/*/*.xdc
+*/*/*/bd/*/ip/*/*.xml
+*/*/*/prebuilt-mk
+*/*/*/prebuilt-mk/Android.mk
+*/*/bd/*
+*/*/bd/*/*.xdc
+*/*/bd/*/hdl
+*/*/bd/*/ip
+*/*/bd/*/ip/*
+*/*/bd/*/ip/*/*.tcl
+*/*/bd/*/ip/*/*.vhd
+*/*/bd/*/ip/*/*.xdc
+*/*/bd/*/ip/*/*.xml
+*/*/build
+*/*/prebuilt-mk
+*/*/prebuilt-mk/Android.mk
+*/*/production
 */.cvsignore
+*/.ipynb_checkpoints
+*/CMakeCache.txt
+*/CMakeFiles
+*/Files
+*/Files/Data
+*/Files/Data/docs.checksum
+*/Files/Docs
+*/Files/Docs/docs.checksum
+*/Files/binder.autosave
+*/Files/binder.backup
+*/Files/search.indexes
+*/Files/user.lock
+*/Generated_Source
+*/Logs
+*/Makefile
+*/QuickLook
+*/Settings
+*/Settings/ui.plist
+*/build
+*/cache
+*/cmake_install.cmake
+*/codegentemp
+*/codekit-config.json
+*/config
+*/config/development
+*/expressionengine
+*/expressionengine/cache
+*/local.properties
+*/logs/log-*.php
+*/meshPhi
+*/node_modules
+*/out
+*/phi
+*/prebuilt-mk
+*/prebuilt-mk/Android.mk
+*backup*.zip
+*credentials
+*dsgn.autobk
+*password
+*secret
+*template.cir
+*template.cir/drc
+*template.cir/ext
+*template.cir/ext/readme.txt
+*template.cir/frame
+*template.cir/log
 +runtime/indent/testdir
 +runtime/indent/testdir/*.fail
-- API keys
-- Access tokens
-- Adding new build tools (e.g., `tox`, `nox`)
+- .gitignore
+- 4 experiment directories (sentiment, math, logic, overall)
+- All JSON result files (`*.json`)
+- All dataset JSON files for experiments
+- All other markdown files
+- All visualization charts (`*.png`)
+- Any file named with "secret" or "password"
+- Archives (`*.zip`, `*.tar.gz`)
 - Archivos binarios pesados (cientos de MB)
+- BLOG_COMPLETE.md
 - Backend directory: Not needed in frontend container
+- Backups (`*.bak`, `*~`)
 - Build optimization: Excludes unnecessary files from Docker context
 - Build tools: Vite, Webpack, Rollup caches
 - Builds: dist/, build
 - Builds: dist/, build/, .next
 - Bun specific: bun.lockb, .bun directory
+- But you can add specific files:
 - Bytecode: __pycache__
 - Bytecode: __pycache__/, *.py[cod]
+- COMPLETION_SUMMARY.md
 - Caches: .cache/, .vite
 - Caches: .cache/, .vite/, .parcel-cache
-- Commit IDE configs (`.vscode/`, `.idea
-- Commit IDE configs (`.vscode/`, `.idea/`)
-- Commit OS files (`.DS_Store`, `Thumbs.db`)
-- Commit build artifacts (`dist/`, `build
-- Commit build artifacts (`dist/`, `build/`)
-- Commit cache (`__pycache__
-- Commit cache (`__pycache__/`, `*.pyc`)
-- Commit configuration (`requirements.txt`, `setup.py`)
-- Commit documentation (`.md` files)
-- Commit large binaries (audio files, executables)
-- Commit secrets (`.env`, `*.key`)
-- Commit source code (`.py` files)
-- Commit virtual environments (`venv/`, `bin/`, `lib
-- Commit virtual environments (`venv/`, `bin/`, `lib/`)
+- Certificates (`*.pem`, `*.key`, `*.crt`)
 - Comprehensive coverage for the entire monorepo
-- Database credentials
+- Compress images with tools like TinyPNG
+- Consider external CDN
+- Consider external CDN/storage for production
+- Coverage files: `coverage.txt`, `coverage.html`, `coverage.xml`
+- DEPLOYMENT_GUIDE.md
+- DEPLOYMENT_SUMMARY.md
 - Dependencies: node_modules
 - Dependencies: node_modules/, bun.lockb
 - Development configurations: Vite, Jest configs
@@ -229,114 +375,284 @@ $tf
 - Distributions: build/, dist
 - Distributions: build/, dist/, *.egg-info
 - Documentation: *.md, README*, docs
+- EXPERIMENTAL_RESULTS.md
 - Editor files: .vscode/, .idea
 - Editor files: .vscode/, .idea/, *.swp
-- Emacs: `*~`, `#*#`
+- Emacs (auto-save, desktop files)
+- Environment files (`.env`) - often contain passwords
+- Environment files (`.env`) - often contain passwords/tokens
 - Específicos de la versión de Python
 - Específicos del sistema operativo
+- Exception: Terraform examples are tracked
+- Exceptions: `*.example`, `*.template`, `*.sample` ARE tracked
 - Excludes development dependencies (optional)
+- Flutter mobile wrapper app
 - Frontend directory: Not needed in backend container
-- IDE configurations
+- Game assets (images, audio, JSON data)
+- General settings are ignored
+- Generated API docs
+- Go community standards
+- HW6_Submission_Lior_Livyatan.docx
+- Helm chart dependencies
 - IDE configurations: .vscode
 - IDE configurations: .vscode/, .idea
 - IDE configurations: Editor-specific files
+- JavaScript
+- JavaScript/Node.js game engine (Vite)
+- JetBrains (GoLand, IntelliJ IDEA)
 - JetBrains IDEs: Excludes .idea
 - JetBrains IDEs: Excludes .idea/ directory
-- Linux: `*~`, `.directory`
+- Kubeconfig files (contain cluster access credentials)
+- Kubernetes configs (`kubeconfig`)
+- Kubernetes, Prometheus, Docker projects
+- Linux: `.directory`, Trash
+- Local config overrides (`.local.yaml`, etc.)
 - Logs: *.log, logs
+- Main `docker-compose.yml` IS tracked
+- Mock data directories
 - Multi-stage builds from root directory
-- New IDE adopted by team
-- New temporary file patterns discovered
 - No aportan valor al código fuente
 - Node.js
 - Node.js ecosystem: node_modules, package-lock files
 - Node.js/Bun patterns: Dependencies, builds, caches
+- Note: Markdown docs ARE tracked
+- Note: `go.mod` and `go.sum` ARE tracked
 - OS files: .DS_Store, Thumbs.db, *~
-- OS-specific files
 - Optimized for production builds
+- PDF_DOWNLOAD_SETUP.md
+- PROJECT_COMPLETE.md
 - Package distributions: build/, dist
 - Package distributions: build/, dist/, *.egg-info
-- Passwords
-- Private keys
-- Project-specific artifacts
-- Project-specific requirements
+- Personal TODO files (`TODO.local`)
+- Platform-specific binaries (`.exe`, `.dll`, `.so`, `.dylib`)
+- PostgreSQL data (`pgdata
+- PostgreSQL data (`pgdata/`)
+- Profiling data: `*.prof`, `*.pprof`
+- Project binaries: `cache-service`, `cachegenius`
 - Project-specific: Logs, temporary files, archives
-- PyCharm: `.idea
-- PyCharm: `.idea/`
-- Python build artifacts
 - Python build optimization
 - Python patterns: Virtual environments, bytecode, distributions
+- Python scripts for asset processing
 - Python-specific: __pycache__, *.pyc files
-- Review `.gitignore` regularly
+- QUICK_DEPLOY.md
+- README.md
+- Redis dumps (`dump.rdb`, `appendonly.aof`)
+- SQLite databases (`*.db`, `*.sqlite`)
+- SSH private keys (`.pem`, `.key`, `id_rsa`)
 - Se recrean con `pip install -r requirements.txt`
 - Se regeneran automáticamente
-- Security audit recommendations
-- Security-sensitive files
+- Secrets directories
 - Source TypeScript files (only .d.ts kept)
 - Source control: .git
 - Source control: .git/, .gitignore
 - Source control: Git files and history
+- Sphinx builds (`docs/_build
+- Sphinx builds (`docs/_build/`)
+- Sublime Text (workspace, project files)
 - Sublime Text: Excludes project and workspace files
-- Sublime: `*.sublime-project`
 - Temporary files: *.tmp, .cache
 - Temporary files: *.tmp, .cache/, .temp
+- Terraform state files (`*.tfstate`)
+- Terraform variables files (`*.tfvars`) - may contain secrets
 - Testing: .pytest_cache
 - Testing: .pytest_cache/, .coverage
 - Testing: Coverage reports, test artifacts
 - Testing: pytest cache, coverage reports
+- Total: 18 files
+- Total: 3 files
 - TypeScript: *.tsbuildinfo
 - TypeScript: Compiled output, build info
+- Use Git LFS (Large File Storage) for binary assets > 5MB
+- Use appropriate audio formats (MP3 for music, OGG for effects)
+- VIEW_RESULTS.sh
+- VISUALIZATION_INDEX.md
+- VS Code (keeps settings, excludes workspace)
 - VS Code: Excludes .vscode
 - VS Code: Excludes .vscode/ but allows specific config files
-- VSCode: `.vscode
-- VSCode: `.vscode/`
 - Vim
+- Vim (swap files, sessions)
 - Vim/Emacs: Excludes swap and backup files
-- Vim: `*.swp`, `*.un~`
-- Virtual environment directories
-- Virtual environments
 - Virtual environments: .venv, venv directories
 - Virtual environments: Not needed in container
 - Virtual envs: .venv/, venv
 - Virtual envs: .venv/, venv/, .env
-- Windows: `Thumbs.db`, `Desktop.ini`
-- [Atlassian .gitignore Guide](https://www.atlassian.com/git/tutorials/saving-changes
-- [Atlassian .gitignore Guide](https://www.atlassian.com/git/tutorials/saving-changes/gitignore)
-- [Git Documentation](https://git-scm.com/docs
-- [Git Documentation](https://git-scm.com/docs/gitignore)
-- [GitHub gitignore Templates](https://github.com/github
-- [GitHub gitignore Templates](https://github.com/github/gitignore)
-- [GitHub's Python .gitignore](https://github.com/github/gitignore/blob/main
-- [GitHub's Python .gitignore](https://github.com/github/gitignore/blob/main/Python.gitignore)
-- [gitignore.io](https://www.toptal.com/developers
-- [gitignore.io](https://www.toptal.com/developers/gitignore)
-- `*.egg-info
-- `*.egg-info/` - Distribution metadata
-- `*.pyc`, `*.pyo` - Compiled Python files
+- Windows: `Thumbs.db`, Recycle Bin, shortcuts
+- [ ] No API tokens or credentials
+- [ ] No SSH private keys
+- [ ] No `.env` files with secrets
+- [ ] No `.terraform
+- [ ] No `.terraform/` directory
+- [ ] No `.tfstate` files
+- [ ] No `.tfvars` files with real values
+- [ ] No `.vagrant
+- [ ] No `.vagrant/` directory
+- [ ] No kubeconfig files
+- [ ] No passwords in scripts or config
+- [ ] Reviewed `git diff --staged` output
+- [Git Documentation](https://git-scm.com
+- [Git Documentation](https://git-scm.com/doc)
+- [GitHub .gitignore Templates](https://github.com/github
+- [GitHub .gitignore Templates](https://github.com/github/gitignore)
+- [GitHub Go .gitignore](https://github.com/github/gitignore/blob/main
+- [GitHub Go .gitignore](https://github.com/github/gitignore/blob/main/Go.gitignore)
+- [GitIgnore.io](https://www.toptal.com/developers
+- [GitIgnore.io](https://www.toptal.com/developers/gitignore)
+- [Secrets Detection Tools](https://github.com/awslabs
+- [Secrets Detection Tools](https://github.com/awslabs/git-secrets)
+- [Terraform .gitignore Best Practices](https://www.terraform.io/docs/language/settings/backends
+- [Terraform .gitignore Best Practices](https://www.terraform.io/docs/language/settings/backends/local.html)
+- `!.env.example` - Exception: Example file IS tracked
+- `*.backup` - Backup files
+- `*.bench` - Benchmark results
+- `*.box` - Large box files
+- `*.keystore`, `*.jks` - Android signing keys
+- `*.local` - Any local configuration overrides
+- `*.log` - All log files
+- `*.log` - Log files
+- `*.pid` - Process ID files
+- `*.swp` - Vim swap files
+- `*.test` - Test binaries
+- `*.tfplan` - Terraform plan output
+- `*.tfstate` - Contains infrastructure state (can have secrets)
+- `*.tfvars` - Variable values (often sensitive)
+- `*.tmp` - Temporary files
+- `*.token` - Authentication tokens
+- `.DS_Store` (macOS)
+- `.DS_Store` - macOS folder metadata
+- `.cache/`, `.tmp
+- `.cache/`, `.tmp/` - Temporary build files
+- `.env*` - Environment variables
 - `.env.example` - Template file (can be committed)
 - `.env.local` - Local development overrides
 - `.env.production` - Production settings (usually not committed)
 - `.env` - Never committed (contains secrets)
-- `.pytest_cache
-- `.pytest_cache/`, `.coverage` - Test artifacts
-- `__pycache__
-- `__pycache__/` - Python bytecode cache
-- `build/`, `dist
-- `build/`, `dist/` - Build outputs
-- macOS: `.DS_Store`, `.AppleDouble`, `.Spotlight-V100`
+- `.env` and variants - IMPORTANT: Contains secrets!
+- `.idea
+- `.idea/` - JetBrains IDE config
+- `.idea/` - JetBrains IDE files
+- `.kube
+- `.kube/config` - Default kubectl config
+- `.terraform
+- `.terraform/` - Downloaded providers and modules
+- `.test-cache
+- `.test-cache/` - Test cache directory
+- `.vagrant
+- `.vagrant/` - Vagrant runtime data
+- `.venv/`, `venv
+- `.venv/`, `venv/` - Python virtual environments
+- `.vscode
+- `.vscode/*` (except workspace settings)
+- `.vscode/` - VS Code settings
+- `.vscode/launch.json` - Debug configurations
+- `.vscode/settings.json` - Workspace settings
+- `.vscode/tasks.json` - Build tasks
+- `README.md`, `EDITOR_GUIDE.md`, etc. - Project documentation
+- `Thumbs.db` (Windows)
+- `Thumbs.db` - Windows thumbnail cache
+- `assets*.mp3` - Audio files (BGM, effects, ambience)
+- `assets*.png` - Sprite images, backgrounds, icons
+- `bin/`, `dist/`, `build
+- `bin/`, `dist/`, `build/` - Build directories
+- `changelog*` - Personal changelog files (CHANGELOG.md in docs is tracked)
+- `crop_sprites.bat` - Windows batch files
+- `crop_sprites.py` - Asset processing scripts
+- `data*.json` - Game data (maps, items, objects)
+- `dist
+- `dist/` - Vite build output
+- `docker-compose.override.yml` - Local overrides
+- `docker-data/`, `volumes
+- `docker-data/`, `volumes/` - Local volume mounts
+- `flutter_app
+- `flutter_app*.g.dart` - Generated code files
+- `flutter_app/.dart_tool
+- `flutter_app/.dart_tool/` - Dart tooling cache
+- `flutter_app/.flutter-plugins*` - Generated plugin files
+- `flutter_app/.packages` - Generated package config
+- `flutter_app/.pub-cache
+- `flutter_app/.pub-cache/` - Pub package cache
+- `flutter_app/analysis_options.yaml` - Linter config
+- `flutter_app/android
+- `flutter_app/android/.cxx
+- `flutter_app/android/.cxx/` - C++ build artifacts
+- `flutter_app/android/.gradle
+- `flutter_app/android/.gradle/` - Gradle cache
+- `flutter_app/android/app
+- `flutter_app/android/app/build.gradle.kts` - Android build config
+- `flutter_app/android/app/debug
+- `flutter_app/android/app/debug/` - Debug builds
+- `flutter_app/android/app/release
+- `flutter_app/android/app/release/` - Release builds
+- `flutter_app/android/app/src/main
+- `flutter_app/android/app/src/main/AndroidManifest.xml` - App manifest
+- `flutter_app/android/app/src/main/kotlin*.kt` - Kotlin activity
+- `flutter_app/android/app/src/main/res` - Android resources (icons, styles)
+- `flutter_app/android/build.gradle.kts` - Root gradle config
+- `flutter_app/android/gradle.properties` - Gradle properties
+- `flutter_app/android/gradlew*` - Gradle wrapper scripts
+- `flutter_app/android/local.properties` - Local SDK paths
+- `flutter_app/android/settings.gradle.kts` - Gradle settings
+- `flutter_app/build
+- `flutter_app/build/` - Flutter build output
+- `flutter_app/lib*.dart` - Dart source code
+- `flutter_app/pubspec.lock` - Locked Flutter dependencies
+- `flutter_app/pubspec.yaml` - Flutter dependencies
+- `go.work` - Go workspace file (usually local)
+- `index.html` - Main HTML entry point
+- `kubeconfig*` - Cluster access credentials
+- `node_modules
+- `node_modules/` - If Node.js used for tooling
+- `node_modules/` - NPM packages (restored with `npm install`)
+- `package.json` & `package-lock.json` - Node dependencies manifest
+- `plan*` - Planning documents (local notes)
+- `private
+- `private/` - Private development files
+- `src*.js` - Game engine JavaScript files
+- `tmp/`, `temp
+- `tmp/`, `temp/` - Temporary directories
+- `vendor
+- `vendor/` - Vendored dependencies (optional, can be committed)
+- `vite.config.js` - Build configuration
+- comprehensive_results_summary.png (4-panel dashboard)
+- create_hw6_submission_docx.py
+- logical_reasoning.json (60 test cases)
+- macOS: `.DS_Store`, Spotlight, Time Machine
+- math_reasoning.json (60 test cases)
 - name: Check for sensitive files
-- ✅ `*.py` - Python source files
-- ✅ `.gitignore` - This file
-- ✅ `README.md`, `CLAUDE.md` - Documentation
-- ✅ `app_icon.icns` - Application icon
-- ✅ `requirements.txt` - Dependencies
-- ✅ `setup.py`, `setup_ddd.py` - Build scripts
+- notebooks
+- notebooks/create_comprehensive_viz.py
+- notebooks/create_temperature_viz.py
+- notebooks/extract_results.py
+- notebooks/generate_plots.py
+- overall_accuracy_comparison.png (combined datasets)
+- sentiment_analysis.json (60 test cases)
+- temperature_sensitivity.png (temperature analysis)
+- ✅ All OS types (macOS, Windows, Linux)
+- ✅ All major IDEs (5 editors)
+- ✅ CI
+- ✅ CI/CD tools (Terraform, K8s, Helm)
+- ✅ Comprehensive comments
+- ✅ Database local files
+- ✅ Docker development
+- ✅ Security files
+-%>
 ---
+--prune-empty --tag-name-filter cat -- --all
+.#
+.#*.scm
+.#*.ss
+.*.aux
+.*.cfg
+.*.d
+.*.env
+.*.kate-swp
+.*.lb
 .*.sw?
+.*.sw[a-p]
 .*.swp
 .*crunch*.local.xml
-..idea
-..iml
+.*history
+./*.tfstate
+./auto
 .AppleDB
 .AppleDesktop
 .AppleDouble
@@ -344,39 +660,84 @@ $tf
 .DS_Store     # macOS
 .DS_Store?
 .DocumentRevisions-V100
+.FlexUnitSettings
+.HA_VERSION
+.HOLMK
 .HTF
+.JustCode
 .LSOverride
 .Python
 .RData
+.RDataTmp
+.RHistory
 .Rapp.history
 .Renviron
-.Rhistory
 .Rproj.user
 .Ruserdata
+.Simulator-Debug
 .Spotlight-V100
+.TAGS
+.Target-Debug
+.Target-Release
 .TemporaryItems
 .Trash-
 .Trashes
 .VolumeIcon.icns
+.Xil
+.[dD][sS]_[sS]tore
 .\#
 ._
-.__pycache__
+._.
+._.DS_Store
+._zinit
+.ab
 .abstra
 .accio
+.actionScriptProperties
+.agent
 .ai
+.ai-cache
 .aider
 .aiderignore
 .amplify
 .angular
+.angular-build
 .angular-cli.json
+.angular.json
+.angular/cache
+.anjuta
+.anjuta_sym_db.db
 .apdisk
+.api_keys
 .apt_generated
+.apt_generated_test
+.arch-internal-preview.css
+.architect
+.archive
+.aspnet
+.astro
+.aswb
 .autotools
+.awcache
+.aws
 .aws-sam
 .axoCover
+.azure
+.backup
+.bak
+.ballerina
+.bash_history
+.bat
+.bitrise.secrets.yml
 .bloop
+.bower-cache
+.bower-registry
+.bower-tmp
 .bsb.lock
 .bsp
+.buckconfig.local
+.buckd
+.buckversion
 .build
 .buildlog
 .buildpath
@@ -385,103 +746,258 @@ $tf
 .byebug_history
 .bzr
 .bzrignore
+.c9
+.c9revisions
 .cabal-sandbox
 .cache
+.cache-build
+.cache-loader
 .cache-main
+.cache-storybook
+.cache-test
+.cache-webpack
 .cache/clangd
 .cask
 .ccls-cache
-.checkstyle
+.cdk.staging
+.ceylon
+.ceylon/config.old
+.chatgpt
+.clang_complete
 .clangd
 .classpath
 .claude
+.claude-artifacts
+.claude.json
+.claude/agents
+.claude/claude.json
+.claude/commands
+.claude/hooks
+.claude/hooks/hook_execution.log
+.claude/settings.local
+.claude/settings.local.json
+.claudecode
+.claudeignore
+.cline
+.cloud
+.clwb
+.cm
 .cmake
+.codacy.yml
 .codeium
+.codekit-cache
+.codekit-config.json
+.codewhisperer
+.codio
 .cody
 .com.apple.timemachine.donotpresent
+.concrete
+.concrete/DEV_MODE
 .conda
 .config
+.config*.copy
 .consulo
 .continue
 .continuerc.json
+.copilot
+.coq-native
 .coverage
 .coverage.
 .cpcache
 .cproject
 .cr
 .cr/personal
+.crdb
+.crossbar
+.crossbar/node.pid
+.csdp.cache
+.csettings
 .cursor
+.cursor-tutor
+.cursor/rules
+.cursor/rules/captain.mdc
 .cursorignore
 .cursorrc
 .cursorrules
+.cvs
 .cvsignore
 .cxx
+.cypress
 .dart_tool
 .dat
+.data
+.databricks
+.dbconnection
+.dbeaver-data-sources*.xml
+.dccache
+.ddev
+.ddev/docker-compose.host-docker-internal.yaml
+.ddev/docker-compose.phpmyadmin_norouter.yaml
+.ddev/mautic-preference
+.debmake
+.deploy
+.deploy_git
 .deps
+.designer
+.dev.vars
+.devcontainer
+.df_cache
 .dir-locals.el
 .directory
+.directory_history
+.direnv
 .dirstamp
+.divinercache
 .dmypy.json
+.docker
+.docker-pryrc
+.docker-pryrc-local
 .dockerignore
+.dockerignore.local
 .docusaurus
+.docz
+.doit.db
+.dotnet
+.dropbox
+.dropbox.attr
+.dropbox.cache
 .dub
 .dynamodb
+.eclipse
+.editorconfig
 .eggs
+.elasticbeanstalk
 .elixir_ls
 .emacs.desktop
 .emacs.desktop.lock
+.ensime
+.ensime_cache
+.ensime_lucene
 .env                    # Desarrollo local
+.env                   # SECRETS!
 .env*.local
 .env.
 .env.*.local
+.env.*.localCLAUDE.md
+.env.*.php
 .env.development.local
+.env.local.php
+.env.php
+.env.prod
 .env.production        # Producción
 .env.production.local
+.env.sh
 .env.staging          # Staging
 .env.test.local
 .env.testing          # Testing
+.env.venv
 .envrc
 .eslintcache
+.eslintrc.yaml
+.eunit
 .exercism
+.expo
 .externalNativeBuild
 .externalToolBuilders
+.exvim.
+.exvim.app
 .factorypath
 .fake
+.fakebuckversion
 .fetch
 .firebase
 .firebaserc
+.flatpak-builder
+.fleet
+.flexConfig.xml
+.flexLibProperties
+.flexProperties
+.floo
 .flutter-plugins
 .flutter-plugins-dependencies
 .fseventsd
 .fuse_hidden
 .fusebox
+.fvm
+.fvm/flutter_sdk
+.gcc-flags.json
+.gcloud
+.gen
+.generated-mima
+.generated-tests
+.generated_files
 .ghc.environment.
 .git
+.git-blame-ignore-revs
+.gitattributes
+.gitconfig.local
 .github
+.github/actions/*
+.github/actions/*/dist
+.github/actions/*/node_modules
+.github/copilot
 .github/copilot-instructions.md
+.gitignore.app
+.gitignore.dist
+.gitignore.echoyl
+.gitlab-ci-gputest.yml
+.gitlab-ci-local
+.gitpod
+.gitpod.yml
+.godot
+.google.token
 .gradle
 .gradletasknamecache
 .grunt
+.gwt
+.gwt-tmp
+.hg
+.hgignore
+.hgsigs
+.hgsub
+.hgsubstate
+.hgtags
 .history
+.hollogs
+.homeassistant
 .hpc
 .hsenv
+.htaccess.backup
 .httr-oauth
+.hugo_build.lock
 .hypothesis
 .idea
+.idea/$CACHE_FILE$
+.idea/*.iml
+.idea/.name
+.idea/artifacts
+.idea/assetWizardSettings.xml
 .idea/caches
 .idea/caches/build_file_checksums.ser
+.idea/codestream.xml
+.idea/compiler.xml
+.idea/copyright
+.idea/copyright/profiles_settings.xml
 .idea/dataSources.ids
 .idea/dataSources.local.xml
 .idea/dataSources.xml
 .idea/dictionaries
 .idea/dynamic.xml
+.idea/encodings.xml
 .idea/gradle.xml
 .idea/httpRequests
+.idea/jarRepositories.xml
 .idea/jsLibraryMappings.xml
+.idea/libraries
 .idea/misc.xml
+.idea/modules
+.idea/modules.xml
 .idea/mongoSettings.xml
+.idea/navEditor.xml
 .idea/replstate.xml
+.idea/scopes
+.idea/scopes/scope_settings.xml
+.idea/shelf
 .idea/sonarlint
 .idea/sqlDataSources.xml
 .idea/tasks.xml
@@ -489,6 +1005,8 @@ $tf
 .idea/vcs.xml
 .idea/workspace.xml
 .idea_modules
+.ideaaws.xml
+.ideaazureSettings.xml
 .ideacontentModel.xml
 .ideadataSources
 .ideadataSources.ids
@@ -498,131 +1016,291 @@ $tf
 .ideadynamic.xml
 .ideagradle.xml
 .idealibraries
+.ideamarkdown-navigator
+.ideamarkdown-navigator-enh.xml
+.ideamarkdown-navigator.xml
 .ideamongoSettings.xml
 .ideashelf
+.ideasonarIssues.xml
+.ideasonarlint
 .ideasqlDataSources.xml
 .ideatasks.xml
 .ideauiDesigner.xml
 .ideausage.statistics.xml
 .ideaworkspace.xml
+.ijwb
+.import
+.ini
 .install
 .installed.cfg
+.internal
 .ionide
 .ipynb_checkpoints
 .java-version
+.jekyll-cache
+.jekyll-metadata
+.jenv-version
+.jobs
+.jvmopts
+.kdev4
+.keystone
+.kitchen
+.kitchen.local.yml
+.kobalt
+.komodotools
 .kotlin
+.kube
 .last-updated
+.last_cover_stats
+.launches
 .lein-deps-sum
 .lein-failures
 .lein-plugins
 .lein-repl-history
+.lesshst
+.lgt_tmp
+.lia.cache
 .libs
+.lighthouseci
+.link_to_grails_plugins
 .llm
+.llm-cache
 .loadpath
-.localhistory
+.local
+.localHistory
+.localstack
+.lock
+.lock-waf_*_build
 .lock-wscript
 .luacheckcache
+.merge_file
 .merlin
+.meta
 .metadata
+.metadata_never_index
 .metals
+.meteor
+.meteor/local
+.mf
 .mfractor
+.moban.hashes
+.model
+.mono
 .mtj.tmp
+.mule
 .mvn
 .mvn/timing.properties
 .mypy_cache
+.n
+.navigation
 .nb-gradle
 .netlify
+.netrwhist
 .next
+.next/debug
 .nfs
 .nfs.
 .ng
+.nia.cache
+.ninja_deps
+.ninja_log
+.ninja_logs
+.nlia.cache
+.node-version
+.node_history
 .node_repl_history
+.nova
+.now
 .nox
 .npm
+.nra.cache
 .nrepl-port
 .ntvs_analysis.dat
 .nuxt
+.nuxt-
 .nvimlog
+.nvmrc
+.nx
 .nyc_output
+.obsidian
+.openai
 .opencode.json
 .org-id-locations
+.otto
 .output
 .packages
 .packages.generated
+.pants.
 .parcel-cache
+.pdf
 .pdm-build
 .pdm-python
 .pdm.toml
+.php-cs-fixer.cache
+.php-cs-fixer.php
+.php_cs
+.php_cs.cache
 .phpactor.json
+.phpstorm.meta.php
+.phpunit.cache
 .phpunit.result.cache
+.phutil_module_cache
+.pids
+.pio
+.pioenvs
+.piolibdeps
 .pixi
+.pl-history
+.playwright
+.playwright-mcp
+.pm2
+.pnp
 .pnp.
+.pnp.js
 .pnpm-debug.log
 .pnpm-store
 .powenv
 .precomp
+.profiling
 .project
 .projectile
 .prompt
+.prompts
+.propath
+.psci
+.psci_modules
 .pub
+.pub-cache
 .pub-preload-cache
+.public
+.pulumi
+.pvscontext
 .pybuilder
+.pydevproject
 .pypirc
 .pyre
 .pytest_cache
 .python-version
 .pytype
+.qmake.cache
+.qmake.stash
+.qodo
+.quasar
+.rbenv-gemsets
+.rebar
+.rebar3
 .recommenders
+.redcar
 .repl_history
+.replit
 .ropeproject
 .rpt2_cache
 .rspec
+.rts2
 .rts2_cache_cjs
 .rts2_cache_es
 .rts2_cache_umd
+.rubocop.override.yml
+.ruby-gemset
+.ruby-version
 .ruff_cache
 .runtimeconfig.json
 .rvmrc
 .sass-cache
 .scala_dependencies
 .scannerwork
+.sconf_temp
+.sconsign.dblite
+.scoutesuite-report
 .scrapy
-.secret-
+.secrets
+.secrets.baseline
 .serverless
 .settings
+.sfdx
+.shards
+.sharp
+.shelf
+.signing
+.smushit-status
+.snapshots
+.snow-utils
+.snowpack
+.solargraph.yml
 .sonar
+.sonar-project.properties
 .sonarlint
+.sonarqube
+.sourcemaps
+.spago
 .springBeans
 .spyderproject
 .spyproject
+.ssh
+.ssh/*_id_
+.ssh/id_
+.ssh/known_hosts
 .stack-work
+.storage
+.strapi-updater.json
 .streamlit
 .streamlit/secrets.toml
 .sts4-cache
+.studio
+.stversions
+.styleci.yml
 .stylelintcache
+.sublime-project
+.sublime-workspace
 .svelte-kit
 .svn
 .swiftpm
+.swp.
+.tabnine
+.tag
 .target
+.task
+.taskmaster
 .temp
 .tern-port
 .tern-project
 .terraform
+.terraform.lock.hcl
 .terraform.tfstate.lock.info
 .terraformrc
+.terragrunt-cache
 .texlipse
+.texpadtmp
+.tflint.d
+.tgitconfig
+.theos
+.thumbs.db
+.tidelift.yml
 .tmp
+.tmp_versions
 .tmux
 .tmux/resurrect
+.tool-versions
 .tox
+.travis.yml
+.truffle-solidity-loader
 .turbo
+.tye
+.umi
+.umi-production
+.uno
+.uuid
+.uv
+.vaadin-designer
 .vagrant
+.vault-token
+.vault_pass
 .venv
-.venv/
-.venv/ / __pycache__
-.vim
+.vercel
+.vertx
 .vim-src
-.vimspector.json
+.vimfiles.
+.viminfo
 .virtualenv
 .vite
 .vitepress
@@ -632,13 +1310,22 @@ $tf
 .vscode
 .vscode-server
 .vscode-test
+.vshistory
 .vuepress
 .vuepress/dist
+.waf-*-
+.waf3-*-
 .web-server-pid
 .webassets-cache
+.webmeta
 .webpack
+.wget-hsts
 .windsurf
 .worksheet
+.xdchelp
+.xlib
+.xmake
+.yalc
 .yardoc
 .yarn
 .yarn-integrity
@@ -646,59 +1333,245 @@ $tf
 .yarn/cache
 .yarn/install-state.gz
 .yarn/unplugged
+.zcalc_history
+.zcompdump
+.zed
+.zinit_lstupd
+.zsh_history
+.zsh_sessions
+.~lock.
+.~lock.*#
+0.
 1. Añadir .gitignore antes del primer commit
+1. If node_modules is tracked: Run `git rm -r --cached node_modules
+1. If node_modules is tracked: Run `git rm -r --cached node_modules/`
 1. Layer-specific ignores: Each service has its own ignore patterns
+1. Make sure your backend
+1. Make sure your backend/.env file has the MongoDB URL
+1. New IDE: Add to IDE section
 1. Nunca commitear archivos con credenciales
 1. Reduce build context size by excluding unnecessary files
 1. Revisar nuevos archivos generados durante el desarrollo
+1. results/experiments/sentiment_20251217_232429
+1. results/experiments/sentiment_20251217_232429/summary.json
+10. results/experiments/overall_20251217_232429
+10. results/experiments/overall_20251217_232429/summary.json
+11. results/experiments/overall_20251217_232429
+11. results/experiments/overall_20251217_232429/BaselineVariator.json
+12. results/experiments/overall_20251217_232429
+12. results/experiments/overall_20251217_232429/FewShotVariator.json
+13. results/experiments/overall_20251217_232429
+13. results/experiments/overall_20251217_232429/ChainOfThoughtVariator.json
+14. results/experiments/overall_20251217_232429
+14. results/experiments/overall_20251217_232429/CoTPlusVariator.json
+15. results/experiments/overall_20251217_232429
+15. results/experiments/overall_20251217_232429/temperature_sensitivity.json
+16. results/visualizations
+16. results/visualizations/comprehensive_results_summary.png
+17. results/visualizations
+17. results/visualizations/overall_accuracy_comparison.png
+18. results/visualizations
+18. results/visualizations/temperature_sensitivity.png
 2. Añadir patrones para nuevas herramientas
 2. Build optimization: Docker ignores exclude unnecessary files
+2. If .venv is tracked: Run `git rm -r --cached .venv
+2. If .venv is tracked: Run `git rm -r --cached .venv/`
 2. Improve build speed by avoiding large directories
 2. Mantener organizadas las secciones
+2. New Tool: Add tool-specific ignores
 2. No ignorar archivos importantes del proyecto
+2. Verify frontend
+2. Verify frontend/.env has the API URL
+2. results/experiments/sentiment_20251217_232429
+2. results/experiments/sentiment_20251217_232429/accuracy_comparison.png
 3. Comentar patrones complejos
 3. Enhance security by excluding sensitive development files
+3. If build/ is tracked: Run `git rm -r --cached flutter_app/build
+3. If build/ is tracked: Run `git rm -r --cached flutter_app/build/`
 3. Mantener organizadas las secciones
+3. New Secret Type: Add to Security section
 3. No usar patrones demasiado amplios
+3. Ready to push to GitHub safely!
 3. Security: Environment files (.env*) are always ignored
+3. results/experiments/sentiment_20251217_232429
+3. results/experiments/sentiment_20251217_232429/latency_comparison.png
 4. Documentar patrones complejos
+4. If .idea is tracked: Run `git rm -r --cached .idea
+4. If .idea is tracked: Run `git rm -r --cached .idea/`
 4. Maintain separation between frontend and backend concerns
 4. No ignorar el propio .gitignore
 4. Performance: Large directories (node_modules) excluded from Docker contexts
+4. Team Request: Add to Project Specific
 4. Usar patrones específicos en lugar de genéricos
+4. results/experiments/math_20251217_232429
+4. results/experiments/math_20251217_232429/summary.json
+404.html
+4_terraform.tfvars
+4pwdb
+4pwvs
 5. Maintenance: Comments and sections for easy updates
 5. Revisar periódicamente y actualizar
+5. results/experiments/math_20251217_232429
+5. results/experiments/math_20251217_232429/accuracy_comparison.png
+5_output.tf
+6. results/experiments/math_20251217_232429
+6. results/experiments/math_20251217_232429/latency_comparison.png
+7. results/experiments/logic_20251217_232429
+7. results/experiments/logic_20251217_232429/summary.json
+8. results/experiments/logic_20251217_232429
+8. results/experiments/logic_20251217_232429/accuracy_comparison.png
+9. results/experiments/logic_20251217_232429
+9. results/experiments/logic_20251217_232429/latency_comparison.png
+<% if (props.tools.includes('compodoc')) { -%>
+<% } -%>
+<%#
+<&- fragments.render({ join: '\n\n' }) &>
+<<<<<<< HEAD
+=======
+>>>>>>> 753edcc255b690e73ffee0005891226a1a96678c
+@eaDir
+ADDRVER.
+AMENT_IGNORE
+API_TOKEN=abc123xyz789
+API_TOKEN=your_token_here
+AS
+AS/System
 ASALocalRun
 AbletonTmp-
+Actions
+Actions/test
+After removing, commit the changes and push.
+All experimental results, visualizations, and documentation are now tracked by git and ready to be committed and pushed to the repository.
 AppPackages
+AppSettings.config
+App_Data
+App_Data/Logs
+App_Data/NuGetBackup
+App_Data/TEMP
+App_Data/[Pp]review
+App_Data/cache
+App_Data/umbraco.config
+Application
+Application/Common/Conf
+Application/Common/Conf/config.php
+Application/Runtime
+AudioCache
+AutoBackups
 AutoTest.Net
+BRKTVER.
 Backup
-Based on:
+Backup of *.doc
+Based on best practices from:
+BeefSpace_User.toml
+Before pushing to a remote repository:
 BenchmarkDotNet.Artifacts
 Binaries
+Brewfile.lock.json
+Build.bat
 Build/Android
 Build/Android/res
 Build/Android/res/*
 Build/IOS
 Build/IOS/Resources
 Build/IOS/Resources/Graphics
+Builds
 BundleArtifacts
+CATKIN_IGNORE
+CHANGELOG.txt
 CLAUDE.local.md
 CLAUDE.md
+CMS
+CMS/App_Data
+CMS/App_Data/AzureCache
+CMS/App_Data/AzureTemp
+CMS/App_Data/CMSModules
+CMS/App_Data/CMSModules/DeviceProfile
+CMS/App_Data/CMSModules/DeviceProfile/logFiftyOne.txt
+CMS/App_Data/CMSModules/DeviceProfiles
+CMS/App_Data/CMSModules/DeviceProfiles/logFiftyOne.txt
+CMS/App_Data/CMSModules/SmartSearch
+CMS/App_Data/CMSModules/WebFarm
+CMS/App_Data/CMSModules/WebFarm/webfarm.sync
+CMS/App_Data/CMSTemp
+CMS/App_Data/DancingGoat
+CMS/App_Data/Persistent
+CMS/App_Data/Templates
+CMS/App_Data/Templates/CommunitySite
+CMS/App_Data/Templates/CorporateSite
+CMS/App_Data/Templates/DancingGoat
+CMS/App_Data/Templates/EcommerceSite
+CMS/App_Data/Templates/IntranetPortal
+CMS/App_Data/Templates/PersonalSite
+CMS/App_Themes
+CMS/App_Themes/CommunitySite
+CMS/App_Themes/CorporateSite
+CMS/App_Themes/EcommerceSite
+CMS/App_Themes/IntranetPortal
+CMS/App_Themes/PersonalSite
+CMS/CMSSiteUtils
+CMS/CMSSiteUtils/Export
+CMS/CMSSiteUtils/Import
+CMS/CMSTemplates
+CMS/CMSTemplates/CorporateSite
+CMS/CommunitySite
+CMS/CorporateSite
+CMS/DancingGoat
+CMS/EcommerceSite
+CMS/IntranetPortal
+CMS/PersonalSite
 CMakeCache.txt
 CMakeFiles
+CMakeLists.txt.user
+CMakeScripts
+CMakeUserPresets.json
+COLCON_IGNORE
+CONTRIBUTING.md
+COPYRIGHT.txt
+CTestTestfile.cmake
 CVS
+Cache
 Cargo.lock
 Carthage
 Carthage/Build
+Catbird.xcodeproj/project.xcworkspace
+Catbird.xcodeproj/project.xcworkspace/xcuserdata
+Check what's being ignored:
+Check what's being tracked:
+Check what's ignored:
+Clean System Files
 ClientBin
-Configuration files from popular editors:
-Critical patterns to prevent accidental credential commits:
-Demucs_Cuts
+Commands:
+Compiled
+Config
+Config/secrets
+Configurations
+ConnectionStrings.config
+ConvertLog.txt
+Copyright 2013-2026 the original author or authors from the JHipster project.
+Currently Tracked: All game assets in `assets
+Currently Tracked: All game assets in `assets/` are tracked in Git.
+DEADJOE
+DUPEREF.
+DVEfiles
+Darwin
+DataDigger
+DataDigger/Cache
+DataDigger/DataDigger*.log
+DataDigger/DataDigger-*.ini
+DataDigger/backup
+DataSourcesIndex.xml
+Debug*
+Debug*/Debug*\ Libs
+Debug/Exe
+Debug/List
 Dependencies
+Dependencies:
 DerivedData
 DerivedDataCache
 Desktop.ini
+Device-Debug
+Device-Release
+Diagnosis
 DocProject
 DocProject/Help
 DocProject/Help/*.HxC
@@ -709,45 +1582,139 @@ DocProject/Help/*.hhp
 DocProject/Help/Html2
 DocProject/Help/html
 DocProject/buildhelp
+Docker development files:
 Docker ignore files are optimized to:
+Dockerfile.local
+Docs
+EIFGENs
 ENV
 ETAGS
+EWARM
+EWARM/settings
+EWARMExe
+EWARMList
+EWARMObj
 El `.gitignore` está organizado en secciones temáticas para facilitar su mantenimiento:
 El archivo `.gitignore` especifica qué archivos y directorios deben ser ignorados por Git, evitando que se suban al repositorio archivos sensibles, temporales, o generados automáticamente.
 Entity
 Entity/*~
 Environment files follow this pattern:
 Este `.gitignore` mejorado proporciona una protección completa para el proyecto, evitando problemas comunes de seguridad y mantenimiento.
+Exe
+Exe/*.sim
+Export
+ExportedFiles.xml
 ExportedObj
+FINAL_SYSTEM_ASSESSMENT_*.json
+FIRST_INSTALL
 FakesAssemblies
+Find*.cmake
+Flash
 Flutter
 Flutter/ephemeral
 FodyWeavers.xsd
+Formform
 GPATH
+GRAFANA_PASSWORD=mysecretpassword123
+GRAFANA_PASSWORD=your_password_here
 GRTAGS
+GSYMS
 GTAGS
+Game.agf.bak
+Game.agf.user
+Gemfile.local
+Gemfile.local.lock
+Generated Files
+Generated documentation:
 Generated\ Files
 Generated_Code
 GitHub.sublime-settings
+Go compiled outputs:
+Go tooling outputs:
+GoogleService-Info.plist
+Gruntfile.js
+HISTORY.txt
+HardwareDebug
+HardwareDebug/src
+HeadlessBuild-Global.properties
+HeadlessBuild.properties
+History
 Homestead.json
 Homestead.yaml
-How to add: Download from official sources and place in `resources
-How to add: Download from official sources and place in `resources/` directory.
+I've saved it in: ENVIRONMENT_SETUP.txt
+INSTALL*.txt
 Icon
+Icon.png
+Icon?
+If you have non-sensitive variables:
+IlluminatedCloud
+Infrastructure as Code:
 InstalledFiles
+IntegrationServer
+IntegrationServer/DocumentStore
+IntegrationServer/WmRepository4
+IntegrationServer/XAStore
+IntegrationServer/datastore
+IntegrationServer/db
+IntegrationServer/lib
+IntegrationServer/logs
+IntegrationServer/packages
+IntegrationServer/packages/Wm
+IntegrationServer/replicate
+IntegrationServer/sdk
+IntegrationServer/support
+IntegrationServer/update
+IntegrationServer/userFtpRoot
+IntegrationServer/web
 Intermediate
+JLinkLog.txt
+JOB.OTL.OLD
+LICENSE
+LICENSE.txt
+Licensed under the Apache License, Version 2.0 (the "License");
+LineIDs.dbg
+LineIDs.dbg.bak
+Local database files (for development):
+Logs
+MAINTAINERS.txt
 MANIFEST
-MANIFEST.MF
+MANIFEST.bak
+MAlonzo
+META.json
+META.yml
+MYMETA.
+Makefile
 Makefile.in
+Makefile.old
+Manifest.toml
+Mercury
+Mercury.modules
 MigrationBackup
+Mkfile.old
+ModelIndex.xml
+Module.symvers
 Network Trash Folder
 Nota: En desarrollo se suele usar SQLite local, en producción PostgreSQL
 Nota: En desarrollo se suele usar SQLite local, en producción PostgreSQL/MySQL
+Note: `.vscode
+Note: `.vscode/settings.json` is not ignored for team consistency.
 OPENCODE.local.md
 OPENCODE.md
-Only source code and configuration:
+OS-specific files that shouldn't be in git:
+Obj
+Obj/*.pbd
+Obj/*.pbd.
+Obj/*.pbi
+Obj/*.pbi.
+Objects
 OpenCover
+OpenFrameworks.gitignore
+Other common files:
+Output
 PATCH_*.sh
+PHP_errors.log
+PROJECT_READINESS_BRIEF_*.md
+PULL.TBL
 Package Control.ca-bundle
 Package Control.ca-certs
 Package Control.ca-list
@@ -757,36 +1724,123 @@ Package Control.merged-ca-bundle
 Package Control.system-ca-bundle
 Package Control.user-ca-bundle
 Package.StoreAssociation.xml
-Platform-specific files that shouldn't be committed:
+Package.pins
+Package.resolved
+Packages
+Payload
+PharoDebug.log
+Physical/*/*/*
+Physical/*/*/*/DLFiles
+Pipfile.lock
 Plugins/*
 Plugins/*/Binaries
 Plugins/*/Intermediate
 PluginsBinaries
 PluginsIntermediate
 Pods
+Policy Templates
+Prerequisites
+Prevents committing secrets:
+ProgramHeaders.xml
+Project-specific files that shouldn't be in version control:
+Project\ Logs
+Project\ Outputs
+Properties
+Properties/launchSettings.json
 PublishScripts
+Pulumi.*.yaml
+R-unit-tests.log
+R/cran-check.out
+R/pkg/tests/fulltests
+R/pkg/tests/fulltests/Rplots.pdf
+R/pkg/vignettes
+R/pkg/vignettes/sparkr-vignettes.html
+R/unit-tests.out
+RAM
+README.md
+README.txt
+REFVER.
+REVISION
+Referenced Packages
+Release
+Remove tracked files that should be ignored:
+Resources
+Resources/Library
+Runtime artifacts:
+SECTVER.
+SUBMVER.
 Saved
 ScaffoldingReadMe.txt
+Scan repository for secrets:
+Screenshots
+Security-sensitive files:
+See the License for the specific language governing permissions and
+Sensitive configuration:
 ServiceFabricBackup
+Session.vim
+Sessionx.vim
 Si accidentalmente se committearon archivos que deberían estar ignorados:
+Simulator
+Some teams commit `.terraform.lock.hcl`:
 SourceArt*.png
 SourceArt*.tga
-Standard Python gitignore patterns including:
+SqueakDebug.log
+Status\ Report.txt
 StyleCopReport.xml
+SubmissionInfo
+Support for all major editors:
 TAGS
+TEST-*.xml
+TODO.local       # Your personal TODO
+TSWLatexianTemp
+TTLDIFFS.
+TabNine.toml
+Temp
+TempStatsStore
 Temporary Items
+Test and development outputs:
+TestCache.xml
 TestResult.xml
+Testing
+TestsResultsCache.xml
+The file is organized into 12 logical sections:
 The ignore files are configured to work well with:
-This `.gitignore` follows industry best practices for Python projects, covering:
+This `.gitignore` file follows best practices for Go open source projects and is specifically tailored for CacheGenius.
+This `.gitignore` file protects your repository from including sensitive or unnecessary files.
 This document explains the ignore file structure for the DevOps Ontology Workbench monorepo.
+This file is also NOT tracked by git for security!
+This file is part of the JHipster project, see https:/
+This file is part of the JHipster project, see https://www.jhipster.tech
+This project contains multiple components that need proper .gitignore configuration:
 Thumbs.db
 Thumbs.db     # Windows
 Thumbs.db:encryptable
+Total: 290 lines covering all common scenarios.
+UPGRADE.txt
+Uncomment `# vendor
+Uncomment `# vendor/` to commit vendored dependencies.
+Unless required by applicable law or agreed to in writing, software
+Updated `.gitignore` to allow experimental results to be committed while still ignoring temporary files.
 UpgradeLog*.XML
 UpgradeLog*.htm
+Upgrades
+UserInterfaceState.xcuserstate
 VERSION.cache
-Why: Generated by py2app
-Why: Generated by py2app/PyInstaller during app bundling.
+VisualStudio.gitignore
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+Workflows
+Workflows/Library
+Workflows/VCO@
+You may obtain a copy of the License at
+Your sensitive data is now protected! 🔒
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]*.un~
+[._]s[a-rt-v][a-z]
+[._]s[a-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+[1-9]
 [56789a].out
 [Aa][Rr][Mm]
 [Aa][Rr][Mm]64
@@ -797,69 +1851,575 @@ Why: Generated by py2app/PyInstaller during app bundling.
 [Aa]ssets/[Ss]treamingAssets
 [Aa]ssets/[Ss]treamingAssets/aa
 [Aa]ssets/[Ss]treamingAssets/aa.meta
+[Bb]ackup
 [Bb]in
 [Bb]uild
 [Bb]uild[Ll]og.
 [Bb]uilds
 [Dd]ebug
+[Dd]ebug.win32
 [Dd]ebugPS
 [Dd]ebugPublic
 [Dd]esktop.ini
 [Ee]xpress
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
 [Ll]ibrary
+[Ll]ocal
 [Ll]og
 [Ll]ogs
 [Mm]emoryCaptures
+[Mm]odel
+[Mm]odel/[Dd]eployment
 [Oo]bj
+[Oo]ut
+[Pp]ackages
 [Rr]ecordings
 [Rr]elease
+[Rr]elease.win32
 [Rr]eleasePS
 [Rr]eleases
+[Ss]cripts
 [Tt]emp
 [Tt]est[Rr]esult
 [Uu]ser[Ss]ettings
 [Ww][Ii][Nn]32
+[_@]
+\#*.rkt#
+\#*.rkt#*#
 \#*\#
-_*.cfe
-_*.cfs
-_*.doc
-_*.fdt
-_*.fdx
-_*.fnm
-_*.nvd
-_*.nvm
-_*.pos
-_*.si
-_*.tim
-_*.tip
+\#recycle
+],
+_Boot
 _Chutzpah
+_CompileInfo
+_Debug
+_Deployment
+_Libraries
+_ModuleInstall
 _NCrunch_
+_OpenInEditor.lock
 _Pvt_Extensions
 _ReSharper
+_Repository
 _TeamCity
 _UpgradeReport_Files
+__Previews
+__azurite_db_blob__.json
+__azurite_db_blob_extent__.json
+__azurite_db_queue__.json
+__azurite_db_queue_extent__.json
+__azurite_db_table__.json
+__azurite_db_table_extent__.json
+__blobstorage__
+__debug_bin
 __dummy.html
+__generated__
+__history
 __marimo__
 __pycache__
 __pypackages__
+__queuestorage__
+__recovery
+_autosave-
+_book
 _build
+_builds
+_cache
 _cgo_
+_checkouts
+_clouddata
+_compareTemp
+_deps
+_docpress
 _esy
+_eumm
+_gsdata_
+_ide_helper.php
+_impactbatch.log
+_minted
+_ngo
+_notes
 _obj
 _opam
-_pkginfo.txt
+_pgbackup
+_pkginFo.Txt
+_projects
+_protected/app/configs
+_protected/app/configs/config.ini
+_protected/app/system/core/assets/cron
+_protected/app/system/core/assets/cron/_delay
+_protected/data
+_protected/data/backup
+_protected/data/cache
+_protected/data/cache/pH7_cache
+_protected/data/cache/pH7_static
+_protected/data/cache/pH7tpl_cache
+_protected/data/cache/pH7tpl_compile
+_protected/data/tmp
+_site
+_steps
 _test
 _testmain.go
+_thumbs
+_tools
+_tools/migration
+_tools/migration/composer.lock
+_tools/migration/conf.php
+_tools/migration/vendor
+_tools/selenium_WebDriver/tests/share/config
+_tools/selenium_WebDriver/tests/share/config/sessions.local.php
+_tools/selenium_WebDriver/tests/share/storage
+_tools/selenium_WebDriver/tests/share/storage/local.php
+_tools/selenium_WebDriver/tests/share/storage/screens
+_tools/selenium_WebDriver/tests/share/storage/screens/*.png
+_tracks
+_ttd_log_
+_wpeprivate
+_xmsgs
 _yardoc
 _zuo.db
 _zuo_tc.db
 ```
 ```bash
 ```gitignore
+```text
 ```yaml
+a.out
+abstract.log
+abstract.record
+access.log
 aclocal.m4
+acs-*.bib
+activate_run.ps1
+activate_run.sh
 activemq-data
 add-on
+admin
+admin-dev
+admin-dev/autoupgrade
+admin-dev/backups
+admin-dev/export
+admin-dev/import
+admin-dev/themes/default/css
+admin-dev/themes/default/css/bundle
+admin-dev/themes/default/css/bundle/default_rtl.css
+admin-dev/themes/default/css/bundle/shared_rtl.css
+admin-dev/themes/default/css/font_rtl.css
+admin-dev/themes/default/css/overrides_rtl.css
+admin-dev/themes/default/css/vendor
+admin-dev/themes/default/css/vendor/font-awesome
+admin-dev/themes/default/css/vendor/font-awesome/font-awesome_rtl.css
+admin-dev/themes/default/css/vendor/nv.d3_rtl.css
+admin-dev/themes/default/css/vendor/titatoggle-min_rtl.css
+admin-dev/themes/default/public
+admin-dev/themes/default/public/theme_rtl.css
+admin-dev/themes/new-theme/css
+admin-dev/themes/new-theme/css/module
+admin-dev/themes/new-theme/css/module/drop_rtl.css
+admin-dev/themes/new-theme/css/right-sidebar_rtl.css
+admin/config.php
+administrator
+administrator/cache
+administrator/components
+administrator/components/com_actionlogs
+administrator/components/com_admin
+administrator/components/com_ajax
+administrator/components/com_associations
+administrator/components/com_banners
+administrator/components/com_cache
+administrator/components/com_categories
+administrator/components/com_checkin
+administrator/components/com_config
+administrator/components/com_contact
+administrator/components/com_content
+administrator/components/com_contenthistory
+administrator/components/com_cpanel
+administrator/components/com_fields
+administrator/components/com_finder
+administrator/components/com_installer
+administrator/components/com_joomlaupdate
+administrator/components/com_languages
+administrator/components/com_login
+administrator/components/com_media
+administrator/components/com_menus
+administrator/components/com_messages
+administrator/components/com_modules
+administrator/components/com_newsfeeds
+administrator/components/com_plugins
+administrator/components/com_postinstall
+administrator/components/com_privacy
+administrator/components/com_redirect
+administrator/components/com_search
+administrator/components/com_tags
+administrator/components/com_templates
+administrator/components/com_users
+administrator/help
+administrator/includes
+administrator/index.php
+administrator/language
+administrator/language/en-GB
+administrator/language/en-GB/en-GB.com_actionlogs.ini
+administrator/language/en-GB/en-GB.com_actionlogs.sys.ini
+administrator/language/en-GB/en-GB.com_admin.ini
+administrator/language/en-GB/en-GB.com_admin.sys.ini
+administrator/language/en-GB/en-GB.com_ajax.ini
+administrator/language/en-GB/en-GB.com_ajax.sys.ini
+administrator/language/en-GB/en-GB.com_associations.ini
+administrator/language/en-GB/en-GB.com_associations.sys.ini
+administrator/language/en-GB/en-GB.com_banners.ini
+administrator/language/en-GB/en-GB.com_banners.sys.ini
+administrator/language/en-GB/en-GB.com_cache.ini
+administrator/language/en-GB/en-GB.com_cache.sys.ini
+administrator/language/en-GB/en-GB.com_categories.ini
+administrator/language/en-GB/en-GB.com_categories.sys.ini
+administrator/language/en-GB/en-GB.com_checkin.ini
+administrator/language/en-GB/en-GB.com_checkin.sys.ini
+administrator/language/en-GB/en-GB.com_config.ini
+administrator/language/en-GB/en-GB.com_config.sys.ini
+administrator/language/en-GB/en-GB.com_contact.ini
+administrator/language/en-GB/en-GB.com_contact.sys.ini
+administrator/language/en-GB/en-GB.com_content.ini
+administrator/language/en-GB/en-GB.com_content.sys.ini
+administrator/language/en-GB/en-GB.com_contenthistory.ini
+administrator/language/en-GB/en-GB.com_contenthistory.sys.ini
+administrator/language/en-GB/en-GB.com_cpanel.ini
+administrator/language/en-GB/en-GB.com_cpanel.sys.ini
+administrator/language/en-GB/en-GB.com_fields.ini
+administrator/language/en-GB/en-GB.com_fields.sys.ini
+administrator/language/en-GB/en-GB.com_finder.ini
+administrator/language/en-GB/en-GB.com_finder.sys.ini
+administrator/language/en-GB/en-GB.com_installer.ini
+administrator/language/en-GB/en-GB.com_installer.sys.ini
+administrator/language/en-GB/en-GB.com_joomlaupdate.ini
+administrator/language/en-GB/en-GB.com_joomlaupdate.sys.ini
+administrator/language/en-GB/en-GB.com_languages.ini
+administrator/language/en-GB/en-GB.com_languages.sys.ini
+administrator/language/en-GB/en-GB.com_login.ini
+administrator/language/en-GB/en-GB.com_login.sys.ini
+administrator/language/en-GB/en-GB.com_mailto.sys.ini
+administrator/language/en-GB/en-GB.com_media.ini
+administrator/language/en-GB/en-GB.com_media.sys.ini
+administrator/language/en-GB/en-GB.com_menus.ini
+administrator/language/en-GB/en-GB.com_menus.sys.ini
+administrator/language/en-GB/en-GB.com_messages.ini
+administrator/language/en-GB/en-GB.com_messages.sys.ini
+administrator/language/en-GB/en-GB.com_modules.ini
+administrator/language/en-GB/en-GB.com_modules.sys.ini
+administrator/language/en-GB/en-GB.com_newsfeeds.ini
+administrator/language/en-GB/en-GB.com_newsfeeds.sys.ini
+administrator/language/en-GB/en-GB.com_plugins.ini
+administrator/language/en-GB/en-GB.com_plugins.sys.ini
+administrator/language/en-GB/en-GB.com_postinstall.ini
+administrator/language/en-GB/en-GB.com_postinstall.sys.ini
+administrator/language/en-GB/en-GB.com_privacy.ini
+administrator/language/en-GB/en-GB.com_privacy.sys.ini
+administrator/language/en-GB/en-GB.com_redirect.ini
+administrator/language/en-GB/en-GB.com_redirect.sys.ini
+administrator/language/en-GB/en-GB.com_search.ini
+administrator/language/en-GB/en-GB.com_search.sys.ini
+administrator/language/en-GB/en-GB.com_tags.ini
+administrator/language/en-GB/en-GB.com_tags.sys.ini
+administrator/language/en-GB/en-GB.com_templates.ini
+administrator/language/en-GB/en-GB.com_templates.sys.ini
+administrator/language/en-GB/en-GB.com_users.ini
+administrator/language/en-GB/en-GB.com_users.sys.ini
+administrator/language/en-GB/en-GB.com_weblinks.ini
+administrator/language/en-GB/en-GB.com_weblinks.sys.ini
+administrator/language/en-GB/en-GB.com_wrapper.ini
+administrator/language/en-GB/en-GB.com_wrapper.sys.ini
+administrator/language/en-GB/en-GB.ini
+administrator/language/en-GB/en-GB.lib_joomla.ini
+administrator/language/en-GB/en-GB.localise.php
+administrator/language/en-GB/en-GB.mod_custom.ini
+administrator/language/en-GB/en-GB.mod_custom.sys.ini
+administrator/language/en-GB/en-GB.mod_feed.ini
+administrator/language/en-GB/en-GB.mod_feed.sys.ini
+administrator/language/en-GB/en-GB.mod_latest.ini
+administrator/language/en-GB/en-GB.mod_latest.sys.ini
+administrator/language/en-GB/en-GB.mod_latestactions.ini
+administrator/language/en-GB/en-GB.mod_latestactions.sys.ini
+administrator/language/en-GB/en-GB.mod_logged.ini
+administrator/language/en-GB/en-GB.mod_logged.sys.ini
+administrator/language/en-GB/en-GB.mod_login.ini
+administrator/language/en-GB/en-GB.mod_login.sys.ini
+administrator/language/en-GB/en-GB.mod_menu.ini
+administrator/language/en-GB/en-GB.mod_menu.sys.ini
+administrator/language/en-GB/en-GB.mod_multilangstatus.ini
+administrator/language/en-GB/en-GB.mod_multilangstatus.sys.ini
+administrator/language/en-GB/en-GB.mod_online.ini
+administrator/language/en-GB/en-GB.mod_online.sys.ini
+administrator/language/en-GB/en-GB.mod_popular.ini
+administrator/language/en-GB/en-GB.mod_popular.sys.ini
+administrator/language/en-GB/en-GB.mod_privacy_dashboard.ini
+administrator/language/en-GB/en-GB.mod_privacy_dashboard.sys.ini
+administrator/language/en-GB/en-GB.mod_quickicon.ini
+administrator/language/en-GB/en-GB.mod_quickicon.sys.ini
+administrator/language/en-GB/en-GB.mod_sampledata.ini
+administrator/language/en-GB/en-GB.mod_sampledata.sys.ini
+administrator/language/en-GB/en-GB.mod_stats_admin.ini
+administrator/language/en-GB/en-GB.mod_stats_admin.sys.ini
+administrator/language/en-GB/en-GB.mod_status.ini
+administrator/language/en-GB/en-GB.mod_status.sys.ini
+administrator/language/en-GB/en-GB.mod_submenu.ini
+administrator/language/en-GB/en-GB.mod_submenu.sys.ini
+administrator/language/en-GB/en-GB.mod_title.ini
+administrator/language/en-GB/en-GB.mod_title.sys.ini
+administrator/language/en-GB/en-GB.mod_toolbar.ini
+administrator/language/en-GB/en-GB.mod_toolbar.sys.ini
+administrator/language/en-GB/en-GB.mod_unread.ini
+administrator/language/en-GB/en-GB.mod_unread.sys.ini
+administrator/language/en-GB/en-GB.mod_version.ini
+administrator/language/en-GB/en-GB.mod_version.sys.ini
+administrator/language/en-GB/en-GB.plg_actionlog_joomla.ini
+administrator/language/en-GB/en-GB.plg_actionlog_joomla.sys.ini
+administrator/language/en-GB/en-GB.plg_authentication_cookie.ini
+administrator/language/en-GB/en-GB.plg_authentication_cookie.sys.ini
+administrator/language/en-GB/en-GB.plg_authentication_example.ini
+administrator/language/en-GB/en-GB.plg_authentication_example.sys.ini
+administrator/language/en-GB/en-GB.plg_authentication_gmail.ini
+administrator/language/en-GB/en-GB.plg_authentication_gmail.sys.ini
+administrator/language/en-GB/en-GB.plg_authentication_joomla.ini
+administrator/language/en-GB/en-GB.plg_authentication_joomla.sys.ini
+administrator/language/en-GB/en-GB.plg_authentication_ldap.ini
+administrator/language/en-GB/en-GB.plg_authentication_ldap.sys.ini
+administrator/language/en-GB/en-GB.plg_captcha_recaptcha.ini
+administrator/language/en-GB/en-GB.plg_captcha_recaptcha.sys.ini
+administrator/language/en-GB/en-GB.plg_captcha_recaptcha_invisible.ini
+administrator/language/en-GB/en-GB.plg_captcha_recaptcha_invisible.sys.ini
+administrator/language/en-GB/en-GB.plg_content_confirmconsent.ini
+administrator/language/en-GB/en-GB.plg_content_confirmconsent.sys.ini
+administrator/language/en-GB/en-GB.plg_content_contact.ini
+administrator/language/en-GB/en-GB.plg_content_contact.sys.ini
+administrator/language/en-GB/en-GB.plg_content_emailcloak.ini
+administrator/language/en-GB/en-GB.plg_content_emailcloak.sys.ini
+administrator/language/en-GB/en-GB.plg_content_fields.ini
+administrator/language/en-GB/en-GB.plg_content_fields.sys.ini
+administrator/language/en-GB/en-GB.plg_content_finder.ini
+administrator/language/en-GB/en-GB.plg_content_finder.sys.ini
+administrator/language/en-GB/en-GB.plg_content_geshi.ini
+administrator/language/en-GB/en-GB.plg_content_geshi.sys.ini
+administrator/language/en-GB/en-GB.plg_content_joomla.ini
+administrator/language/en-GB/en-GB.plg_content_joomla.sys.ini
+administrator/language/en-GB/en-GB.plg_content_loadmodule.ini
+administrator/language/en-GB/en-GB.plg_content_loadmodule.sys.ini
+administrator/language/en-GB/en-GB.plg_content_pagebreak.ini
+administrator/language/en-GB/en-GB.plg_content_pagebreak.sys.ini
+administrator/language/en-GB/en-GB.plg_content_pagenavigation.ini
+administrator/language/en-GB/en-GB.plg_content_pagenavigation.sys.ini
+administrator/language/en-GB/en-GB.plg_content_vote.ini
+administrator/language/en-GB/en-GB.plg_content_vote.sys.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_article.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_article.sys.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_contact.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_contact.sys.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_fields.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_fields.sys.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_image.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_image.sys.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_menu.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_menu.sys.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_module.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_module.sys.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_pagebreak.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_pagebreak.sys.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_readmore.ini
+administrator/language/en-GB/en-GB.plg_editors-xtd_readmore.sys.ini
+administrator/language/en-GB/en-GB.plg_editors_codemirror.ini
+administrator/language/en-GB/en-GB.plg_editors_codemirror.sys.ini
+administrator/language/en-GB/en-GB.plg_editors_none.ini
+administrator/language/en-GB/en-GB.plg_editors_none.sys.ini
+administrator/language/en-GB/en-GB.plg_editors_tinymce.ini
+administrator/language/en-GB/en-GB.plg_editors_tinymce.sys.ini
+administrator/language/en-GB/en-GB.plg_extension_joomla.ini
+administrator/language/en-GB/en-GB.plg_extension_joomla.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_calendar.ini
+administrator/language/en-GB/en-GB.plg_fields_calendar.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_checkboxes.ini
+administrator/language/en-GB/en-GB.plg_fields_checkboxes.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_color.ini
+administrator/language/en-GB/en-GB.plg_fields_color.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_editor.ini
+administrator/language/en-GB/en-GB.plg_fields_editor.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_image.ini
+administrator/language/en-GB/en-GB.plg_fields_image.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_imagelist.ini
+administrator/language/en-GB/en-GB.plg_fields_imagelist.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_integer.ini
+administrator/language/en-GB/en-GB.plg_fields_integer.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_list.ini
+administrator/language/en-GB/en-GB.plg_fields_list.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_media.ini
+administrator/language/en-GB/en-GB.plg_fields_media.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_radio.ini
+administrator/language/en-GB/en-GB.plg_fields_radio.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_repeatable.ini
+administrator/language/en-GB/en-GB.plg_fields_repeatable.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_sql.ini
+administrator/language/en-GB/en-GB.plg_fields_sql.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_text.ini
+administrator/language/en-GB/en-GB.plg_fields_text.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_textarea.ini
+administrator/language/en-GB/en-GB.plg_fields_textarea.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_url.ini
+administrator/language/en-GB/en-GB.plg_fields_url.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_user.ini
+administrator/language/en-GB/en-GB.plg_fields_user.sys.ini
+administrator/language/en-GB/en-GB.plg_fields_usergrouplist.ini
+administrator/language/en-GB/en-GB.plg_fields_usergrouplist.sys.ini
+administrator/language/en-GB/en-GB.plg_finder_categories.ini
+administrator/language/en-GB/en-GB.plg_finder_categories.sys.ini
+administrator/language/en-GB/en-GB.plg_finder_contacts.ini
+administrator/language/en-GB/en-GB.plg_finder_contacts.sys.ini
+administrator/language/en-GB/en-GB.plg_finder_content.ini
+administrator/language/en-GB/en-GB.plg_finder_content.sys.ini
+administrator/language/en-GB/en-GB.plg_finder_newsfeeds.ini
+administrator/language/en-GB/en-GB.plg_finder_newsfeeds.sys.ini
+administrator/language/en-GB/en-GB.plg_finder_tags.ini
+administrator/language/en-GB/en-GB.plg_finder_tags.sys.ini
+administrator/language/en-GB/en-GB.plg_finder_weblinks.ini
+administrator/language/en-GB/en-GB.plg_finder_weblinks.sys.ini
+administrator/language/en-GB/en-GB.plg_installer_folderinstaller.ini
+administrator/language/en-GB/en-GB.plg_installer_folderinstaller.sys.ini
+administrator/language/en-GB/en-GB.plg_installer_packageinstaller.ini
+administrator/language/en-GB/en-GB.plg_installer_packageinstaller.sys.ini
+administrator/language/en-GB/en-GB.plg_installer_urlinstaller.ini
+administrator/language/en-GB/en-GB.plg_installer_urlinstaller.sys.ini
+administrator/language/en-GB/en-GB.plg_installer_webinstaller.ini
+administrator/language/en-GB/en-GB.plg_installer_webinstaller.sys.ini
+administrator/language/en-GB/en-GB.plg_privacy_actionlogs.ini
+administrator/language/en-GB/en-GB.plg_privacy_actionlogs.sys.ini
+administrator/language/en-GB/en-GB.plg_privacy_consents.ini
+administrator/language/en-GB/en-GB.plg_privacy_consents.sys.ini
+administrator/language/en-GB/en-GB.plg_privacy_contact.ini
+administrator/language/en-GB/en-GB.plg_privacy_contact.sys.ini
+administrator/language/en-GB/en-GB.plg_privacy_content.ini
+administrator/language/en-GB/en-GB.plg_privacy_content.sys.ini
+administrator/language/en-GB/en-GB.plg_privacy_message.ini
+administrator/language/en-GB/en-GB.plg_privacy_message.sys.ini
+administrator/language/en-GB/en-GB.plg_privacy_user.ini
+administrator/language/en-GB/en-GB.plg_privacy_user.sys.ini
+administrator/language/en-GB/en-GB.plg_quickicon_extensionupdate.ini
+administrator/language/en-GB/en-GB.plg_quickicon_extensionupdate.sys.ini
+administrator/language/en-GB/en-GB.plg_quickicon_joomlaupdate.ini
+administrator/language/en-GB/en-GB.plg_quickicon_joomlaupdate.sys.ini
+administrator/language/en-GB/en-GB.plg_quickicon_phpversioncheck.ini
+administrator/language/en-GB/en-GB.plg_quickicon_phpversioncheck.sys.ini
+administrator/language/en-GB/en-GB.plg_quickicon_privacycheck.ini
+administrator/language/en-GB/en-GB.plg_quickicon_privacycheck.sys.ini
+administrator/language/en-GB/en-GB.plg_sampledata_blog.ini
+administrator/language/en-GB/en-GB.plg_sampledata_blog.sys.ini
+administrator/language/en-GB/en-GB.plg_search_categories.ini
+administrator/language/en-GB/en-GB.plg_search_categories.sys.ini
+administrator/language/en-GB/en-GB.plg_search_contacts.ini
+administrator/language/en-GB/en-GB.plg_search_contacts.sys.ini
+administrator/language/en-GB/en-GB.plg_search_content.ini
+administrator/language/en-GB/en-GB.plg_search_content.sys.ini
+administrator/language/en-GB/en-GB.plg_search_newsfeeds.ini
+administrator/language/en-GB/en-GB.plg_search_newsfeeds.sys.ini
+administrator/language/en-GB/en-GB.plg_search_tags.ini
+administrator/language/en-GB/en-GB.plg_search_tags.sys.ini
+administrator/language/en-GB/en-GB.plg_search_weblinks.ini
+administrator/language/en-GB/en-GB.plg_search_weblinks.sys.ini
+administrator/language/en-GB/en-GB.plg_system_actionlogs.ini
+administrator/language/en-GB/en-GB.plg_system_actionlogs.sys.ini
+administrator/language/en-GB/en-GB.plg_system_cache.ini
+administrator/language/en-GB/en-GB.plg_system_cache.sys.ini
+administrator/language/en-GB/en-GB.plg_system_debug.ini
+administrator/language/en-GB/en-GB.plg_system_debug.sys.ini
+administrator/language/en-GB/en-GB.plg_system_fields.ini
+administrator/language/en-GB/en-GB.plg_system_fields.sys.ini
+administrator/language/en-GB/en-GB.plg_system_highlight.ini
+administrator/language/en-GB/en-GB.plg_system_highlight.sys.ini
+administrator/language/en-GB/en-GB.plg_system_languagecode.ini
+administrator/language/en-GB/en-GB.plg_system_languagecode.sys.ini
+administrator/language/en-GB/en-GB.plg_system_languagefilter.ini
+administrator/language/en-GB/en-GB.plg_system_languagefilter.sys.ini
+administrator/language/en-GB/en-GB.plg_system_log.ini
+administrator/language/en-GB/en-GB.plg_system_log.sys.ini
+administrator/language/en-GB/en-GB.plg_system_logout.ini
+administrator/language/en-GB/en-GB.plg_system_logout.sys.ini
+administrator/language/en-GB/en-GB.plg_system_logrotation.ini
+administrator/language/en-GB/en-GB.plg_system_logrotation.sys.ini
+administrator/language/en-GB/en-GB.plg_system_p3p.ini
+administrator/language/en-GB/en-GB.plg_system_p3p.sys.ini
+administrator/language/en-GB/en-GB.plg_system_privacyconsent.ini
+administrator/language/en-GB/en-GB.plg_system_privacyconsent.sys.ini
+administrator/language/en-GB/en-GB.plg_system_redirect.ini
+administrator/language/en-GB/en-GB.plg_system_redirect.sys.ini
+administrator/language/en-GB/en-GB.plg_system_remember.ini
+administrator/language/en-GB/en-GB.plg_system_remember.sys.ini
+administrator/language/en-GB/en-GB.plg_system_sef.ini
+administrator/language/en-GB/en-GB.plg_system_sef.sys.ini
+administrator/language/en-GB/en-GB.plg_system_sessiongc.ini
+administrator/language/en-GB/en-GB.plg_system_sessiongc.sys.ini
+administrator/language/en-GB/en-GB.plg_system_stats.ini
+administrator/language/en-GB/en-GB.plg_system_stats.sys.ini
+administrator/language/en-GB/en-GB.plg_system_updatenotification.ini
+administrator/language/en-GB/en-GB.plg_system_updatenotification.sys.ini
+administrator/language/en-GB/en-GB.plg_twofactorauth_totp.ini
+administrator/language/en-GB/en-GB.plg_twofactorauth_totp.sys.ini
+administrator/language/en-GB/en-GB.plg_twofactorauth_yubikey.ini
+administrator/language/en-GB/en-GB.plg_twofactorauth_yubikey.sys.ini
+administrator/language/en-GB/en-GB.plg_user_contactcreator.ini
+administrator/language/en-GB/en-GB.plg_user_contactcreator.sys.ini
+administrator/language/en-GB/en-GB.plg_user_joomla.ini
+administrator/language/en-GB/en-GB.plg_user_joomla.sys.ini
+administrator/language/en-GB/en-GB.plg_user_profile.ini
+administrator/language/en-GB/en-GB.plg_user_profile.sys.ini
+administrator/language/en-GB/en-GB.plg_user_terms.ini
+administrator/language/en-GB/en-GB.plg_user_terms.sys.ini
+administrator/language/en-GB/en-GB.tpl_hathor.ini
+administrator/language/en-GB/en-GB.tpl_hathor.sys.ini
+administrator/language/en-GB/en-GB.tpl_isis.ini
+administrator/language/en-GB/en-GB.tpl_isis.sys.ini
+administrator/language/en-GB/en-GB.xml
+administrator/language/en-GB/install.xml
+administrator/language/index.html
+administrator/language/overrides
+administrator/logs
+administrator/manifests/files
+administrator/manifests/files/joomla.xml
+administrator/manifests/libraries
+administrator/manifests/libraries/fof.xml
+administrator/manifests/libraries/idna_convert.xml
+administrator/manifests/libraries/joomla.xml
+administrator/manifests/libraries/phpass.xml
+administrator/manifests/libraries/phputf8.xml
+administrator/manifests/packages
+administrator/manifests/packages/index.html
+administrator/manifests/packages/pkg_en-GB.xml
+administrator/modules
+administrator/modules/mod_custom
+administrator/modules/mod_feed
+administrator/modules/mod_latest
+administrator/modules/mod_latestactions
+administrator/modules/mod_logged
+administrator/modules/mod_login
+administrator/modules/mod_menu
+administrator/modules/mod_multilangstatus
+administrator/modules/mod_online
+administrator/modules/mod_popular
+administrator/modules/mod_privacy_dashboard
+administrator/modules/mod_quickicon
+administrator/modules/mod_sampledata
+administrator/modules/mod_stats_admin
+administrator/modules/mod_status
+administrator/modules/mod_submenu
+administrator/modules/mod_title
+administrator/modules/mod_toolbar
+administrator/modules/mod_unread
+administrator/modules/mod_version
+administrator/templates
+administrator/templates/hathor
+administrator/templates/isis
+administrator/templates/system
+ai-artifacts
+alembic/versions
+alembic/versions/*.py
+allure-report
+allure-results
 amplify
 amplify-build-config.json
 amplify-gradle-config.json
@@ -867,168 +2427,579 @@ amplify/.config
 amplify/.config/local-
 amplify/\#current-cloud-backend
 amplify/backend
-amplify/backend/.temp
 amplify/backend/amplify-meta.json
-amplify/logs
+amplify/backend/awscloudformation
 amplify/mock-data
 amplify/team-provider-info.json
-amplifyconfiguration.dart
 amplifyconfiguration.json
-amplifytools.xcconfig
+amplifyxc.config
 analysis_benchmark.json
+analytics-data
 android
+android/.gradle
+android/app
+android/app/build
 android/captures
 android/gradlew
 android/gradlew.bat
 android/key.properties
 android/local.properties
 androidGeneratedPluginRegistrant.java
+anti_pseudo_algorithmic_report_*.json
+anti_pseudo_algorithmic_summary_*.txt
+apc.php
+apex-scripts
+apex-scripts/log
 api-docs
 api-docs-source
+api-keys.json
+api/index.js
+api/index.js.map
+api_key.txt
+api_keys.py
 api_keys.txt
 app
 app*.js
 app*.js.map
+app*.map
 app.*.symbols
+app.log
 app/Config
 app/Config/core.php
 app/Config/database.php
+app/Config/install.php
+app/Http/Controllers/admin
+app/Http/Controllers/admin/$projectname
+app/Models
+app/Models/$projectname
+app/Resources
+app/Resources/geoip
+app/Resources/geoip/GeoLite2-City.mmdb
+app/Resources/translations
+app/Services
+app/Services/$projectname
+app/Services/SmsService.php
+app/View
+app/View/cache
+app/View/logs
+app/View/templates_c
+app/assets
+app/assets/builds
+app/bootstrap
 app/bootstrap.php
 app/bootstrap.php.cache
+app/bundles/CoreBundle/Assets
+app/bundles/CoreBundle/Assets/css
+app/bundles/CoreBundle/Assets/css/app
+app/bundles/CoreBundle/Assets/css/app/less*.css
+app/bundles/CoreBundle/Assets/css/libraries*.css
+app/bundles/CoreBundle/Assets/pictograms
 app/cache
+app/code/Magento
+app/code/Magento/TestModule
+app/config/config.php
+app/config/config_local.php
+app/config/local*.php
 app/config/parameters.ini
+app/config/parameters.old.yml
+app/config/parameters.php
 app/config/parameters.yml
+app/config/parameters_defaults.php
+app/config/paths_local.php
+app/config_sandbox
+app/console
+app/db
 app/etc
+app/etc/config.php
+app/etc/env.php
 app/etc/local.xml
+app/lib
+app/lib/composer.phar
 app/logs
 app/phpunit.xml
 app/spool
 app/storage
+app/tests.bootstrap
 app/tmp
-application-dev.properties
-application-dev.yml
-application-local.properties
-application-local.yml
+app/webroot
+app/webroot/files
+app/webroot/theme/PROJECT
+app/webroot/theme/PROJECT/Pages
+app/webroot/theme/PROJECT/Pages/empty
+appSettings.xml
+appengine-generated
+applet
+application.css
+application.js
+application.linux-arm64
+application.linux-armv6hf
+application.linux32
+application.linux64
+application.macosx
+application.windows32
+application.windows64
+application/cache
+application/files
+application/logs
+apps/*
+apps/*/node_modules
+appsettings.Local.json
+apt-get install git-secrets  # Linux
 ar-lib
-argfile
+archive
+arm
+arm-p
 artifacts
+assets
+assets/Uploads
+assets/_combinedfiles
+assets/_resampled
+assets/avatars
+assets/ckeditor
+assets/ckeditor/build
+assets/jsconfig.json
+assets/node_modules
+atlassian
 atlassian-ide-plugin.xml
 auth.json
+authorize.php
 auto
 auto-save-list
 autom4te.cache
+automation
 autoscan*.log
+autoscan-*.log
+autoscan.log
 aws-exports.js
+aws_credentials
 awsconfiguration.json
+backend
+backend "s3" {
+backend/GenerateLicense.cs
+backend/GenerateLicense.csproj
+backend/audio_transcript.json
+backend/configKeys.js
+backend/license.key
+backend/node_modules
+backend/serviceAccountKey.json
+backend/web
+backend/web/index-test.php
+backend/web/index.php
+backend/web/robots.txt
+backtest_results
+backup_acsprset.spr
+backups
+batch*.txt
+bazel-
+bazel-out
+bb.out
+bb.out.
 bh_unicode_properties.cache
 bin
+bin-debug
+bin-release
+bin/                   # Compiled binaries
+bin/*.ap_
+bin/.phpunit
+bin/RhoBundle
 bin/cache
+bin/ci
+bin/dev
 bin/internal
 bin/internal/bootstrap.bat
 bin/internal/bootstrap.sh
+bin/ldap
+bin/libs
 bin/mingit
+bin/target
+bin/tmp
+binance_speed_analyzer.py
+bitrix
+bitrix/components
+bitrix/components/bitrix
+bitrix/gadgets
+bitrix/gadgets/bitrix
+bitrix/php_interface
+bitrix/php_interface/dbconn.php
 bld
+blib
 blob-report
+blockchain
+blockchain/geth
+blockchain/history
+blockchain/keystore
+blog
+blog/drafts
+bluej.pkh
+bom
+book
+boot.php
+boot_out.txt
 bootstrap
+bootstrap.css
+bootstrap.js
+bootstrap.json
+bootstrap.jsonp
 bootstrap/cache
 bootstrap/compiled.php
+bootstrap/data
+bootstrap/tmp
 bower.json
 bower_components
+brew install git-secrets  # macOS
+brew install gitleaks  # macOS
+buck-out
+bucket = "my-terraform-state"
 build         # Solo directorio build en la raíz
-build-cache
+build-
+build-dir
 build-iPhoneOS
 build-iPhoneSimulator
+build-info.json
 build-sbt
+build.log
+build.ninja
 build.out
-build.sh
-build.xml
+build.properties
 build/Release
+build/apache-maven
+build/build
+build/coverage
+build/linux-build
+build/packages
+build/packaging
+build/scala
+build/zinc
 buildNumber.properties
 buildSrc
+buildSrc/.gradle
 buildSrc/build
+build_*_vc10
+build_*_xcode
+build_isolated
+build_local
+build_package_test
+build_production
+build_staging
+build_webpack
+builtins
 bundle
+bundles
 cabal-dev
 cabal.project.local
 cabal.project.local~
 cabal.sandbox.config
-cache
+cache-downloads
+cachegrind.out
+cachegrind.out.
+callgrind.out
+callgrind.out.
 captures
 capybara-*.html
+catalog
 cboe_pipeline
+cd ~
+cd ~/homelabs
+cdaelerybeat-schedule.db
+cdk.out
+cdktf.log
+cdktf.out
 celerybeat-schedule
 celerybeat.pid
+cert
+cfg
+cfg/*.py
+cfg/cpp
+charts
+charts/*.tgz
+chat_history.db
 chatbot
 chatbot/__pycache__
 checkouts
+checkpoint
+cicd_demo_gcp_creds.json
 classes
+classes_gen
+classic.json
+classic.jsonp
+claude-artifacts
+claude-dev
+claude-swarm
+cli
+client
+client/.angular
 client/app/styles
 client/app/styles/style.css
+client/dist
+client_secret*.json
 cljs-test-runner-out
 cmake-build-
 cmake-build-debug
 cmake-build-release
 cmake_install.cmake
+cobertura.ser
+cocos/scripting/lua-bindings/proj.ios_mac
+cocos/scripting/lua-bindings/proj.ios_mac/build
+codegen
 com_crashlytics_export_strings.xml
 compile
 compile_commands.json
-compiled
+compiler/ballerina-lang/src/main/resources/grammar
+compiler/ballerina-lang/src/main/resources/grammar/BallerinaLexer.tokens
+component
+components
+components/com_ajax
+components/com_banners
+components/com_config
+components/com_contact
+components/com_content
+components/com_contenthistory
+components/com_fields
+components/com_finder
+components/com_mailto
+components/com_media
+components/com_menus
+components/com_modules
+components/com_newsfeeds
+components/com_privacy
+components/com_search
+components/com_tags
+components/com_users
+components/com_wrapper
+components/index.html
 composer
 composer.phar
-config
+composer/modules/web
+composer/modules/web/dist-electron
+composer_backup.json
+conan.lock
+conan_paths.
+conanbuildinfo.
+conaninfo.txt
+conda-env
+conf
+conf/*.cmd
+conf/*.conf
+conf/*.properties
+conf/*.sh
+conf/*.xml
+conf/java-opts
+conf/slaves
+config.cache
+config.codekit
+config.codekit3
 config.guess
 config.h.in
 config.ini
+config.local.
+config.local.fish
+config.local.py
+config.local.yml # Your local config
 config.log
+config.php
 config.status
 config.sub
+config.wyam.hash
 config/*.secret.exs
+config/.env
 config/app.php
-config/application-local.yml
+config/autoload
+config/autoload/*.local.php
 config/credentials.yml.enc
+config/database.json
 config/database.yml
+config/development
 config/initializers
 config/initializers/secret_token.rb
-config/log4j2-local.yml
+config/local.json
 config/master.key
+config/sa.php
+config/secrets.json
 config/secrets.yml
+config/settings.inc.php
+config/settings.old.php
+config/site.php
+config/themes
+config/xml
+config_override.php
+configs
+configuration.php
 configure
 configure.ac
 configure.scan
 connect.lock
+connection.txt
+constant
+constant/polyMesh
+constant/polyMesh/boundary
+constant/polyMesh/faces
+constant/polyMesh/neighbour
+constant/polyMesh/owner
+constant/polyMesh/points
+constant/polyMesh/refinementHistory
+constant/polyMesh/sets
+constant/polyMesh/surfaceIndex
+constant/triSurface
+constraint
+content
+content/drafts
+contents
+context.properties
+controllers
+cookbooks
+copilot
+copilot/experiments/tardis
+copilot/experiments/tardis/datasets_probe
+copilot/experiments/tardis/reports
+copilot/experiments/tardis/reports/*.jsonl
+copilot/experiments/tardis/reports/*.status.json
+copilot/experiments/tardis/reports/impulse_scan_*.json
+copilot/state
+copilot/state/runtime_state.json
+copilot/tmp
+copilot_data
+cordovatemp
+core
+core/Core
+core/Core/bin
+core/Core/obj
+core/Data.Sqlite
+core/Data.Sqlite/bin
+core/Data.Sqlite/obj
+core/cache
+core/export
+core/import
+core/packages
+core/packages/*
+cosign
+cov
 cover
+cover_db
 coverage
 coverage*.info
 coverage*.json
 coverage*.xml
+coverage*[.json, .xml, .info]
 coverage.
+coverage.*             # Test coverage
+coverage.out
 coverage.xml
+cp .env.example .env
+cp docker-compose.yml docker-compose.override.yml
+cp secrets.yaml secrets.yaml.example
+craft
+craft/storage
 crash.*.log
 crash.log
 crashlytics-build.properties
 crashlytics.properties
+creator.d.ts
+credentials
 credentials.json
+credentials.yaml
+credentials.yml
+credits.html
+cron.php
+crush.dylib
+cscope.files
+cscope.in.out
+cscope.out
+cscope.po.out
+csdp.cache
+csrc
+css.php
 csx
+custom
+custom/application
+custom/application/Ext
+custom/history
+custom/modulebuilder
+custom/modules/*
+custom/modules/*/Ext
+custom/working
+custom_components
+cwallet.sso.lck
+cypress
+cypress/reports
+cypress/results
+cypress/screenshots
+cypress/videos
 cython_debug
-data.store.json
+daily_reports
+dashboard
+dashboard/auth
+dashboard/cache
+dashboard/keys
+dashboard/session-data
+dashboard/temp
+dashboard/uploads
+data
+data/*.db
+data/DoctrineORMModule
+data/DoctrineORMModule/Proxy
+data/DoctrineORMModule/cache
+data/TechAnalysis.db
+data/aft
+data/cache
+data/logs
+data/raw
+data/sessions
+data/tmp
+data_
+database
 database.json
 database.sqlite
+database.yml
+database/connection.local
+database_connection_info.txt
+datascience_env
+datasets
 db
+db.json
 db.sqlite3
 db.sqlite3-journal
 db/*.sqlite3
+db/*.sqlite3-
 db/*.sqlite3-[0-9]
 db/*.sqlite3-journal
+db/sql
+dbt_modules
+dbt_packages
+deactivate_run.ps1
+deactivate_run.sh
+debug.log
+debugger
+debugger.pref
+defaults
+demo.sql
+demo.sqldump
+demos
 depcomp
 dependency-reduced-pom.xml
+deploy
+deploy-config
 deploymentTargetDropDown.xml
 deps
+deps/build.log
+deps/deps.jl
+deps/downloads
+deps/src
+deps/usr
 derby.log
+design/backend/css
+design/backend/css/twitterbootstrap.css
+designer
+designer/*
 dev
+dev.config.js
 dev/benchmarks
 dev/benchmarks/mega_gallery
 dev/bots
 dev/bots/.recipe_deps
 dev/bots/android_tools
+dev/create-release
+dev/create-release/*final
+dev/create-release/*txt
 dev/devicelab
 dev/devicelab/ABresults*.json
 dev/docs
@@ -1038,115 +3009,399 @@ dev/docs/lib
 dev/docs/pubspec.yaml
 dev/integration_testsPods
 dev/integration_testsxcuserdata
+dev/pr-deps
 dev/tests
 dev/tests/functional
+devdata.db
+devel
+devel_isolated
 develop-eggs
+development.db
+development.test.py
 devops-ontology-workbench
+disassembly
 dist
 dist-
+dist-electron
+dist-packages
 dist-ssr
-dist/
-dist/ / build
+distributed under the License is distributed on an "AS IS" BASIS,
+dkms.conf
 dlldata.c
 dmypy.json
 doc
+doc/*.tag
 doc/api
 doc/articles/wiki
 doc/articles/wiki/*.bin
+doc/html
+doc/xml
+docgen_tmp
+docker
+docker-compose-override-volumes.yml
+docker-compose-tools.yml
+docker-compose.debug.yml
+docker-compose.dev.yaml
+docker-compose.dev.yml
+docker-compose.override.yaml
 docker-compose.override.yml
-docs
+docker-compose.prod.yml
+docker-proj.zip
+docker/psql-exec
+docker/run-p
+docker/run-q
+docker_images
+dockerscan
+dockerscan/debian-base
+dockerscan/nginx-trojanized
 docs.json
+docs/.jekyll-metadata
+docs/.vuepress/public
+docs/.vuepress/public/api-site
 docs/_book
 docs/_build
+docs/_site
+docs/api
+docs/api/generated
+docs/build
+docs/generated
+docs/nav.02.api
+docs/phpdoc-sf
+docs/site
+documentation
+download
 downloads
+drcRunDir
 drupal
 drupal.phar
 drush
 drush.phar
+dub.selections.json
+dump.rdb
+dump.rdb               # Redis dumps
+dw_php_codehinting.config
+dwsync.xml
 e2e
 e2e/*.js
 e2e/*.map
 e2e/test-output
+eagle.epf
+ebin
+ebin/*.beam
 ecf
 echo "Sensitive files found in repository!"
+ecnl
 eggs
 ehthumbs.db
 ehthumbs_vista.db
+electron.main.js
 elm-stuff
 elpa
+env-sample.php
 env.bak
+env.json
+env.php
+environment_run.ps1.env
+environment_run.sh.env
 erl_crash.dump
+error.log
+error_log
+errors.txt
+ers.txt
 eshell
 eshell/history
 eshell/lastdir
+etc
+etc/*.crt
+etc/*.csr
+etc/*.htpasswd
+etc/*.ini
+etc/*.kdbx
+example.json
+example.tf
 exit 1
+exp
+exploded-archives
+export.cfg
+export_presets.cfg
+exports
+expressionengine/config
+expressionengine/config/config.php
+expressionengine/config/database.php
+ext
+ext/.deps
+ext/Makefile
+ext/acinclude.m4
+ext/aclocal.m4
+ext/autom4te
+ext/build
+ext/config
+ext/install-sh
+ext/libtool
+ext/ltmain.sh
+ext/missing
+ext/mkinstalldirs
+ext/modules
+ext/run-tests.php
+external
 extra-pkgs
+extras
+extras/documentation
 fabric.properties
+fake-eggs
 fastapidoc_apps
 fastlane
+fastlane/FastlaneRunner
 fastlane/Preview.html
+fastlane/readme.md
 fastlane/report.xml
+fastlane/screenshots
 fastlane/screenshots*.png
 fastlane/test_output
 fi
+fileadmin
+fileadmin/_processed_
+fileadmin/_temp_
+fileadmin/user_upload
+files
+files.txt
+files/cache
+files/documents
+files/downloads
+files/tmp
 finalOutput
 finalOutput/*.js
 find . -name "*.env*" -o -name "config.*" -o -name "secret*"
+firebase-debug.log
+firebase-service-account.json
+firestore-debug.log
+firestore.indexes.json
+firestore.rules
+fish
+fish/completions
+fish_history
+fish_variables
+fishd.
+fixtures
+fixturesSQL_minimal.sql
+flows
 flutter_*.png
 flycheck_*.el
+foo.
+for more information.
+forces
+fp-info-cache
+fp.cfg
+fp.dsk
+fp.ini
+freeline
+freeline.py
+freeline_project_description.json
 frontend
+frontend/.DS_Store
+frontend/.angular
+frontend/.env.development.local
+frontend/.env.local
+frontend/.env.production.local
+frontend/.env.test.local
+frontend/.pnp
+frontend/.pnp.js
+frontend/coverage
 frontend/dist
 frontend/node_modules
+frontend/npm-debug.log
+frontend/web
+frontend/web/index-test.php
+frontend/web/index.php
+frontend/web/robots.txt
+frontend/yarn-debug.log
+frontend/yarn-error.log
+fuel
+fuel/app/cache
+fuel/app/cache/*
+fuel/app/config
+fuel/app/config/crypt.php
+fuel/app/logs/*
+fuel/app/logs/*/*
+fuel/vendor
+funclist
+functions
+functions/\[\[path\]\].js
+functions/\[\[path\]\].js.map
+game28.dta
+gcloud-key.json
+gems
+gen
 gen-external-apklibs
+generated
+generated-tests
 generated_plugin_registrant.dart
+get_addon
+get_addon.php
+geth
+git add *.md
+git add *.sh
+git add -f <filename>  # Only if you're sure it's safe!
 git add -f archivo_ignorado.py
-git add -f path/to
-git add -f path/to/file
-git add -f resources
-git add -f resources/yt-dlp
+git add -f id_rsa
+git add -f kubeconfig
 git add .
-git add src
-git add src/new_module.py
-git check-ignore -v path/to
-git check-ignore -v path/to/file
+git add .env
+git add .gitignore
+git add Vagrantfile
+git add id_rsa.pub
+git add secrets.yaml.example
+git branch -M main
+git check-ignore -v
+git check-ignore -v .vagrant
+git check-ignore -v <filename>
+git check-ignore -v kubeconfig
 git check-ignore .env config.ini secrets.json
 git check-ignore archivo.env
-git commit -m "Apply .gitignore"
-git commit -m "Remove accidentally committed file"
+git commit -m "Add SSH public key for team"
+git commit -m "Add secrets template"
+git commit -m "Initial commit: Homelabs k3s cluster setup"
+git commit -m "Initial commit: Navarasa Music Emotion Analyzer"
+git commit -m "Remove accidentally committed kubeconfig"
+git commit -m "Remove ignored files from tracking"
 git commit -m "Remove sensitive files from tracking"
+git commit -m "Stop tracking <filename>"
+git commit -m "chore(git): update gitignore for <reason>"
+git diff --staged
+git filter-branch --force --index-filter \
+git init
 git log --all --full-history -- .env
 git ls-files
 git ls-files | grep -E "\.(env|config|secret|key|pem)$"
+git ls-tree -r main --name-only
+git push
+git push -u origin main
+git push origin --force --all
+git remote add origin git@gitserver.local:repos
+git remote add origin git@gitserver.local:repos/homelabs.git
+git remote add origin https://github.com/username
+git remote add origin https://github.com/username/homelabs.git
+git remote add origin https://gitlab.com/username
+git remote add origin https://gitlab.com/username/homelabs.git
+git rm --cached <filename>
 git rm --cached archivo_sensible.env
-git rm --cached path/to
-git rm --cached path/to/file
-git rm -r --cached .
+git rm --cached kubeconfig
+git rm -r --cached --dry-run <file>
+git rm -r --cached <file>
 git rm -r --cached directorio
+git secrets --install
+git secrets --register-aws
+git status
 git status --ignored
 git status --ignored --short
-git status --short
+github-*.zip
+github-cache
+github-copilot
+gitleaks detect --source . --verbose
 go.work
 go.work.sum
 goinstall.log
-gradle
+gomock_reflect
+google_calendars.yaml
 gradle-app.setting
-gradlew
-gradlew.bat
-gruntfile.js
+graph_info.json
+gravity_full_prompt.txt
+grunt-config.json
+gtags.files
+gwt-unitCache
+hadoop-common-project/hadoop-common/src/test/resources
+hadoop-common-project/hadoop-common/src/test/resources/contract-test-options.xml
+hadoop-common-project/hadoop-kms
+hadoop-common-project/hadoop-kms/downloads
+hadoop-hdfs-project/hadoop-hdfs
+hadoop-hdfs-project/hadoop-hdfs-httpfs
+hadoop-hdfs-project/hadoop-hdfs-httpfs/downloads
+hadoop-hdfs-project/hadoop-hdfs/downloads
+hadoop-tools/hadoop-openstack/src/test/resources
+hadoop-tools/hadoop-openstack/src/test/resources/contract-test-options.xml
+harmony_media_room.conf
 healthchecksdb
+helpsearch
+high_speed_impulse_detector.py
+history.index
+home-assistant.db
+home-assistant.log
+home-assistant.log.
+home-assistant_v2.db
+home-assistant_v2.db-
+homelabs
+hooks
 hs_err_pid
-htdemucs
+hsptmp
+htaccess.txt
+htdocs
+htdocs/download
+htdocs/owee
+htdocs/plaetjes
+htdocs/tools
+htdocs/tools/alphabanner
+html
+html5_push_registrations.conf
 htmlcov
 htmldocs
+https://www.apache.org/licenses
+https://www.apache.org/licenses/LICENSE-2.0
+hugo.darwin
+hugo.linux
+hugo_stats.json
+hw_handoff
 iOSInjectionProject
+icloud
+icudtl.dat
+id_dsa
+id_ecdsa
+id_ed25519
+id_rsa
 if git ls-files | grep -E "\.(env|key|pem)$"; then
-include
+image
+image-cache
+image/cache
+image/data
+images
+images/avatars
+images/banners
+images/captchas
+images/headers
+images/index.html
+images/joomla
+images/member_photos
+images/pm_attachments
+images/powered_by.png
+images/sampledata
+images/signature_attachments
+images/smileys
+img
+impact.xsl
+impact_impact.xwbt
+imports
+inc
+includes
+index.html
 index.php
+indexing
+infer-out
+init
+input.i
+inspector
+install
+install-log.txt
 install-sh
+install.php
 install_manifest.txt
+installation
+installer
+installer/_build
+installer/deps
+installer/doc
+installer/tmp
+installer_files
 instance
 instance/observaciones.db
-integration-repo
 ios
 ios*.mode1v3
 ios*.mode2v3
@@ -1170,6 +3425,7 @@ ios/Flutter/app.zip
 ios/Flutter/ephemeral
 ios/Flutter/flutter_assets
 ios/Flutter/flutter_export_environment.sh
+ios/Pods
 ios/Runner
 ios/Runner/GeneratedPluginRegistrant.
 ios/ServiceDefinitions.json
@@ -1178,43 +3434,279 @@ iosIcon?
 iosPods
 iosprofile
 iosxcuserdata
+ip_bans.yaml
 ipch
+ipshared
 ipython_config.py
-ivy-cache
+ise_impact.cmd
+iseconfig
+javadoc
+javascripts
+javascripts/bundles
+jboss/server/all
+jboss/server/all/data
+jboss/server/all/deploy
+jboss/server/all/deploy/project.ext
+jboss/server/all/log
+jboss/server/all/log/*.log
+jboss/server/all/tmp
+jboss/server/all/work
+jboss/server/default
+jboss/server/default/data
+jboss/server/default/deploy
+jboss/server/default/deploy/project.ext
+jboss/server/default/log
+jboss/server/default/log/*.log
+jboss/server/default/tmp
+jboss/server/default/work
+jboss/server/minimal
+jboss/server/minimal/data
+jboss/server/minimal/deploy
+jboss/server/minimal/deploy/project.ext
+jboss/server/minimal/log
+jboss/server/minimal/log/*.log
+jboss/server/minimal/tmp
+jboss/server/minimal/work
+jgiven-reports
 jitwatch.out
-jmx.log
+jobs
+jobs*workspace
+joomla.xml
+jpm_tree
+js/core
+js/core/node_modules
+js/core/npm-debug.log
+js/tygh
+js/tygh/bottom_panel.js
+js/tygh/core.js
+js/tygh/notifications_center.js
+jsb
+jsb-binary
+jsb-default
+jsb-link
 jspm_packages
-jxl.log
+jssrc
+junit*.properties
+junit.xml
+junitvmwatcher*.properties
+jwt-secret.txt
+k8s*.secret
+k8s.bootstrap-credentials.env
+k8spersistence.xml
+k8spolaris-secrets.yaml
+k8spolaris.yaml
+k8spostgresql.yaml
+key    = "homelabs
+key    = "homelabs/terraform.tfstate"
+keyrings/live
+keyrings/live/pubring.gpg~
+keyrings/live/pubring.kbx~
+keyrings/live/secring.gpg
 keys.env
 keys.env.local
+keystore
+known_devices.yaml
+kobaltBuild
+kubeconfig
+language
+language/en-GB
+language/en-GB/en-GB.com_ajax.ini
+language/en-GB/en-GB.com_config.ini
+language/en-GB/en-GB.com_contact.ini
+language/en-GB/en-GB.com_content.ini
+language/en-GB/en-GB.com_finder.ini
+language/en-GB/en-GB.com_mailto.ini
+language/en-GB/en-GB.com_media.ini
+language/en-GB/en-GB.com_messages.ini
+language/en-GB/en-GB.com_newsfeeds.ini
+language/en-GB/en-GB.com_privacy.ini
+language/en-GB/en-GB.com_search.ini
+language/en-GB/en-GB.com_tags.ini
+language/en-GB/en-GB.com_users.ini
+language/en-GB/en-GB.com_weblinks.ini
+language/en-GB/en-GB.com_wrapper.ini
+language/en-GB/en-GB.files_joomla.sys.ini
+language/en-GB/en-GB.finder_cli.ini
+language/en-GB/en-GB.ini
+language/en-GB/en-GB.lib_fof.ini
+language/en-GB/en-GB.lib_fof.sys.ini
+language/en-GB/en-GB.lib_idna_convert.sys.ini
+language/en-GB/en-GB.lib_joomla.ini
+language/en-GB/en-GB.lib_joomla.sys.ini
+language/en-GB/en-GB.lib_phpass.sys.ini
+language/en-GB/en-GB.lib_phpmailer.sys.ini
+language/en-GB/en-GB.lib_phputf8.sys.ini
+language/en-GB/en-GB.lib_simplepie.sys.ini
+language/en-GB/en-GB.localise.php
+language/en-GB/en-GB.mod_articles_archive.ini
+language/en-GB/en-GB.mod_articles_archive.sys.ini
+language/en-GB/en-GB.mod_articles_categories.ini
+language/en-GB/en-GB.mod_articles_categories.sys.ini
+language/en-GB/en-GB.mod_articles_category.ini
+language/en-GB/en-GB.mod_articles_category.sys.ini
+language/en-GB/en-GB.mod_articles_latest.ini
+language/en-GB/en-GB.mod_articles_latest.sys.ini
+language/en-GB/en-GB.mod_articles_news.ini
+language/en-GB/en-GB.mod_articles_news.sys.ini
+language/en-GB/en-GB.mod_articles_popular.ini
+language/en-GB/en-GB.mod_articles_popular.sys.ini
+language/en-GB/en-GB.mod_banners.ini
+language/en-GB/en-GB.mod_banners.sys.ini
+language/en-GB/en-GB.mod_breadcrumbs.ini
+language/en-GB/en-GB.mod_breadcrumbs.sys.ini
+language/en-GB/en-GB.mod_custom.ini
+language/en-GB/en-GB.mod_custom.sys.ini
+language/en-GB/en-GB.mod_feed.ini
+language/en-GB/en-GB.mod_feed.sys.ini
+language/en-GB/en-GB.mod_finder.ini
+language/en-GB/en-GB.mod_finder.sys.ini
+language/en-GB/en-GB.mod_footer.ini
+language/en-GB/en-GB.mod_footer.sys.ini
+language/en-GB/en-GB.mod_languages.ini
+language/en-GB/en-GB.mod_languages.sys.ini
+language/en-GB/en-GB.mod_login.ini
+language/en-GB/en-GB.mod_login.sys.ini
+language/en-GB/en-GB.mod_menu.ini
+language/en-GB/en-GB.mod_menu.sys.ini
+language/en-GB/en-GB.mod_random_image.ini
+language/en-GB/en-GB.mod_random_image.sys.ini
+language/en-GB/en-GB.mod_related_items.ini
+language/en-GB/en-GB.mod_related_items.sys.ini
+language/en-GB/en-GB.mod_search.ini
+language/en-GB/en-GB.mod_search.sys.ini
+language/en-GB/en-GB.mod_stats.ini
+language/en-GB/en-GB.mod_stats.sys.ini
+language/en-GB/en-GB.mod_syndicate.ini
+language/en-GB/en-GB.mod_syndicate.sys.ini
+language/en-GB/en-GB.mod_tags_popular.ini
+language/en-GB/en-GB.mod_tags_popular.sys.ini
+language/en-GB/en-GB.mod_tags_similar.ini
+language/en-GB/en-GB.mod_tags_similar.sys.ini
+language/en-GB/en-GB.mod_users_latest.ini
+language/en-GB/en-GB.mod_users_latest.sys.ini
+language/en-GB/en-GB.mod_weblinks.ini
+language/en-GB/en-GB.mod_weblinks.sys.ini
+language/en-GB/en-GB.mod_whosonline.ini
+language/en-GB/en-GB.mod_whosonline.sys.ini
+language/en-GB/en-GB.mod_wrapper.ini
+language/en-GB/en-GB.mod_wrapper.sys.ini
+language/en-GB/en-GB.tpl_atomic.ini
+language/en-GB/en-GB.tpl_atomic.sys.ini
+language/en-GB/en-GB.tpl_beez3.ini
+language/en-GB/en-GB.tpl_beez3.sys.ini
+language/en-GB/en-GB.tpl_beez5.ini
+language/en-GB/en-GB.tpl_beez5.sys.ini
+language/en-GB/en-GB.tpl_beez_20.ini
+language/en-GB/en-GB.tpl_beez_20.sys.ini
+language/en-GB/en-GB.tpl_protostar.ini
+language/en-GB/en-GB.tpl_protostar.sys.ini
+language/en-GB/en-GB.xml
+language/en-GB/install.xml
+language/index.html
+language/overrides
 last-change
+latex
+latex.out
+layouts
+layouts/index.html
+layouts/joomla
+layouts/libraries
+layouts/plugins
+lcov.info
 lerna-debug.log
+lgt_tmp
+lia.cache
 lib
 lib-cov
 lib/.precomp
 lib/bs
 lib/bundler
 lib/bundler/man
+lib/debug
+lib/generated_plugin_registrant.dart
+lib/internal/flex/uploader
+lib/internal/flex/uploader/.actionScriptProperties
+lib/internal/flex/uploader/.flexProperties
+lib/internal/flex/uploader/.project
+lib/internal/flex/uploader/.settings
+lib/internal/flex/varien
+lib/internal/flex/varien/.actionScriptProperties
+lib/internal/flex/varien/.flexLibProperties
+lib/internal/flex/varien/.project
+lib/internal/flex/varien/.settings
 lib/js
 lib/ocaml
+lib/release
 lib64
+lib_managed
 libpeerconnection.log
+libraries
+libraries/classmap.php
+libraries/cms
+libraries/cms.php
+libraries/fof
+libraries/idna_convert
+libraries/import.legacy.php
+libraries/import.php
+libraries/index.html
+libraries/joomla
+libraries/legacy
+libraries/loader.php
+libraries/php-encryption
+libraries/phpass
+libraries/phpmailer
+libraries/phputf8
+libraries/simplepie
+libraries/src
+libraries/vendor
+library
+libs
 libtool
-license.txt
+licenc.txt
+license.key
+limitations under the License.
 linked_*.ds
+lint
+lint-r-report.log
+lint/generated
+lint/intermediates
+lint/outputs
+lint/tmp
+linux
 linux/flutter
 linux/flutter/generated_plugin_registrant.cc
 linux/flutter/generated_plugin_registrant.h
 linux/flutter/generated_plugins.cmake
+live_trading_*.log
+lnInclude
+local
+local-config.yml
+local-patch
+local.config.js
+local.meta
 local.mk
 local.properties
 local.sbt
+local.settings.json
+local_conf.php
+local_mail
 local_settings.py
+locales
 log
-logs
+log.
+log.html
+log.txt
+logfile
 logs/          # Directorio logs y todo su contenido
+logtalk_doclet_logs
+logtalk_tester_logs
+lpfg.log
+lsys.exp
+lsys.i
+lsys.ii
 ltmain.sh
-lucene
+luac.out
+lvsRunDir
 m4
 m4/libtool.m4
 m4/ltoptions.m4
@@ -1224,18 +3716,92 @@ m4/lt~obsolete.m4
 macos/Flutter
 macos/Flutter/GeneratedPluginRegistrant.swift
 macos/Flutter/ephemeral
+mails
+makeplan.mk
+manifest/cache
+manifest/logs
+manifest/tmp
 marimo
 marimo/_lsp
 marimo/_static
+massif.out
+massif.out.
+mcp-server-config.json
 mdate-sh
 media
+media/archive
+media/assets
+media/bundles
+media/cms
+media/com_associations
+media/com_contact
+media/com_content
+media/com_contenthistory
+media/com_fields
+media/com_finder
+media/com_joomlaupdate
+media/com_menus
+media/com_modules
+media/com_wrapper
+media/contacts
+media/css
+media/css/app.css
+media/css/libraries.css
+media/css/mediaelementplayer.min.css
+media/css/modal.min.css
 media/customer
+media/dashboards
 media/dhl
 media/downloadable
+media/editors
+media/files
+media/image
+media/images
+media/index.html
+media/js
+media/js/app.js
+media/js/froogaloop.min.js
+media/js/jquery.min.js
+media/js/libraries.js
+media/js/mautic-form.js
+media/jui
+media/libraries
+media/libraries/ckeditor
+media/mailto
+media/media
+media/mod_languages
+media/mod_sampledata
+media/music
+media/overrider
+media/pdf
+media/plg_captcha_recaptcha
+media/plg_captcha_recaptcha_invisible
+media/plg_quickicon_extensionupdate
+media/plg_quickicon_joomlaupdate
+media/plg_quickicon_privacycheck
+media/plg_system_highlight
+media/plg_system_stats
+media/plg_twofactorauth_totp
+media/system
+media/temp
+media/unknown
+media/video
 media/xmlconnect
 media/xmlconnect/custom
 media/xmlconnect/original
 media/xmlconnect/system
+meson-logs
+meson-private
+meson_benchmark_setup.dat
+meson_test_setup.dat
+metastore
+metastore_db
+micro
+micro/backups
+micro/buffers
+middleware.properties
+min
+misc
 misc.xml
 misc/cgo/life
 misc/cgo/life/run.out
@@ -1244,103 +3810,596 @@ misc/cgo/stdio/run.out
 misc/cgo/testso
 misc/cgo/testso/main
 missing
+mix-manifest.json
+ml_models
+ml_models/*.joblib
+ml_models/*.pkl
+mm.log
 mnesia
+moc_*.cpp
+moc_*.h
+mock-data
+mockup
+model_progress
+models
+modern.json
+modern.jsonp
+modules
+modules-dev
+modules.order
 modules.xml
+modules/KonySyncLib.js
+modules/backend
+modules/blog
+modules/cms
+modules/core
+modules/index.html
+modules/kony_sdk.js
+modules/mod_articles_archive
+modules/mod_articles_categories
+modules/mod_articles_category
+modules/mod_articles_latest
+modules/mod_articles_news
+modules/mod_articles_popular
+modules/mod_banners
+modules/mod_breadcrumbs
+modules/mod_custom
+modules/mod_feed
+modules/mod_finder
+modules/mod_footer
+modules/mod_languages
+modules/mod_login
+modules/mod_menu
+modules/mod_random_image
+modules/mod_related_items
+modules/mod_search
+modules/mod_stats
+modules/mod_syndicate
+modules/mod_tags_popular
+modules/mod_tags_similar
+modules/mod_users_latest
+modules/mod_whosonline
+modules/mod_wrapper
+modules/session
+modules/shop
+modules/system
+modules/users
+mongodb+srv://himanshu:Himanshu06@cluster0.gjqrhqb.mongodb.net
+mongodb+srv://himanshu:Himanshu06@cluster0.gjqrhqb.mongodb.net/navarasa
 mono_crash.
+mono_crash.*.json
+msbuild.err
+msbuild.log
+msbuild.wrn
+msg
+msg/*Action.msg
+msg/*ActionFeedback.msg
+msg/*ActionGoal.msg
+msg/*ActionResult.msg
+msg/*Feedback.msg
+msg/*Goal.msg
+msg/*Result.msg
+msg/_*.py
+msg_gen
+mu-plugins
+mu-plugins/force-strong-passwords
+mu-plugins/mu-plugin
+mu-plugins/mu-plugin.php
+mu-plugins/slt-force-strong-passwords.php
+mu-plugins/stop-long-comments.php
+mu-plugins/wpe-wp-sign-on-plugin
+mu-plugins/wpengine-common
+mup.js
+mup.json
 mutants.out
+my-experiments
+myenv
 nCrunchTemp_
+nacl_irt_x86_64.nexe
+namecheap.tf
+native_compute_profile_*.data
+nativeapi.json
+nativebindings/Android/*
+nativebindings/Android/*/Kony_SyncV2-Android-*
+nativebindings/Android/*/Kony_SyncV2-Android-*.zip
+nativebindings/Android/*/Kony_SyncV2-Android-*/tern.json
+nativebindings/iOS/*
+nativebindings/iOS/*/Kony_SyncV2-iOS-*
+nativebindings/iOS/*/Kony_SyncV2-iOS-*.zip
+nativebindings/iOS/*/Kony_SyncV2-iOS-*/tern.json
+natives_blob.bin
+nb-configuration.xml
+nbactions.xml
 nbbuild
 nbdist
 nbproject
+nbproject/Makefile-
+nbproject/Makefile-*.mk
+nbproject/Package-*.bash
 nbproject/private
 network-security.data
+next-env.d.ts
+nginx-access.log
+nginx-error.log
+nginx-ssl.access.log
+nginx-ssl.error.log
+nia.cache
 nimblecache
 nimcache
+nlia.cache
+node
 node_modules
 node_modules # node_modules en cualquier subdirectorio
+node_modules.bun
+node_tmp
+nohup.out
 nosetests.xml
+notebooks
+notebooks/verify_*.ipynb
 npm-debug.log
+npm-debug.log.
+nra.cache
 nunit-*.xml
+nupkg
+nw_100_percent.pak
+nw_200_percent.pak
+nytprof.out
+object_script.*.Debug
+object_script.*.Release
+octave-workspace
+old
+olvasdel.html
+online_learning.log
+ood.flag
+opa-debug-js
+optimized-images
 orleans.codegen.cs
+orphaned-proofs.prf
 oscrypto-ca-bundle.crt
 out
 out-tsc
-output
+output-
 output-metadata.json
 output.json
-overlays
+output.xml
+override
 override.tf
 override.tf.json
+ozw_log.txt
 package
-packages
+package-cache
+package-json.lock
+package-lock.json  # Uncomment if using yarn
+packages/*
+packages/*/node_modules
 packages/flutter
 packages/flutter/coverage
+packer_cache
+packfile
 paket-files
+panic*.log.
+par_usage_statistics.html
 parts
+passwords.
+patched-src
+pawn.lock
 phase1
 phase1/keys.env
+php-cs-fixer
+php-errors.log
+php_error.log
+phpcs.xml
+phproad
+phpunit.init.php
+phpunit.phar
 phpunit.xml
+phue.conf
 pickle-email-*.html
 pids
+pimcore
+pinegrow.json
 pip-delete-this-directory.txt
 pip-log.txt
+pip-selfcheck.json
 pip-wheel-metadata
 pkg
+plan.txt
+planning
+planning/cfg
+planning/docs
+planning/src
+platforms
+play-cache
+play-stash
 playground.xcworkspace
 playwright-report
+plex.conf
+plugin.xml
+plugins
+plugins/actionlog
+plugins/actionlog/joomla
+plugins/android.json
+plugins/authentication
+plugins/authentication/cookie
+plugins/authentication/example
+plugins/authentication/gmail
+plugins/authentication/joomla
+plugins/authentication/ldap
+plugins/captcha
+plugins/captcha/recaptcha
+plugins/captcha/recaptcha_invisible
+plugins/content
+plugins/content/confirmconsent
+plugins/content/contact
+plugins/content/emailcloak
+plugins/content/example
+plugins/content/fields
+plugins/content/finder
+plugins/content/geshi
+plugins/content/joomla
+plugins/content/loadmodule
+plugins/content/pagebreak
+plugins/content/pagenavigation
+plugins/content/vote
+plugins/editors
+plugins/editors-xtd
+plugins/editors-xtd/article
+plugins/editors-xtd/contact
+plugins/editors-xtd/fields
+plugins/editors-xtd/image
+plugins/editors-xtd/menu
+plugins/editors-xtd/module
+plugins/editors-xtd/pagebreak
+plugins/editors-xtd/readmore
+plugins/editors/codemirror
+plugins/editors/none
+plugins/editors/tinymce
+plugins/extension
+plugins/extension/example
+plugins/extension/joomla
+plugins/fields
+plugins/fields/calendar
+plugins/fields/checkboxes
+plugins/fields/color
+plugins/fields/editor
+plugins/fields/imagelist
+plugins/fields/integer
+plugins/fields/list
+plugins/fields/media
+plugins/fields/radio
+plugins/fields/repeatable
+plugins/fields/sql
+plugins/fields/text
+plugins/fields/textarea
+plugins/fields/url
+plugins/fields/user
+plugins/fields/usergrouplist
+plugins/finder
+plugins/finder/categories
+plugins/finder/contacts
+plugins/finder/content
+plugins/finder/newsfeeds
+plugins/finder/tags
+plugins/index.html
+plugins/installer
+plugins/installer/folderinstaller
+plugins/installer/packageinstaller
+plugins/installer/urlinstaller
+plugins/ios.json
+plugins/privacy
+plugins/privacy/actionlogs
+plugins/privacy/consents
+plugins/privacy/contact
+plugins/privacy/content
+plugins/privacy/message
+plugins/privacy/user
+plugins/quickicon
+plugins/quickicon/extensionupdate
+plugins/quickicon/index.html
+plugins/quickicon/joomlaupdate
+plugins/quickicon/phpversioncheck
+plugins/quickicon/privacycheck
+plugins/sampledata
+plugins/sampledata/blog
+plugins/search
+plugins/search/categories
+plugins/search/contacts
+plugins/search/content
+plugins/search/index.html
+plugins/search/newsfeeds
+plugins/search/tags
+plugins/search/weblinks
+plugins/system
+plugins/system/actionlogs
+plugins/system/cache
+plugins/system/debug
+plugins/system/fields
+plugins/system/highlight
+plugins/system/index.html
+plugins/system/languagecode
+plugins/system/languagefilter
+plugins/system/log
+plugins/system/logout
+plugins/system/logrotation
+plugins/system/p3p
+plugins/system/privacyconsent
+plugins/system/redirect
+plugins/system/remember
+plugins/system/sef
+plugins/system/sessiongc
+plugins/system/stats
+plugins/system/updatenotification
+plugins/twofactorauth
+plugins/twofactorauth/totp
+plugins/twofactorauth/yubikey
+plugins/user
+plugins/user/contactcreator
+plugins/user/example
+plugins/user/index.html
+plugins/user/joomla
+plugins/user/profile
+plugins/user/terms
+pm_to_blib
+pnacl
 pnpm-debug.log
 po
 po/*~
+poetry.lock
 poetry.toml
 pom.xml
+pom.xml.asc
 pom.xml.next
 pom.xml.releaseBackup
 pom.xml.tag
 pom.xml.versionsBackup
+postProcessing
+posts.sql
+pre-commit-
+prebuilt
+preferences.arc
+prepros-6.config
+prepros.cfg
+prepros.config
+prime
+priv
+priv/static
+private
+processor
+prodDb.
 profile.cov
 profile_default
+profiles
+proguard
 project
+project.cfg
 project.fragment.lock.json
+project.greenfoot
 project.lock.json
+project.pbxproj.backup
+project.properties
 project.xcworkspace
+project/boot
+project/build
+project/build/target
+project/plugins
+project/plugins/lib_managed
+project/plugins/project
+project/plugins/project/build.properties
+project/plugins/src_managed
+project/plugins/target
+project/project
+project/target
+project_readiness_report_*.json
+projectmetals.sbt
+projects
+projectsplash.xml
+protected
+protected/data
+protected/data/*.db
+protected/runtime
+protrace
+proxy
+proxy/data
+proxy/letsencrypt
+psalm.xml
 psd
+pub
+pub/media
+pub/media/*.
+pub/media/analytics
+pub/media/attribute
+pub/media/captcha
+pub/media/catalog
+pub/media/custom_options
+pub/media/customer
+pub/media/downloadable
+pub/media/favicon
+pub/media/import
+pub/media/logo
+pub/media/theme
+pub/media/theme_customization
+pub/media/tmp
+pub/media/wysiwyg
+pub/robots.txt
+pub/sitemap
+pub/sitemap.xml
+pub/static
 public
+public/.DS_Store
+public/.user.ini
+public/_constants.php
+public/_install
+public/_install/_license-key.txt
+public/_install/data/caches
+public/_install/data/caches/smarty_cache
+public/_install/data/caches/smarty_compile
+public/_repository
+public/_repository/upgrade
 public/assets
 public/build
+public/converters
+public/data
+public/dist
+public/firebase-messaging-sw.js
+public/generated
 public/hot
+public/imager
+public/myadmin
+public/myadmin/LICENSE
+public/myadmin/README.md
+public/myadmin/json
+public/myadmin/json/local
 public/packs
 public/packs-test
+public/resources
 public/storage
 public/system
+public/uploadfiles
 public/uploads
+public/webstatic
 public_html
 public_html/hot
 public_html/storage
 publish
+publish/dist
+publish/dist/license.key
 pubspec.lock
+pulltbl.bck
+pvsbin
 py-compile
+pyozw.sqlite
 pyrightconfig.json
-python3 -m venv venv
-python3 main_simple.py
-python3 setup_ddd.py py2app
+python
+python/deps
+python/lib
+python/lib/pyspark.zip
+python/pyspark
+python/pyspark/python
+python/test_coverage
+python/test_coverage/coverage_data
+python/test_coverage/htmlcov
+pythontex-files-
 pyvenv.cfg
+qrc_*.cpp
+qtcreator-
+quick-test
+quick-test/quick-test.log
+quick-test/runnable
+quick_gen_project_*_autogen.bat
+quick_gen_project_*_autogen.bat.meta
+quick_gen_project_*_autogen.sh
+quick_gen_project_*_autogen.sh.meta
 rabbitmq
 rabbitmq-data
 rcf
 rdoc
 readme.html
-rebel.xml
+rebar3.crashdump
+recordings
+recovery
+region = "us-west-2"
+rel
+rel/example_project
 release.properties
+releases
 render.experimental.xml
 repl-temp-
 replay_pid
+replit.nix
+repo
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+report.html
+reports
+requirements.locked.txt
+rerun
 rerun.txt
-resources
+rescue-backup
+resources.pak
+resources/.arch-internal-preview.css
+resources/_gen
+resources/customlibs
+resources/customlibs/jsSrc/android/com/konylabs/ffi
+resources/customlibs/jsSrc/android/com/konylabs/ffi/ND_binary_util.java
+resources/customlibs/jsSrc/android/com/konylabs/ffi/N_KonyLogger.java
+resources/customlibs/jsSrc/android/com/konylabs/ffi/N_binarydata.java
+resources/customlibs/jsSrc/kiosk
+resources/customlibs/jsSrc/kiosk/KonyLogger.js
+resources/customlibs/jsSrc/kiosk/KonyLogger.xml
+resources/customlibs/jsSrc/kiosk/SSOFFI.js
+resources/customlibs/jsSrc/kiosk/SSOFFI.xml
+resources/customlibs/jsSrc/tabrcandroid/com/konylabs/ffi
+resources/customlibs/jsSrc/tabrcandroid/com/konylabs/ffi/ND_binary_util.java
+resources/customlibs/jsSrc/tabrcandroid/com/konylabs/ffi/N_KonyLogger.java
+resources/customlibs/jsSrc/tabrcandroid/com/konylabs/ffi/N_binarydata.java
+resources/customlibs/jsSrc/windows8
+resources/customlibs/jsSrc/windows8/KonyLogger.js
+resources/customlibs/jsSrc/windows8/KonyLogger.xml
+resources/customlibs/jsSrc/windows8/SSOFFI.js
+resources/customlibs/jsSrc/windows8/SSOFFI.xml
+resources/customlibs/jsSrc/winmobile
+resources/customlibs/jsSrc/winmobile/KonyLogger.js
+resources/customlibs/jsSrc/winmobile/KonyLogger.xml
+resources/customlibs/jsSrc/winmobile/SSOFFI.js
+resources/customlibs/jsSrc/winmobile/SSOFFI.xml
+resources/customlibs/jsSrc/winphone8
+resources/customlibs/jsSrc/winphone8/KonyLogger.js
+resources/customlibs/jsSrc/winphone8/KonyLogger.xml
+resources/customlibs/jsSrc/winphone8/SSOFFI.js
+resources/customlibs/jsSrc/winphone8/SSOFFI.xml
+resources/customlibs/jsSrc/winphone81s
+resources/customlibs/jsSrc/winphone81s/KonyLogger.js
+resources/customlibs/jsSrc/winphone81s/KonyLogger.xml
+resources/customlibs/jsSrc/winphone81s/SSOFFI.js
+resources/customlibs/jsSrc/winphone81s/SSOFFI.xml
+resources/customlibs/jsXml
+resources/customlibs/jsXml/KonyLogger.js
+resources/customlibs/jsXml/KonyLogger.xml
+resources/customlibs/jsXml/SSOFFI.js
+resources/customlibs/jsXml/SSOFFI.xml
+resources/customlibs/jsXml/binary.util.js
+resources/customlibs/jsXml/binary.util.xml
+resources/customlibs/jsXml/binarydata.js
+resources/customlibs/jsXml/binarydata.xml
+resources/customlibs/lib
+resources/customlibs/lib/android
+resources/customlibs/lib/ipad
+resources/customlibs/lib/iphone
+resources/customlibs/lib/tabrcandroid
+resources/customlibs/lib/windows10
+resources/customlibs/lib/winphone10
+resources/customlibs/sdkplugin.properties
+resources/dist
+resources/dist/monaco
+resources/hot
+resources/i18n
+resources/mobile/native/android/values
+resources/mobile/native/android/values/widgetids.xml
+resources/sass
+resources/sass/.sass-cache
+resources/tablet/native/androidtab/values
+resources/tablet/native/androidtab/values/widgetids.xml
+resources/tmp
+resources/views
+resources/views/admin
+resources/views/admin/ratecard
+resources/views/vendor
+result
+result-
 results
+rholog-
 robo
 robo.phar
+robots.txt
+robots.txt.backup
+robots.txt.dist
+roles
+rpc
+rsa_
+rsconnect
+run
 run: |
+runs
+runtime
 runtime/doc
 runtime/doc/*.html
 runtime/doc/*.mpack
@@ -1348,42 +4407,204 @@ runtime/doc/errors.log
 runtime/doc/tags.ref
 runtime/indent/testdir
 runtime/indent/testdir/*.out
+rust-project.json
+salesforce.schema
+sam.json
+sam.yaml
+samconfig.toml
+sanitycheckcpp.cc
+sanitycheckcpp.cc     # C++ specific
+sanitycheckcpp.exe    # C++ specific
+saves
+sbom
+sbom/*.json
+sc_dpiheader.h
+scalastyle-on-compile.generated.xml
+scalastyle-output.xml
+scalastyle.txt
+sccprj
+scratch.txt
+screenshot*.png
+scripts
+scripts/explore_catalog.sql
 sdist
+sdkconfig
+sdkconfig.old
+secret-*.json
 secrets
+secrets.*.js
 secrets.json
 secrets.yaml
 secrets.yml
-segments.
-segments_
+secrets/               # Any secrets directory
+secring.
+sed 's/password:.*/password: "YOUR_PASSWORD_HERE"
+sed 's/password:.*/password: "YOUR_PASSWORD_HERE"/' secrets.yaml.example
+selenium-screenshot-*.png
+selenium.php
+send_tester_critical_report.py
 server
+server.pid
+server/all
+server/all/data
+server/all/log
+server/all/tmp
+server/all/work
+server/default
+server/default/data
+server/default/deploy
+server/default/deploy/*.jar.dodeploy
+server/default/deploy/*.jar.failed
+server/default/deploy/*.war.dodeploy
+server/default/deploy/*.war.failed
+server/default/deploy/*.xml.dodeploy
+server/default/deploy/*.xml.failed
+server/default/log
+server/default/tmp
+server/default/work
+server/index.js
+server/jbossweb-standalone
+server/jbossweb-standalone/data
+server/jbossweb-standalone/log
+server/jbossweb-standalone/tmp
+server/jbossweb-standalone/work
+server/minimal
+server/minimal/data
+server/minimal/log
+server/minimal/tmp
+server/minimal/work
+server/standard
+server/standard/data
+server/standard/log
+server/standard/tmp
+server/standard/work
+service-account-key.json
+service-account.json
+services/*
+services/*/node_modules
+sessie
+session.inp
 sessions
+settings
+settings-production.json
+settings.ini
+settings/*.crun
+settings/*.cspy
+settings/*.cspy.
+settings/*.dbgdt
+settings/*.dni
+settings/*.wsdt
+settings/*.wspos
+settings/*.xcl
 setup.data
 setup.log
+sftp-config-alt*.json
 sftp-config.json
 share
 share/python-wheels
 shell
 shell/.htaccess
+silentUpgrade*.php
+silverstripe-cache
+sim-
+simulation
+simv
+simv.daidir
+simv.db.dir
+simv.vdb
 site
+site-metrics
+site/accounts
+site/cache
+site/config
+site/config/.license
+site/sessions
+sitemap
+sitemap.xml
+sitemap.xml.gz
+sites
+sites/*
+sites/*/*settings*.php
+sites/*/files
+sites/*/private
+sites/*/translations
+sites/README.txt
+sites/all/libraries
+sites/all/libraries/README.txt
+sites/all/modules
+sites/all/modules/README.txt
+sites/all/themes
+sites/all/themes/README.txt
+sites/example.sites.php
+sites/site*
+sites/site*/admin
+sites/site*/private
+sites/site*/public
+sites/site*/public/admin
+sites/site*/public/setup
+sites/site*/public/theme
+sized
 sketch
-source venv/bin
-source venv/bin/activate
+slprj
+smartgen
+smartgen/*
+smartgen/smartgen.aws
+snap
+snap/.snapcraft
+snapshot_blob.bin
+solution
+source
+source/Application
+source/Application/translations
+source/Application/views
+source/Application/views/admin
+source/Application/views/azure
+source/Application/views/flow
+source/inspector.html
+source/modules
+source/out
+source/out/admin
+source/out/azure
+source/out/downloads
+source/out/flow
+source/out/media
+source/out/pictures
+source/tmp
+source_gen
+source_gen.caches
+spark-*-bin-*.tgz
+spark-tests.log
+spark-warehouse
 spec
 spec/examples.txt
+spec/fixtures
 spec/reports
 spec/tmp
-spring-*
-spring-*/build
-spring-*/src/main/java/META-INF
-spring-*/src/main/java/META-INF/MANIFEST.MF
-spring-shell.log
-spring-test
-spring-test/test-output
+specialized_pseudo_fraud_report_*.json
+specialized_pseudo_fraud_summary_*.txt
+sph*.php
+spring
+sql
+sql/docs
+sql/hive-thriftserver
+sql/hive-thriftserver/test_warehouses
+sql/site
 sql_app.db
 src
+src-bex
+src-bex/js
+src-bex/js/core
+src-bex/www
+src-capacitor
+src-capacitor/node_modules
+src-capacitor/www
+src-cordova
+src-cordova/node_modules
+src-cordova/platforms
+src-cordova/plugins
+src-cordova/www
+src-gen
 src/*.
-src/asciidoc
-src/asciidoc/build
 src/cmd/cgo
 src/cmd/cgo/zdefaultcc.go
 src/cmd/dist
@@ -1393,12 +4614,18 @@ src/cmd/go/internal/cfg/zdefaultcc.go
 src/cmd/go/internal/cfg/zosarch.go
 src/cmd/internal/objabi
 src/cmd/internal/objabi/zbootstrap.go
+src/config
+src/config/config.json
+src/configKeys.js
+src/environments
+src/environments/.env.
+src/gatsby-types.d.ts
 src/go/build
 src/go/build/zcgo.go
 src/go/doc
 src/go/doc/headscan
-src/main/webapp
-src/main/webapp/libs
+src/main/resources
+src/main/resources/rebel.xml
 src/nvim/po
 src/nvim/po/*.ck
 src/nvim/po/vim.pot
@@ -1417,29 +4644,102 @@ src/nvim/testdir/valgrind.
 src/nvim/testdir/viminfo
 src/runtime/internal/sys
 src/runtime/internal/sys/zversion.go
+src/translations
+src/translations/template.
 src/unicode
 src/unicode/maketables
+src_managed
+srcmaps.txt
+srcrenames.txt
+srcund
+srv
+srv/_*.py
+srv_gen
+ssl
+stacktrace.log
+stage
+stamp-h1
 stamp-h?
+start.sh
+stat
 static
 static/        # Si se generan archivos estáticos
+static/companies.bson
+static/companies.json
+static/generated
+static/uploads
+staticfiles
+status.txt
+stellar.yaml
 storage
 storage/*.key
+storage/api-docs
 storage/app
+storage/app/public
 storage/framework
+storage/framework/cache
+storage/framework/sessions
+storage/framework/views
 storage/logs
 storage/pail
-subject
+storybook-static
+streaming-tests.log
+string_table.txt
+studio_log
+stylesheets
+stylesheets/bundles
+subprojects
+svg-inkscape
+symphony
+sympy-plots-for-*.tex
 sync
+synthesis
 sysinfo.txt
+system
+system/cache
+system/expressionengine/config
+system/expressionengine/config/config.php
+system/expressionengine/config/database.php
+system/logs
+system/storage
+system/tests/source/units
+system/tests/source/units/auto-tests
+tags.html
+tags.lock
+tags.temp
 target
-temp
+target-eclipse
+target_wrapper.
 temp*          # Archivos que empiecen con "temp"
+temp-testng-customsuite.xml
+tempCodeRunnerFile.py
+temp_
+temp_files
+temp_gravity_
+templates
+templates/*-template-binary
+templates/beez3
+templates/index.html
+templates/lua-template-runtime
+templates/lua-template-runtime/runtime
+templates/protostar
+templates/system
+terraform {
 terraform.rc
+terraform.tfplan
 terraform.tfstate.backup
+terragrunt-debug.tfvars.json
 test
+test-build
 test-driver
+test-local.sh
+test-modules
 test-output
+test-report
+test-result
 test-results
+test-results.
+test-servers
 test.java
 test.out
 test/garbage
@@ -1447,14 +4747,79 @@ test/garbage/*.out
 test/includes
 test/includes/post
 test/pass.out
+test/reports
+test/reports/*.xml
 test/run.out
 test/times.out
 test/tmp
 test/version_tmp
+test1.sql
+testApp
+test_data
+test_gen
+test_gen.caches
+test_report_*.md
+test_websocket_connection.py
 testbox
+testdata
+testdata/local
 testem.log
+testit-reports
+tests
+tests*.sql
+tests/*
+tests/*/proj.android-studio/app
+tests/*/proj.android-studio/app/build.xml
+tests/*/proj.android-studio/app/proguard-project.txt
+tests/*/project/proj.android-studio/app
+tests/*/project/proj.android-studio/app/build.xml
+tests/*/project/proj.android-studio/app/proguard-project.txt
+tests/*/publish
+tests/*/runtime
+tests/Shopware
+tests/Shopware/TempFiles
+tests/_output
+tests/cpp-tests/Resources
+tests/cpp-tests/Resources/audio
+tests/js-tests
+tests/js-tests/res
+tests/lua-empty-test/src
+tests/lua-empty-test/src/cocos
+tests/lua-game-controller-test/src
+tests/lua-game-controller-test/src/cocos
+tests/lua-tests/src
+tests/lua-tests/src/cocos
+tests/source/units
+tests/source/units/auto-tests
 texinfo.tex
+textpattern
+tfplan.binary
+tfplan.json
+theme
+theme/PROJECT
+theme/PROJECT/Pages
+theme/demo
+themes
+themes/*
+themes/*/cache
+themes/*/config
+themes/*/config/settings_*.json
+themes/classic
+themes/classic/views
+themes/default-bootstrap
+themes/default-bootstrap/lang
+themes/default-bootstrap/mails
+themes/default-bootstrap/modules/*
+themes/default-bootstrap/modules/*/mails
+themes/default-bootstrap/modules/*/translations
+themes/default-bootstrap/modules/*/translations/*.php
+themes/simple
 thumb
+thumbs
+time-of-build-after.log
+time-of-build-before.log
+time-of-build-both.log
+time-of-build-pretty.log
 timeline.xctimeline
 tmp
 tmp-*-doc
@@ -1462,20 +4827,106 @@ tmp/cache
 tmp/cache/models
 tmp/cache/persistent
 tmp/cache/views
+tmp/nanoc
+tmp/pids
+tmp/screenshots
 tmp/sessions
+tmp/storage
 tmp/tests
+tmtags
+to: <%= packageDir %>
+to: <%= packageDir %>/.gitignore
+token.json
+tool-plugins/intellij/src/main/antlr/org/ballerinalang/plugins/idea/grammar
+tool-plugins/intellij/src/main/antlr/org/ballerinalang/plugins/idea/grammar/BallerinaLexer.tokens
+tooldata
+tools
+tools/fbx-conv
+tools/framework-compile/bin/proj_modifier
+tools/framework-compile/bin/proj_modifier/plutil-win32
+tools/jenkins_scripts/mac/android
+tools/jenkins_scripts/mac/android/userconf.ini
+tools/tojs
+tools/tojs/user.cfg
+tools/tojs/userconf.ini
+tools/tolua
+tools/tolua/userconf.ini
+trace.out
+traceback.txt
+tradfri.conf
+trading_logs
+trained_models
+training_results
 tramp
+transcript
+translations
+translations/*.qm
+tslint.json
+tts
 typings
+typo3
+typo3_src
+typo3_src-
+typo3conf
+typo3conf/ENABLE_INSTALL_TOOL
+typo3conf/deprecation_*.log
+typo3conf/realurl_autoconf.php
+typo3conf/temp_CACHED
+typo3conf/temp_fieldInfo.php
+typo3temp
+ucli.key
+ui_*.h
+umbraco
+unit-tests.log
 unlinked.ds
 unlinked_spec.ds
+update.php
+updates
+updraft
+upgrade
+upgrade_errors.txt
+upload
+upload_backup
+uploaded
+uploads
+urgReport
+usage_statistics_webtalk.html
+user.gradle
+user.properties
+user_guide_src
+user_guide_src/build
+user_guide_src/cilexer
+user_guide_src/cilexer/build
+user_guide_src/cilexer/dist
+user_guide_src/cilexer/pycilexer.egg-info
+users
 uvicorn.log
+v*-console-*.zip
+v*-deps-*.zip
+v*-lua-runtime-*.zip
+validation/evidence/backups
+validation/evidence/backups/*.tar.gz
+validation/evidence/backups/*.zip
 var
+var/bootstrap
 var/bootstrap.php.cache
 var/cache
+var/langs
 var/log
 var/logs
 var/package
+var/phpstan-cache
 var/sessions
+var/spool
+var/tmp
+vault-keys.json
+vault.yaml
+vault.yml
+vc_hdrs.h
+vcpkg-manifest-install.log
+vcpkg_installed
+vcs.xml
+velocity.log
 vendor
 vendor/assets
 vendor/assets/bower_components
@@ -1484,13 +4935,37 @@ vendors
 venv
 venv.bak
 version
+viewdraw
 vignettes
 vignettes/*.html
 vignettes/*.pdf
+vim .gitignore
 vim-*.patch
 vite.config.js.timestamp-
 vite.config.ts.timestamp-
+vqmod
+vqmod/checked.cache
+vqmod/logs
+vqmod/mods.cache
+vqmod/vqcache
+vsim.dbg
+waf-*-
+waf3-*-
+war
+war/WEB-INF
+war/WEB-INF/classes
+war/WEB-INF/deploy
+war/gwt_bree
+warehouse
+warnings.log
 web
+web-app
+web-app/WEB-INF
+web-app/WEB-INF/classes
+web-app/plugins
+web-desktop
+web-mobile
+web.config.txt
 web/.csslintrc
 web/.editorconfig
 web/.eslintignore
@@ -1498,16 +4973,24 @@ web/.eslintrc.json
 web/.gitattributes
 web/.ht.router.php
 web/.htaccess
+web/FIRST_INSTALL
 web/INSTALL.txt
 web/LICENSE.txt
 web/README.txt
+web/assets
 web/autoload.php
 web/bundles
+web/cache
 web/composer.json
 web/composer.lock
+web/cordova
+web/cordova/platforms
+web/cordova/plugins
 web/core
 web/css
 web/example.gitignore
+web/fileadmin
+web/imager
 web/index.php
 web/js
 web/modules
@@ -1536,47 +5019,280 @@ web/sites/example.sites.php
 web/themes
 web/themes/README.txt
 web/themes/contrib
+web/typo3
+web/typo3conf
+web/typo3conf/ENABLE_INSTALL_TOOL
+web/typo3conf/PackageStates.php
+web/typo3conf/deprecation
+web/typo3conf/ext
+web/typo3conf/l10n
+web/typo3conf/realurl_autoconf.php
+web/typo3temp
 web/update.php
 web/uploads
+web/var
 web/vendor
 web/web.config
 web_modules
+webostv.conf
+website
+website/.bundle
+website/.vagrant
+website/build
+website/node_modules
+website/var
+website/var/assets
+website/var/backup
+website/var/cache
+website/var/classes
+website/var/classes/Object
+website/var/config
+website/var/config/Geo
+website/var/config/cache.xml
+website/var/config/object
+website/var/config/portal
+website/var/config/robots.txt
+website/var/config/sqlreport
+website/var/config/system.xml
+website/var/email
+website/var/log
+website/var/log/*.log
+website/var/recyclebin
+website/var/search
+website/var/system
+website/var/tmp
+website/var/user-image
+website/var/versions
+website/var/versions/asset
+website/var/versions/document
+website/var/versions/object
+website/vendor
+webtalk.log
+webtalk_impact.xml
+webtalk_pn.xml
+whale-project.code-workspace
 wheels
 windows/flutter
 windows/flutter/generated_plugin_registrant.cc
 windows/flutter/generated_plugin_registrant.h
 windows/flutter/generated_plugins.cmake
+windowsViews.xml
+wlf
+work
+workspace
+workspace.xml
+workspace/uploads
 wp-*.php
+wp-activate.php
 wp-admin
+wp-admin/error_log
+wp-app.php
+wp-blog-header.php
+wp-cli
+wp-comments-post.php
+wp-config-local.php
+wp-config-sample.php
 wp-content
+wp-content/*.php
+wp-content/advanced-cache.php
+wp-content/backup-db
+wp-content/backups
+wp-content/blogs.dir
+wp-content/cache
+wp-content/cache*.css
+wp-content/cache*.css.gz
+wp-content/cache*.html
+wp-content/cache*.html.gz
+wp-content/cache*.js
+wp-content/cache*.js.gz
+wp-content/cache/supercache
+wp-content/debug.log
 wp-content/index.php
 wp-content/languages
+wp-content/mu-plugins
+wp-content/mu-plugins/limit-login-attempts
+wp-content/mu-plugins/mu-plugin.php
+wp-content/mu-plugins/slt-force-strong-passwords.php
+wp-content/mu-plugins/wpengine-common
+wp-content/mysql.sql
+wp-content/object-cache.php
 wp-content/plugins
 wp-content/plugins/hello.php
 wp-content/plugins/index.php
+wp-content/plugins/si-captcha-for-wordpress/captcha
+wp-content/plugins/si-captcha-for-wordpress/captcha/cache
+wp-content/sunrise.php
 wp-content/themes
+wp-content/themes/*
+wp-content/themes/*/css
+wp-content/themes/*/css/dist
+wp-content/themes/*/js
+wp-content/themes/*/js/dist
+wp-content/themes/*/node_modules
+wp-content/themes/THEME-NAME
 wp-content/themes/index.php
 wp-content/themes/twenty
+wp-content/updraft
+wp-content/upgrade
 wp-content/uploads
+wp-content/uploads*.jpg
+wp-content/uploads*.png
+wp-content/w3tc-config
+wp-content/wp-cache-config.php
+wp-content/wpbackitup
+wp-cron.php
 wp-includes
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+wpcs
 wren_modules
+www
+www-test
+wwwroot
+wwwroot/node_modules
+wwwroot/umbraco
 x64
 x86
+xaw2verilog.log
+xcodebuild.log
+xcschememanagement.plist
+xcshareddata
+xcshareddata/WorkspaceSettings.xcsettings
 xcuserdata
+xill.properties
+xlnx_auto_0_xdb
 xmlrpc.php
+xst
+xtend-gen
+yalc.lock
 yarn-debug.log
 yarn-error.log
+yarn.lock          # Uncomment if using npm
+yii
+yii_test
+yii_test.bat
 ylwrap
+you may not use this file except in compliance with the License.
+zig-cache
+zig-out
+zsdoc
+zsdoc/data
+{{.ProjectName}}
+},
 ~$
+~$*.doc
+~$*.ppt
+~$*.vsd
+~$*.xls
+~aclzw.tmp
 │   └── .dockerignore      # Frontend Docker build context
+│   └── .gitignore-README.md   ✓ Committed
+│   └── ssh-nodes.sh           ✓ Committed
 │   ├── .gitignore         # Frontend-specific (Node.js/Bun
 │   ├── .gitignore         # Frontend-specific (Node.js/Bun/TypeScript)
+│   ├── CLUSTER-INFO.md        ✓ Committed
+│   ├── GIT-QUICK-REFERENCE.md ✓ Committed
+│   ├── LOKI-GUIDE.md          ✓ Committed
+│   ├── SETUP-GUIDE.md         ✓ Committed
+│   ├── install-k3s-master.sh  ✓ Committed
+│   ├── install-k3s-worker.sh  ✓ Committed
+│   ├── install-observability.sh ✓ Committed
+│   ├── setup-cluster.sh       ✓ Committed
+│   ├── verify-cluster.sh      ✓ Committed
+└── .DS_Store             ✗ Ignored
 └── .dockerignore      # Backend Docker build context
 └── backend
+├── *.log                  ✗ Ignored
 ├── .dockerignore           # Root dockerignore (for multi-stage builds)
+├── .env                  ✗ Ignored (real secrets)
+├── .env.example           ✓ Committed (template)
 ├── .gitignore              # Root monorepo gitignore (comprehensive)
+├── .gitignore              ✓ Committed
 ├── .gitignore         # Backend-specific (Python)
+├── .kube
+├── .kube/config          ✗ Ignored
+├── .vagrant
+├── .vagrant/              ✗ Ignored
+├── README.md               ✓ Committed
+├── Vagrantfile            ✓ Committed
+├── docs
+├── docs/                  ✓ Committed (folder)
 ├── frontend
+├── id_rsa                ✗ Ignored
+├── kubeconfig            ✗ Ignored
+├── scripts
+├── scripts/               ✓ Committed (folder)
+├── secrets.yaml          ✗ Ignored (real secrets)
+├── secrets.yaml.example   ✓ Committed (template)
+✅ *.log files
+✅ .gitignore itself
+✅ API keys and secrets
+✅ All .env files (including .env, .env.local, .env.production)
+✅ All .md files EXCEPT README.md
+✅ All source code (.js, .jsx, .py files)
+✅ Android Configuration:
+✅ Build Configuration:
+✅ Configuration files (package.json, vercel.json, render.yaml)
+✅ Dataset Files (`data/datasets
+✅ Dataset Files (`data/datasets/`):
+✅ Documentation:
+✅ Environment variables with MongoDB credentials
+✅ Experimental Results (`results/experiments
+✅ Experimental Results (`results/experiments/`):
+✅ Flutter Source:
+✅ Game Assets:
+✅ IDE settings (.vscode/, .idea
+✅ IDE settings (.vscode/, .idea/)
+✅ OS files (.DS_Store, Thumbs.db)
+✅ Public assets (images, etc.)
+✅ README.md (your main documentation)
+✅ Scripts:
+✅ Source Code:
+✅ Summary Visualizations (`results/visualizations
+✅ Summary Visualizations (`results/visualizations/`):
+✅ This means these won't be committed:
+✅ backend/uploads
+✅ backend/uploads/* (except .gitkeep)
+✅ dist
+✅ dist/ and build
+✅ node_modules
+✅ venv
+✓ .gitignore itself
+✓ Example
+✓ Example/template files (*.example, *.template)
+✓ README.md, documentation
+✓ Shell scripts (*.sh)
+✓ Terraform config files (*.tf)
+✓ Vagrantfile
+✗ .terraform
+✗ .terraform/ directory
+✗ .tfstate files
+✗ .tfvars files with real values
+✗ .vagrant
+✗ .vagrant/ directory
+✗ Kubeconfig files
+✗ Passwords or tokens
+✗ SSH private keys
+❌ Android Build Artifacts:
+❌ Build Artifacts:
+❌ Build artifacts and caches
+❌ Dependencies:
+❌ Editor
+❌ Editor/OS Files:
+❌ Environment & Secrets:
+❌ Environment files (.env)
+❌ Flutter Build Artifacts:
+❌ IDE configuration files
+❌ Log files (*.log)
+❌ Python bytecode (__pycache__)
+❌ Test coverage HTML reports (htmlcov
+❌ Test coverage HTML reports (htmlcov/)
+❌ Virtual environments
 !.gitignore
 !.htaccess
 !.htpasswd
@@ -1588,15 +5304,10 @@ ylwrap
 .adm
 .admin
 .adminer.php.swp
-.Backup
-.bak
-.bash_history
 .bash_logout
 .bash_profile
 .bashrc
 .bower-cachez
-.bower-registry
-.bower-tmp
 .build/
 .buildpath/
 .bz2
@@ -1609,10 +5320,9 @@ ylwrap
 .cc-ban.txt
 .cc-ban.txt.bak
 .cfg
+.checkstyle
 .cobalt
 .codeintel
-.codekit-cache
-.codio
 .compile
 .composer
 .conf
@@ -1625,18 +5335,14 @@ ylwrap
 .cpanel/
 .cshrc
 .CSV
-.CVS
 .deployignore
 .dev/
 .dump
-.eclipse
-.editorconfig
 .elasticbeanstalk/
 .elb
 .elc
 .empty-folder
 .env-example
-.env.php
 .env.sample.php
 .environment
 .error_log
@@ -1665,7 +5371,6 @@ ylwrap
 .git/logs/refs
 .git2/
 .git_release
-.gitattributes
 .gitconfig
 .gitignore.swp
 .gitignore_global
@@ -1681,14 +5386,12 @@ ylwrap
 .grunt/
 .gz
 .hash
-.hg
 .hg/
 .hg/dirstate
 .hg/requires
 .hg/store/data/
 .hg/store/undo
 .hg/undo.dirstate
-.hgignore
 .hgignore.global
 .hgrc
 .ht_wsr.txt
@@ -1716,14 +5419,8 @@ ylwrap
 .htpasswds
 .htusers
 .idea/
-.idea/.name
-.idea/compiler.xml
-.idea/copyright/profiles_settings.xml
 .idea/deployment.xml
 .idea/drush_stats.iml
-.idea/encodings.xml
-.idea/modules.xml
-.idea/scopes/scope_settings.xml
 .idea/Sites.iml
 .idea/woaWordpress.iml
 .idea/workspace(2).xml
@@ -1736,7 +5433,6 @@ ylwrap
 .idea_modules/
 .ignore
 .ignored/
-.ini
 .inst/
 .install/composer.phar
 .joe_state
@@ -1746,13 +5442,10 @@ ylwrap
 .jshintignore
 .jshintrc
 .keep
-.komodotools
 .komodotools/
-.lesshst
 .lighttpd.conf
 .listing
 .listings
-.LOCAL
 .localeapp/
 .localsettings.php.swp
 .log
@@ -1768,7 +5461,6 @@ ylwrap
 .mc/
 .memdump
 .mergesources.yml
-.meta
 .metadata/
 .modgit/
 .modman
@@ -1781,7 +5473,6 @@ ylwrap
 .mysql_history
 .nbproject/
 .netrc
-.netrwhist
 .nodelete
 .npmignore
 .npmrc
@@ -1798,7 +5489,6 @@ ylwrap
 .php_history
 .phperr.log
 .phpintel
-.phpstorm.meta.php
 .phptidy-cache
 .phpversion
 .pki
@@ -1812,7 +5502,6 @@ ylwrap
 .properties
 .psql_history
 .pst
-.pydevproject
 .python-eggs
 .qqestore/
 .rar
@@ -1828,8 +5517,6 @@ ylwrap
 .rtlcssrc
 .rubocop.yml
 .rubocop_todo.yml
-.ruby-gemset
-.ruby-version
 .s3backupstatus
 .sass-cache/
 .scrutinizer.yml
@@ -1848,13 +5535,11 @@ ylwrap
 .shrc
 .simplecov
 .sln
-.smushit-status
 .spamassassin
 .sql
 .sql.bz2
 .sql.gz
 .sqlite_history
-.ssh
 .ssh.asp
 .ssh.php
 .ssh/authorized_keys
@@ -1947,8 +5632,6 @@ ylwrap
 .ssh/id_ed25519_sk_key.pub~
 .st_cache/
 .sublime-gulp.cache
-.sublime-project
-.sublime-workspace
 .subversion
 .sucuriquarantine/
 .sunw
@@ -1962,23 +5645,19 @@ ylwrap
 .SyncIgnore
 .synthquota
 .system/sitemap.xml
-.tags
 .tags_sorted_by_file
 .tar
 .tar.bz2
 .tar.gz
-.tgitconfig
 .thumbs
 .tmproj
 .transients_purge.log
 .Trash
-.travis.yml
 .tx/
 .user.ini
 .vacation.cache
 .version
 .vgextensions/
-.viminfo
 .vimrc
 .web
 .workspace/
@@ -2069,7 +5748,6 @@ _www
 abton/spaw2/dialogs/dialog.php
 acceptance_config.yml
 access-log
-access.log
 access.phtml
 access_log
 accesslog
@@ -2191,7 +5869,6 @@ administrator.php
 administrator/
 administrator/.htaccess
 administrator/components/com_joommyadmin/phpmyadmin/
-administrator/logs
 administrators.pwd
 adminpanel.html
 adminpanel.php
@@ -2219,7 +5896,6 @@ apache/logs/access_log
 apache/logs/error.log
 apache/logs/error_log
 apc-nrp.php
-apc.php
 apc/apc.php
 apc/index.php
 api/
@@ -2333,7 +6009,6 @@ backup2023.sql
 backup2024.sql
 backup2025.sql
 backup2026.sql
-backups
 backups.7z
 backups.inc
 backups.inc.old
@@ -2411,6 +6086,8 @@ bot.txt
 buck.sql
 build.gradle
 build.local.xml
+build.sh
+build.xml
 build/build.properties
 build/buildinfo.properties
 build_config_private.ini
@@ -2433,10 +6110,8 @@ Cgishell.pl
 change.log
 changeall.php
 ChangeLog
-CHANGELOG.txt
 CHANGES.html
 changes.txt
-charts
 checked_accounts.txt
 chubb.xml
 cidr.txtа
@@ -2476,7 +6151,6 @@ conf/
 conf/server.xml
 config.bak
 config.bat
-config.codekit
 config.core
 config.dat
 config.dist
@@ -2503,7 +6177,6 @@ config.ini.txt
 config.json.cfm
 config.local
 config.old
-config.php
 config.php-eb
 config.php.bak
 config.php.dist
@@ -2552,7 +6225,6 @@ config/settings/production.yml
 configs/conf_bdd.ini
 configs/conf_zepass.ini
 configuration.ini
-configuration.php
 configuration.php.bak
 configuration.php.dist
 configuration.php.old
@@ -2568,7 +6240,6 @@ console/
 console/base/config.json
 console/payments/config.json
 content/debug.log
-CONTRIBUTING.md
 contributors.txt
 controlpanel.php
 COPYING
@@ -2588,7 +6259,6 @@ crash.php
 CREDITS
 crm/
 cron.log
-cron.php
 cron.sh
 cron/cron.sh
 crond/logs/
@@ -2623,7 +6293,6 @@ data/files/
 data/logs/
 data/tmp/
 dataBackup/
-database
 database.csv
 database.inc
 database.log
@@ -2631,7 +6300,6 @@ database.mdb
 database.php
 database.sql
 database.txt
-database.yml
 database.yml.pgsql
 database.yml.sqlite3
 database.yml_original
@@ -2669,7 +6337,6 @@ dbfix/
 dead.letter
 debug-output.txt
 debug.inc
-debug.log
 debug.php
 debug.txt
 debug/
@@ -2680,7 +6347,6 @@ demo
 demo.php
 demo/ejb/index.html
 demo/sql/index.jsp
-deploy
 deploy.rb
 Descript.ion
 desktop/index_framed.htm
@@ -2691,11 +6357,11 @@ development.esproj/
 development/
 df_main.sql
 dir.php
+dist/
 doctrine/schema/eirec.yml
 doctrine/schema/tmx.yml
 documentation/config.yml
 dom.php
-download
 download.php
 download/history.csv
 download/users.csv
@@ -2712,7 +6378,6 @@ dump.inc.old
 dump.log
 dump.old
 dump.rar
-dump.rdb
 dump.sql
 dump.sql.old
 dump.sqlite
@@ -2751,16 +6416,13 @@ error
 error-log
 error-log.txt
 error.html
-error.log
 error.log.0
 error.txt
 error/
-error_log
 error_log.gz
 error_log.txt
 errorlog
 errors.log
-errors.txt
 errors/
 errors/creation
 errors/local.xml
@@ -2774,7 +6436,6 @@ eula_en.txt
 example.php
 examples/
 exp/
-export
 export/
 export_log.old.txt
 export_log.txt
@@ -2819,7 +6480,6 @@ file_upload.php
 file_upload.php3
 file_upload.shtm
 file_upload/
-fileadmin
 fileadmin.php
 fileadmin/
 filedump/
@@ -2860,6 +6520,7 @@ global.asax.tmp
 globals
 globals.inc
 grabbed.html
+gradlew
 graph
 graphql-explorer
 graphql/console
@@ -2869,7 +6530,6 @@ haproxy_stats2
 haproxy_stats3
 HEADER.txt
 heapdump
-HISTORY
 HISTORY.rst
 home.rar
 home.tar
@@ -2882,7 +6542,6 @@ htaccess.backup
 htaccess.bak
 htaccess.dist
 htaccess.old
-htaccess.txt
 htgroup
 html/config.rb
 html/js/misc/swfupload/swfupload.swf
@@ -2903,9 +6562,7 @@ i.tar.bz2
 i.tar.gz
 i.txt
 i.zip
-id_dsa
 id_dsa.ppk
-id_rsa
 images/c99.php
 images/Sym.php
 import.php
@@ -2948,14 +6605,12 @@ index.sql
 index.xml
 info.json
 info.txt
-install
 INSTALL.html
 INSTALL.md
 INSTALL.mysql
 install.mysql.txt
 INSTALL.pgsql
 install.pgsql.txt
-install.php
 install.sql
 install.txt
 install/
@@ -2966,7 +6621,6 @@ install_
 INSTALL_admin
 installation.php
 installed.json
-installer
 installer/
 install~/
 invoker/JMXInvokerServlet
@@ -2979,7 +6633,6 @@ jmx-console
 jmx-console/
 jo.php
 joomla.rar
-joomla.xml
 joomla.zip
 js/elfinder/elfinder.php
 js/FCKeditor
@@ -3051,11 +6704,9 @@ localsettings.php.templ
 localsettings.php.txt
 localsettings.php~
 log.htm
-log.html
 log.mdb
 log.php
 log.sqlite
-log.txt
 log/
 log/access.log
 log/access_log
@@ -3071,7 +6722,6 @@ log_1.txt
 log_errors.txt
 log_status_order.txt
 logexpcus.txt
-logfile
 logfiles
 login
 login.php
@@ -3097,7 +6747,6 @@ ma/
 madspot.php
 madspotshell.php
 magmi/conf/magmi.ini
-MAINTAINERS.txt
 maintenance.flag
 maintenance.flag.bak
 maintenance.flag2
@@ -3105,7 +6754,6 @@ maintenance.php
 maintenance/
 maintenance/test.php
 maintenance/test2.php
-Makefile
 manage.py
 manage/heapdump
 manager/
@@ -3161,8 +6809,6 @@ mysqldumper/
 mysqlitedb.db
 mysqlmanager/
 nano.save
-nb-configuration.xml
-nbactions.xml
 nbproject/
 nbproject/private/private.properties
 nbproject/private/private.xml
@@ -3171,14 +6817,9 @@ nbproject/project.xml
 New%20Folder
 New%20folder%20(2)
 new.php
-nginx-access.log
-nginx-error.log
-nginx-ssl.access.log
-nginx-ssl.error.log
 nginx-status/
 nginx.conf
 nginx_status
-nohup.out
 nova
 nomad
 nst.php
@@ -3189,7 +6830,6 @@ oauth/personal-access-tokens
 oauth/scopes
 oauth/token
 odbc
-old
 old.htaccess
 old.htpasswd
 old/
@@ -3252,7 +6892,6 @@ php-cgi.core
 php-cli.ini
 php-cs-fixer.phar
 php-error
-php-errors.log
 php-info.php
 php-my-admin/
 php-myadmin/
@@ -3270,10 +6909,8 @@ php4.ini
 php5.fcgi
 php5.ini
 php_cli_errors.log
-php_error.log
 php_error_log
 php_errorlog
-php_errors.log
 php_info.php
 phpadmin/
 phpadminmy/
@@ -3421,7 +7058,6 @@ phpsecinfo/
 phpsysinfo/
 phpThumb.php
 phpThumb/
-phpunit.phar
 phpunit.xml.dist
 phymyadmin/
 pi.php
@@ -3454,7 +7090,6 @@ proftpdpasswd
 project.pbxproj
 project.xml
 propel.ini
-proxy
 prv/
 public/spaw2/dialogs/dialog.php
 publication_list.xml
@@ -3479,8 +7114,6 @@ Read_Me.txt
 readfile
 README
 README.htm
-README.md
-README.txt
 recentservers.xml
 redirect
 register.php
@@ -3540,7 +7173,6 @@ session/
 sessions/
 settings.bak
 settings.dist
-settings.ini
 settings.old
 settings.php
 settings.php.bak
@@ -3616,7 +7248,6 @@ statistics/
 stats
 stats/
 status.php
-STATUS.txt
 status.xsl
 status/
 status2
@@ -3695,8 +7326,6 @@ test8.php
 test9.php
 test_
 test_ip.php
-testing
-tests
 tests/phpunit_report.xml
 tiny_mce/
 tiny_mce/plugins/filemanager/examples.html
@@ -3736,7 +7365,6 @@ tmp/vaga.php
 tmp/whmcs.php
 tmp/xd.php
 TODO
-tools
 tools/_backups/
 Trace.axd::$DATA
 tst
@@ -3749,12 +7377,8 @@ ui/vault/
 unattend.txt
 up.php
 UPDATE.txt
-updates
-UPGRADE
 upgrade.php
-UPGRADE.txt
 upl.php
-Upload
 upload.asp
 upload.aspx
 upload.cfm
@@ -3831,7 +7455,6 @@ web.config.bakup
 web.config.old
 web.config.temp
 web.config.tmp
-web.config.txt
 web.config::$DATA
 Web.Debug.config
 Web.Release.config
@@ -3882,7 +7505,6 @@ wp-config.save
 wp-config.swp
 wp-content/backup-db/
 wp-content/backups/
-wp-content/debug.log
 wp-content/plugins/akismet/admin.php
 wp-content/plugins/akismet/akismet.php
 wp-content/plugins/count-per-day/js/yc/d00.php
@@ -3970,10 +7592,8 @@ list
 ..;/
 .apache.env
 .apt_generated/
-.architect
 .axoCover/
 .babelrc
-.bower-cache
 .bower.json
 .buildpacks
 .bundle/
@@ -3988,7 +7608,6 @@ list
 .circleci/.firebase.secrets.json.enc
 .codeclimate.yml
 .coffee_history
-.concrete/DEV_MODE
 .config/
 .config/filezilla/sitemanager.xml.xml
 .config/psi+/profiles/default/accounts.xml
@@ -3996,15 +7615,12 @@ list
 .coq-native/
 .cpcache/
 .cr/
-.csdp.cache
 .dart_tool/
 .database.env
 .db.env
 .db.xml
 .db.yaml
 .debug.env
-.deploy
-.devcontainer
 .django.env
 .dockerenv
 .drone.yml
@@ -4018,11 +7634,9 @@ list
 .env.docker
 .env.docker.dev
 .env.new
-.env.prod
 .env.prod.local
 .env.remote
 .env.test.sample
-.eunit
 .external/
 .fake/
 .filezilla/
@@ -4039,27 +7653,21 @@ list
 .histfile
 .HTF/
 .hypothesis/
-.idea/libraries
 .idea/WebServers.xml
 .import/
 .influx_history
 .install/
 .jekyll-cache/
-.jekyll-metadata
 .jestrc
 .jpilot
 .jsp
-.JustCode
 .kde
 .keys.yml
-.kitchen.local.yml
 .kitchen.yml
 .kitchen/
 .ksh_history
 .laravel.env
-.last_cover_stats
 .lein-plugins/
-.lia.cache
 .libs/
 .localcache/
 .log.txt
@@ -4073,9 +7681,6 @@ list
 .nano_history
 .navigation/
 .nginx.env
-.nia.cache
-.nlia.cache
-.nra.cache
 .nsf
 .nuget/
 .nuget/packages.config
@@ -4086,24 +7691,18 @@ list
 .password
 .passwords
 .passwrd
-.pdf
 .pgadmin3
 .pgpass
 .pgsql_history
 .postgres.env
 .pre-commit-config.yaml
 .production
-.psci
-.psci_modules
 .psqlrc
 .pub/
 .pwd
 .pylintrc
 .pytest_cache/
 .python-history
-.qmake.cache
-.qmake.stash
-.rebar
 .rediscli_history
 .reek
 .remote
@@ -4112,13 +7711,11 @@ list
 .Rproj.user/
 .rsync-filter
 .scala_history
-.sconsign.dblite
 .smileys
 .src/app.js
 .src/index.js
 .src/server.js
 .ssh/
-.ssh/known_hosts
 .stack-work/
 .style.yapf
 .stylelintrc
@@ -4129,7 +7726,6 @@ list
 .tconn/
 .tconn/tconn.conf
 .temp/
-.texpadtmp
 .tfignore
 .tmp_versions/
 .tox/
@@ -4142,7 +7738,6 @@ list
 .wwwacl
 .yardoc/
 .yo-rc.json
-.zsh_history
 .zshrc
 api-doc
 api.html
@@ -4169,7 +7764,6 @@ api/v3/documentation
 api/v3/swagger.json
 apidoc
 apidocs
-application
 backoffice/v1/ui
 build/reference/web-api/explore
 classicapi/doc/
@@ -4329,7 +7923,6 @@ __pma___
 __pycache__/
 __recovery/
 __web_console/
-_book
 _build/
 _cache/
 _debugbar/open
@@ -4351,7 +7944,6 @@ _php_errors.log
 _proxy
 _site/
 _thumbs/
-_tracks
 _UpgradeReport_Files/
 _vti_bin/
 _vti_bin/_vti_adm/admin.dll
@@ -4361,12 +7953,10 @@ _vti_pvt/
 _vti_pvt/service.pwt
 _vti_pvt/users.pwt
 _wl_cls_gen.jar
-_wpeprivate
 _wpeprivate/
 _wpeprivate/config.json
 _yardoc/
 a%5c.aspx
-a.out
 aadmin/
 abs/
 acceso
@@ -4396,7 +7986,6 @@ adm/index.html
 adm/index.php
 adm_auth
 adm_auth.php
-admin
 admin-authz.xml
 admin-database
 admin-database.php
@@ -4446,7 +8035,6 @@ admin/adminLogin
 admin/adminLogin.htm
 admin/adminLogin.html
 admin/adminLogin.php
-admin/config.php
 admin/controlpanel
 admin/controlpanel.htm
 admin/controlpanel.html
@@ -4677,7 +8265,6 @@ administrador/
 administrateur/
 administratie/
 administration
-administrator
 administrator-login/
 administrator.html
 administrator/account
@@ -4689,7 +8276,6 @@ administrator/cache/
 administrator/db/
 administrator/includes/
 administrator/index.html
-administrator/index.php
 administrator/login
 administrator/login.asp
 administrator/login.html
@@ -4787,7 +8373,6 @@ app/storage/
 app/tmp/
 app/vendor-
 appengine-generated/
-applet
 application.yml
 application/
 application/configs/application.ini
@@ -4833,7 +8418,6 @@ authenticate.php
 authentication
 authentication.php
 authlog.txt
-authorize.php
 authorizenet.log
 authuser
 authuser.php
@@ -4844,7 +8428,6 @@ autodiscover/
 autologin
 autologin.php
 autologin/
-autoscan.log
 AutoTest.Net/
 autoupdate/
 av/
@@ -4903,10 +8486,6 @@ bin-debug/
 bin-release/
 bin/
 bin/hostname
-bin/libs
-bin/RhoBundle
-bin/target
-bin/tmp
 Binaries/
 bitrix/
 bitrix/.settings
@@ -4928,7 +8507,6 @@ bitrix/modules/main/include/virtual_file_system.php
 bitrix/modules/serverfilelog-0.dat
 bitrix/modules/serverfilelog-1.dat
 bitrix/modules/serverfilelog_tmp.dat
-bitrix/php_interface/dbconn.php
 bitrix/settings
 bitrix/settings.bak
 bitrix/settings.php
@@ -4952,9 +8530,6 @@ blog/wp-login
 blog/wp-login.php
 blogindex/
 bookContent.swf
-boot.php
-bootstrap/data
-bootstrap/tmp
 bower_components/
 box.json
 Brocfile.coffee
@@ -4967,16 +8542,12 @@ buffer.conf
 bugs
 build-iPhoneOS/
 build-iPhoneSimulator/
-Build.bat
-build.log
-build.properties
 build/
 build_isolated/
 BundleArtifacts/
 bx_1c_import.php
 ca.crt
 ca.kru
-cache-downloads
 cachemgr.cgi
 caches
 cadmins/
@@ -4985,7 +8556,6 @@ capistrano/
 captures/
 cassandra/
 catalog.wci
-CATKIN_IGNORE
 cbx-portal/
 cbx-portal/js/zeroclipboard/ZeroClipboard.swf
 ccp14admin/
@@ -5038,9 +8608,6 @@ circle.yml
 ckfinder/
 claroline/phpMyAdmin/index.php
 classes/
-classes_gen
-classic.json
-classic.jsonp
 cli/
 client.ovpn
 client_.ovpn
@@ -5052,8 +8619,6 @@ clients.tar.gz
 cloud-config.yml
 cloud/
 CMakeLists.txt
-CMakeLists.txt.user
-CMakeScripts
 cmd-asp-5.1.asp
 cmdasp.aspx
 cmdjsp.jsp
@@ -5074,7 +8639,6 @@ compass.rb
 components/
 composer-bx.json
 conditions
-conf
 conf/Catalina
 conf/catalina.policy
 conf/catalina.properties
@@ -5083,7 +8647,6 @@ conf/logging.properties
 conf/tomcat-users.xml
 conf/tomcat8.conf
 conf/web.xml
-config.codekit3
 config.env
 config.hash
 config.local.php_old
@@ -5098,9 +8661,7 @@ config/autoload/
 config/config.inc
 config/db.inc
 config/development/
-config/site.php
 config/xml/
-config_override.php
 configprops
 configs.zip
 configs/
@@ -5123,10 +8684,8 @@ controllers/
 controlpanel
 controlpanel.html
 controlpanel/
-cookbooks
 cookie
 cookie.php
-COPYRIGHT.txt
 core.zip
 count_admin
 cover_db/
@@ -5135,7 +8694,6 @@ cp
 cp.html
 cpanel_file/
 craft/
-credentials
 credentials.csv
 credentials.txt
 credentials.xml
@@ -5146,14 +8704,10 @@ cron_import.log
 cron_sku.log
 crond/
 cscockpit/
-csdp.cache
-css.php
 csx/
-CTestTestfile.cmake
 custom/
 customer_login/
 CVS/Entries
-dashboard
 dat.tar.gz
 dat.zip
 data/
@@ -5183,7 +8737,6 @@ db/phpMyAdmin-3/
 db/phpMyAdmin/
 db/phpmyadmin2/
 db/phpmyadmin3/
-db/sql
 db/webadmin/
 db/webdb/
 db/websql/
@@ -5195,7 +8748,6 @@ dbadmin/index.php
 dbase.sql
 dbdump.sql
 dbweb/
-DEADJOE
 debug.py
 debug.xml
 debug/pprof
@@ -5214,14 +8766,12 @@ denglu/admin.asp
 deploy.env
 deploy.sh
 deploy.yml
-deps/deps.jl
 DerivedData/
 DerivedDataCache/
 desk/
 desktop/
 dev.env
 dev.zip
-devdata.db
 devel/
 devel_isolated/
 develop-eggs/
@@ -5233,7 +8783,6 @@ dhcp_log/
 dialin/
 dir-login/
 directadmin/
-dkms.conf
 dms/AggreSpy
 dms/DMSDump
 dns.alpha.kubernetes.io
@@ -5246,7 +8795,6 @@ docs/
 docs/_build/
 docs/api-docs.json
 doctrine/
-documentation
 documentation/
 dokuwiki/
 domcfg.nsf
@@ -5266,8 +8814,6 @@ dump.json
 dump.sh
 dump.sql.tgz
 dump.txt
-dwsync.xml
-eagle.epf
 ecf/
 ecp/
 editor-4.0.0-en.php
@@ -5393,7 +8939,6 @@ engine/
 engine/log.txt
 env.bak/
 env.js
-env.json
 env.list
 ENV/
 err.log
@@ -5409,7 +8954,6 @@ error_import
 errorPages
 errors.asp
 errors.tpl
-etc
 etc/
 etc/lib/pChart2/examples/imageMap/index.php
 etcd-apiserver-client.key
@@ -5432,31 +8976,17 @@ exploded-archives/
 explore
 explore/repos
 explorer
-export.cfg
-export_presets.cfg
 ExportedObj/
 exports.zip
 ext/
-ext/.deps
 ext/build/
-ext/config
-ext/install-sh
-ext/libtool
-ext/ltmain.sh
-ext/Makefile
-ext/missing
-ext/mkinstalldirs
 ext/modules/
-ext/run-tests.php
 extjs/
 extjs/resources//charts.swf
-extras/documentation
 ezsqliteadmin/
 fabric/
 fake-eggs/
 FakesAssemblies/
-fastlane/readme.md
-fastlane/screenshots
 fcgi-bin/echo
 fcgi-bin/echo.exe
 fcgi-bin/echo2
@@ -5486,7 +9016,6 @@ files/tmp/
 Files/user.lock
 FileZilla.xml
 findbugs/
-firebase-debug.log
 flash/
 flash/ZeroClipboard.swf
 fluent.conf
@@ -5502,9 +9031,7 @@ fpm-ping
 fpm-status
 framework.zip
 framework/yiic.php
-freeline.py
 freeline/
-freeline_project_description.json
 fuel/app/cache/
 fuel/app/config/
 fuel/app/logs/
@@ -5517,7 +9044,6 @@ gen/
 Generated_Code/
 getFile.cfm
 git/
-github-cache
 github-recovery-codes.txt
 github/
 gitlab/
@@ -5557,7 +9083,6 @@ health
 health.json
 healthcheck.php
 heapdump.json
-HISTORY.txt
 hmc/
 HNAP1/
 hndUnblock.cgi
@@ -5571,7 +9096,6 @@ houtai/
 houtai/admin.asp
 hpwebjetadmin/
 hs_err_pid.log
-htdocs
 htdocs.zip
 html.tar
 html.tar.bz2
@@ -5600,12 +9124,11 @@ import_error.log
 importcockpit/
 in/
 inc/
+include
 include/
-includes
 includes/
 includes/bootstrap.inc
 index.htm
-index.html
 index.tar
 index.tar.bz2
 index.tar.gz
@@ -5619,9 +9142,7 @@ info
 infos.php
 ingress.yaml
 init/
-inspector
 instadmin/
-install-log.txt
 install.asp
 install.aspx
 install.bak
@@ -5657,16 +9178,12 @@ iwa/iwa_test.aspx
 j2ee/servlet/SnoopServlet
 jacoco/
 Jakefile
-javascripts/bundles
 javax.faces.resource.../
 jboss-net/
 jboss-net//happyaxis.jsp
 jboss-net/happyaxis.jsp
-jboss/server/all/deploy/project.ext
 jboss/server/all/log/
-jboss/server/default/deploy/project.ext
 jboss/server/default/log/
-jboss/server/minimal/deploy/project.ext
 jbossws/services
 jbpm-console/app/tasks.jsf
 jdkstatus
@@ -5729,13 +9246,11 @@ level
 lfm.php
 lg/
 lg/lg.conf
-lia.cache
 lib/
 lib/bundler/man/
 lib64/
 libraries/
 librepag.log
-LICENSE
 license.md
 license.php
 license_key.php
@@ -5819,7 +9334,6 @@ logs/www-error.log
 logs_backup/
 logstash/
 Lotus_Domino_Admin/
-luac.out
 macadmin/
 magic.default
 magmi/
@@ -5837,7 +9351,6 @@ main/
 main/login
 maint/
 maintenance.html
-Makefile.old
 manage
 manage.php
 manage/
@@ -5855,7 +9368,7 @@ manager/admin.asp
 manager/login
 manager/login.asp
 manager/status/all
-MANIFEST.bak
+manifest.mf
 manifest.yml
 manifest/cache/
 manifest/logs/
@@ -5893,12 +9406,9 @@ members/
 memcached/
 memlogin/
 mercurial/
-Mercury.modules
 Mercury/
 mesos/
 META-INF/
-META.json
-META.yml
 meta_login/
 metadata.rb
 metric/
@@ -5916,9 +9426,7 @@ mimosa-config.coffee
 mimosa-config.js
 mirror.cfg
 mirror/
-misc
 mkdocs.yml
-Mkfile.old
 moadmin/
 mock/
 modelsearch/
@@ -5937,11 +9445,7 @@ moderator/admin.php
 moderator/login
 moderator/login.html
 moderator/login.php
-modern.json
-modern.jsonp
-Module.symvers
 module.zip
-modules.order
 modules/
 modules/admin/
 mongo/
@@ -6003,18 +9507,14 @@ nfs/
 ng-cli-backup.json
 nginx_template.conf
 ngx_pagespeed_beacon/
-nia.cache
 nimcache/
-nlia.cache
 node-role.kubernetes.io
 node_modules/
 npm-shrinkwrap.json
-nra.cache
 nsw/
 nsw/admin/login.php
 nwp-content/
 nwp-content/plugins/disqus-comment-system/disqus.php
-nytprof.out
 oab/
 obj/
 ocp.php
@@ -6029,7 +9529,6 @@ old.tar.bz2
 old.tar.gz
 old.zip
 ona
-opa-debug-js
 open-flash-chart.swf?get-data=xss
 OpenCover/
 openshift/
@@ -6050,7 +9549,6 @@ output/
 owa/
 owncloud/
 p/
-package-cache
 package/
 packer_cache/
 pagerduty/
@@ -6086,7 +9584,6 @@ perlcmd.cgi
 persistentchat/
 pg_hba.conf
 pgadmin/
-PharoDebug.log
 phoenix
 phoneconferencing/
 php-error.log
@@ -6204,18 +9701,10 @@ piwigo/extensions/UserCollections/template/ZeroClipboard.swf
 pkg/
 placeholder_one
 placeholder_two
-planning/cfg
-planning/docs
-planning/src
 platz_login/
-play-cache
-play-stash
 player.swf
 playground
-plugin.xml
-plugins
 plugins/
-pm_to_blib
 pma-old/index.php
 PMA2/index.php
 pma2009/
@@ -6231,7 +9720,6 @@ pmamy/index.php
 pmamy2/index.php
 pmd/index.php
 pods/
-pom.xml.asc
 portal/
 postgresql.conf
 power_user/
@@ -6248,13 +9736,10 @@ Procfile.offline
 product.json
 productcockpit/
 production.log
-profiles
 profiles.xml
 program/
 proguard/
 project-admins/
-project/project
-project/target
 prometheus
 prometheus/
 prometheus/targets
@@ -6302,7 +9787,6 @@ refresh
 refresh.json
 registration/
 registry/
-rel/example_project
 relogin
 relogin.htm
 relogin.html
@@ -6314,7 +9798,6 @@ requesthandler/
 requesthandlerext/
 requirements.txt
 resources/
-resources/.arch-internal-preview.css
 resources/sass/.sass-cache/
 resources/tmp/
 rest-api/
@@ -6327,8 +9810,6 @@ resume.json
 rgs/
 rgsclients/
 robot.txt
-robots.txt
-robots.txt.dist
 root
 root/
 roundcube/index.php
@@ -6342,7 +9823,6 @@ run.zip
 runningpods/
 RushSite.xml
 s.php
-salesforce.schema
 saltstack/
 Saved/
 sbt/
@@ -6352,7 +9832,6 @@ scheduler/
 script.zip
 script/
 script/jqueryplugins/dataTables/extras/TableTools/media/swf/ZeroClipboard.swf
-scripts
 scripts.zip
 scripts/
 sdb.php
@@ -6370,7 +9849,6 @@ server.config.yaml
 server.js
 server.key
 server.ovpn
-server.pid
 server/config.json
 server/server.js
 server_admin_small/
@@ -6423,12 +9901,7 @@ siteadmin/login.html
 siteadmin/login.php
 sitemanager.xml
 sites.xml
-sites/all/libraries/README.txt
-sites/all/modules/README.txt
-sites/all/themes/README.txt
 sites/default/private/files/backup_migrate/scheduled/test.txt
-sites/example.sites.php
-sites/README.txt
 sized/
 smblogin/
 snoop.jsp
@@ -6439,12 +9912,8 @@ soapdocs/
 sonar/
 sonarcube/
 sonarqube/
-source
 source.zip
 source/
-source/inspector.html
-source_gen
-source_gen.caches
 SourceArt/
 spamlog.log
 spec/
@@ -6470,7 +9939,6 @@ sqladmin/
 sqlbuddy/
 sqldump.sql
 SQLyogTunnel.php
-SqueakDebug.log
 squid-reports/
 squid/
 squid3_log/
@@ -6486,7 +9954,6 @@ sshadmin/
 ssl/
 st.php
 stackstorm/
-stacktrace.log
 staff/
 stage_create_service.sh
 stage_create_service_dev.sh
@@ -6494,10 +9961,8 @@ stage_create_service_prod.sh
 stage_deploy.sh
 stage_deploy_dev.sh
 stage_deploy_prod.sh
-stamp-h1
 staradmin/
 start.html
-start.sh
 startServer.log
 startup.cfg
 startup.sh
@@ -6513,7 +9978,6 @@ storage/logs/laravel.log
 store.tgz
 StreamingStatistics
 stssys.htm
-stylesheets/bundles
 sub-login/
 subversion/
 supe.php
@@ -6569,8 +10033,6 @@ system-administration/
 system.zip
 system/
 system/cache/
-system/expressionengine/config/config.php
-system/expressionengine/config/database.php
 system/storage/
 system_administration/
 SystemErr.log
@@ -6581,10 +10043,8 @@ tasks/
 tconn.conf
 team/
 telephone
-temp-testng-customsuite.xml
 temp.sql
 templates/beez3/
-templates/index.html
 templates/protostar/
 templates/system/
 templates_c/
@@ -6592,21 +10052,16 @@ teraform/
 test-build/
 test-output/
 test-report/
-test-result
 test/php/test.html
-test/reports
 test/ssi/test.shtml
 test/tmp/
 test/version_tmp/
 test1
 test2
-test_gen
-test_gen.caches
 testfile.php
 testproxy.php
 tests/
 textpattern/
-themes
 themes/
 themes/default/htdocs/flash/ZeroClipboard.swf
 Thorfile
@@ -6626,7 +10081,6 @@ tmp/cache/persistent/
 tmp/cache/views/
 tmp/nanoc/
 tmp/tests/
-token.json
 tokenlite.zip
 tomcat-docs/appdev/sample/web/hello.jsp
 tomcat/axis/
@@ -6644,12 +10098,9 @@ trivia/
 twitter/.env
 txt/
 typings/
-typo3
 typo3/
 typo3/phpmyadmin/index.php
-typo3_src
 typo3conf/AdditionalConfiguration.php
-typo3conf/temp_fieldInfo.php
 typo3temp/
 uber/
 ucwa/
@@ -6657,7 +10108,6 @@ uddi
 uddiexplorer
 unifiedmessaging/
 update
-update.php
 upfile.php
 upgrade.readme
 UpgradeLog.XML
@@ -6686,7 +10136,6 @@ userdb
 userlogin
 userlogin.php
 UserLogin/
-users
 users.json
 users/admin
 users/admin.php
@@ -6752,9 +10201,7 @@ vorud
 vorud.php
 vorud/
 vpn/
-vqmod/checked.cache
 vqmod/logs/
-vqmod/mods.cache
 vqmod/vqcache/
 vtiger/
 vtigercrm/
@@ -6765,8 +10212,6 @@ war/gwt_bree/
 war/WEB-INF/classes/
 war/WEB-INF/deploy/
 wc.php
-web-app/plugins
-web-app/WEB-INF/classes
 web-console/status?full=true
 WEB-INF./
 WEB-INF/
@@ -6822,12 +10267,10 @@ wordpress.tar.gz
 wordpress.zip
 wordpress/
 wordpress/wp-login.php
-workspace.xml
 workspace/uploads/
 wp-admin/
 wp-admin/install.php
 wp-cli.yml
-wp-config-sample.php
 wp-config.php.zip
 wp-content/
 wp-content/blogs.dir/
@@ -6841,7 +10284,6 @@ wp-includes/
 wp-includes/rss-functions.php
 wp-json/
 wp-json/wp/v2/users/
-wp-login.php
 wp-login/
 wp/
 wp/wp-login.php
@@ -6910,7 +10352,6 @@ zipkin/
 .accdb
 .ackrc
 .action
-.actionScriptProperties
 .admin/
 .agignore
 .agilekeychain
@@ -6967,12 +10408,10 @@ zipkin/
 .chef/knife.rb
 .circleci/circle.yml
 .clang-format
-.clang_complete
 .clcbio/
 .clog.toml
 .coafile
 .cocoadocs.yml
-.codacy.yml
 .codecov.yml
 .codefresh/codefresh.yml
 .codeship.yaml
@@ -7021,7 +10460,6 @@ zipkin/
 .divzero.log
 .do
 .doc
-.docker
 .docker/
 .docker/.env
 .docker/laravel/app/.env
@@ -7031,9 +10469,6 @@ zipkin/
 .dotfiles.boto
 .drone.sec
 .drone.yaml
-.dropbox
-.dropbox.attr
-.dropbox.cache
 .dropbox/
 .dsk
 .dummy
@@ -7041,7 +10476,6 @@ zipkin/
 .elixir_ls/
 .emails/
 .ember-cli
-.ensime
 .ensime_cache/
 .ensime_lucene/
 .env-sample
@@ -7051,7 +10485,6 @@ zipkin/
 .env.travis
 .envs
 .env~
-.eslintrc.yaml
 .eslintrc.yml
 .esmtprc
 .evg.yml
@@ -7066,8 +10499,6 @@ zipkin/
 .finished-upgraders
 .fixtures.yml
 .flake8
-.flexLibProperties
-.floo
 .flooignore
 .flv
 .foodcritic
@@ -7147,7 +10578,6 @@ zipkin/
 .gnupg/trustdb.gpg
 .godir
 .golangci.yml
-.google.token
 .goreleaser.yml
 .gradle/gradle.properties
 .gvimrc
@@ -7158,10 +10588,6 @@ zipkin/
 .hg/branch
 .hg/hgrc
 .hg_archival.txt
-.hgsigs
-.hgsub
-.hgsubstate
-.hgtags
 .hhconfig
 .hound.yml
 .hsdoc
@@ -7176,7 +10602,6 @@ zipkin/
 .id
 .idea.name
 .idea/libraries/
-.idea/modules
 .identcache
 .inc
 .indent.pro
@@ -7194,8 +10619,6 @@ zipkin/
 .jazzy.yaml
 .jenkins.sh
 .jenkins.yml
-.jenv-version
-.jobs
 .jpeg
 .kdbx
 .kdev4/
@@ -7218,7 +10641,6 @@ zipkin/
 .LICENSE.bud
 .local/
 .localhistory/
-.lock
 .logout
 .luacheckrc
 .luacov
@@ -7244,10 +10666,7 @@ zipkin/
 .nb-gradle/
 .nbgrader.log
 .ngrok2/ngrok.yml
-.ninja_deps
-.ninja_log
 .no-sublime-package
-.node-version
 .nodemonignore
 .nodeset.yml
 .nojekyll
@@ -7256,7 +10675,6 @@ zipkin/
 .npm/
 .nv/
 .nvm/
-.nvmrc
 .nycrc
 .ocp-indent
 .oh-my-zsh/
@@ -7290,7 +10708,6 @@ zipkin/
 .pkgmeta
 .pki/
 .pl
-.pl-history
 .pm2/
 .pmd
 .pmtignore
@@ -7320,14 +10737,11 @@ zipkin/
 .pyup.yml
 .qmake.conf
 .rakeTasks
-.rbenv-gemsets
 .rbenv-version
 .Rbuildignore
 .README.md.bud
 .readthedocs.yml
-.rebar3
 .recommenders/
-.redcar
 .redmine
 .reduxrc
 .remarkrc
@@ -7345,7 +10759,6 @@ zipkin/
 .sailsrc
 .sass-lint.yml
 .scalafmt.conf
-.sconf_temp
 .screenrc
 .semaphore/semaphore.yaml
 .semaphore/semaphore.yml
@@ -7372,7 +10785,6 @@ zipkin/
 .stat/
 .stestr.conf
 .stickler.yml
-.styleci.yml
 .stylelintignore
 .stylintrc
 .stylish-haskell.yaml
@@ -7400,7 +10812,6 @@ zipkin/
 .tm_properties
 .tmp/
 .tmux.conf
-.tool-versions
 .tools/phpMyAdmin/
 .tools/phpMyAdmin/current/
 .trash/
@@ -7458,7 +10869,6 @@ zipkin/
 .well-known/timezone
 .well-known/void
 .well-known/webfinger
-.wget-hsts
 .wgetrc
 .whitesource
 .wm_style
@@ -7625,7 +11035,6 @@ _index
 _mem_bin/
 _mm
 _myadmin
-_notes
 _phpmyadmin
 _ppadmin
 _priv8/
@@ -7722,7 +11131,6 @@ acct_login
 achats
 acheter
 acs-admin
-actions
 actions/seomatic/meta
 actions_admin
 activate
@@ -8164,7 +11572,6 @@ app.py
 app/kibana/
 app_admin
 App_Code
-App_Data
 appadmin
 AppInstallStatusServlet
 apple
@@ -8179,7 +11586,6 @@ applications
 AppManagementStatus
 apps
 AppServer
-archive
 archiver
 archives
 archi~1/
@@ -8193,7 +11599,6 @@ asp/
 aspnet_client
 aspnet_files/
 asps/
-assets
 assets/file
 astroadmin
 asynchbeans/
@@ -8277,14 +11682,12 @@ bel_admin
 bgadmin
 BigDump/
 bins/
-bitrix
 biz_admin
 biz_admin_bak
 bizadmin
 BizTalkServer
 blank
 blocks
-blog
 blog/fckeditor
 blog_admin
 blogadmin
@@ -8296,7 +11699,6 @@ bo0om.ru
 boadmin
 board
 boardadmin
-book
 books
 boot-finished
 borat
@@ -8329,7 +11731,6 @@ car
 careers
 cart
 cartadmin
-catalog
 catalog_admin
 catalogadmin
 categories
@@ -8392,7 +11793,6 @@ classifiedadmin
 Classpath/
 clear
 click
-client
 client_admin
 clientadmin
 clients
@@ -8406,7 +11806,6 @@ ClusterRollout
 cm-admin
 cmadmin
 cmd
-cms
 cms/components/login.ascx
 cms_admin
 cmsample/
@@ -8426,8 +11825,6 @@ community
 compadmin
 company
 compat
-component
-components
 components/login.ascx
 concrete/config/banned_words.txt
 conf.swp
@@ -8463,10 +11860,8 @@ contact
 contact_us
 contacts
 contactus
-content
 content_admin
 contentadmin
-contents
 contributor
 control/login
 controller
@@ -8476,7 +11871,6 @@ ControllerServlet
 cookies
 coppermine
 copyright
-core
 corporate
 counter
 counters
@@ -8515,7 +11909,6 @@ dadmin
 dasbhoard/
 dashboard/
 dat
-data
 data/autosuggest
 datasource
 DateServlet
@@ -8536,7 +11929,6 @@ demoadmin
 design
 detail
 details
-devel
 develop
 developer
 developers
@@ -8650,7 +12042,6 @@ express
 expressInstall.swf
 extdirect
 extra_admin
-extras
 ezadmin
 f
 f94admin
@@ -8672,7 +12063,6 @@ file_upload
 FileHandler/
 fileRealm
 fileRealm.properties
-files
 fileserver
 FileTransfer
 fileupload
@@ -8681,7 +12071,6 @@ fkadmin
 flag
 flag.txt
 flags
-flash
 flow/registries
 folder
 fonts
@@ -8707,7 +12096,6 @@ frontpg.ini
 ftp
 full
 funcion/
-functions
 fzadmin
 g
 gadgets
@@ -8847,7 +12235,6 @@ importcockpit
 IMS
 in
 inadmin
-inc
 inc-admin
 inc/fckeditor
 inc/tiny_mce
@@ -8889,7 +12276,6 @@ ini
 instadmin
 install.log
 Install_dotCMS_Release.txt
-installation
 installation.md
 interadmin
 internal
@@ -8938,7 +12324,6 @@ jmx
 jmxproxy
 JNLP-INF/APPLICATION.JNLP
 jobadmin
-jobs
 join
 jolokia/exec/ch.qos.logback.classic
 jolokia/exec/com.sun.management:type=DiagnosticCommand/compilerDirectivesAdd/!/etc!/passwd
@@ -8992,21 +12377,16 @@ lib/fckeditor
 lib/phpunit/phpunit/phpunit
 lib/tiny_mce
 lib/tinymce
-libraries
 libraries/tiny_mce
 libraries/tinymce
-library
-libs
 liferay
 link
 linkadmin
 links
 linksadmin
-linux
 listadmin
 listinfo
 lists
-local
 local-cgi/
 localconfig
 log/errors.log
@@ -9103,7 +12483,6 @@ mobile/error
 modcp
 module/tiny_mce
 module/tinymce
-modules
 modules/web.config
 modules_admin
 moinmail
@@ -9160,7 +12539,6 @@ new_admin
 newadmin
 nextcloud
 nimda/
-node
 node/1?_format=hal_json
 nodes
 ntadmin
@@ -9171,7 +12549,6 @@ oauth
 oauth/login/
 oauth/signin/
 obj.pkl
-objects
 ojspdemos
 oladmin
 old_admin
@@ -9375,7 +12752,6 @@ pradmin
 press
 print
 printer
-private
 proc/sys/kernel/core_pattern
 procmail
 product
@@ -9387,17 +12763,14 @@ profiles/standard/standard.info
 profiles/testing/testing.info
 programs
 progra~1
-projects
 promo
 propadmin
-properties
 protected_access/
 provider.tf
 proxy.ini
 prv
 ps_admin.cgi
 ptadmin
-pub
 pub/
 publications
 publisher
@@ -9431,8 +12804,6 @@ redoc
 regadmin
 register
 registration
-release
-releases
 Remote-Access/
 Remote-Administrator/
 remote-entry/
@@ -9443,11 +12814,9 @@ removeNodeListener
 render
 rentalsadmin
 reply
-repo
 repos
 repos/
 report
-reports
 reports/Webalizer/
 repository
 reset
@@ -9464,7 +12833,6 @@ rootadmin
 rpc_admin
 rss
 ru
-run
 s
 s/sfsites/aura
 sadmin
@@ -9483,7 +12851,6 @@ scheduler/docs/
 schema
 schoolmanagement
 science
-screenshots
 script
 scripts/cgimail.exe
 scripts/convert.bas
@@ -9549,7 +12916,6 @@ servlets/
 session
 sessions/new
 SessionServlet
-settings
 sfsites/aura
 sh.sh
 share/
@@ -9587,8 +12953,6 @@ Site.admin
 site_map
 sitecore/content/home
 sitecore/login
-sitemap
-sites
 sites/all/libraries/fckeditor
 sites/all/modules/fckeditor
 SiteServer/Admin
@@ -9626,8 +12990,6 @@ sphinx
 sponsors
 spool
 sports
-spring
-sql
 sqli/
 sqlmanager
 sqlnet
@@ -9702,7 +13064,6 @@ sys-admin
 sys_admin
 sys_log/
 sysstat/
-system
 systemadmin
 t
 T3AdminMain
@@ -9717,7 +13078,6 @@ teknoportal/readme.txt
 teleadmin
 teluguadmin
 template
-templates
 templates_admin
 templates_c
 templets
@@ -9731,7 +13091,6 @@ testimonials
 testweb
 text
 text-base/etc/passwd
-theme
 thirdparty/fckeditor
 thread
 threads
@@ -9785,7 +13144,6 @@ UPGRADE_README.txt
 upload_admin
 uploader
 uploadify
-uploads
 uploads/affwp-debug.log
 uploads_admin
 uri
@@ -9889,7 +13247,6 @@ WebServiceServlet
 WebServicesSamples/docs/
 WebSer~1
 WebShell.cgi
-website
 WebSphere
 WebSphereBank
 WebSphereBank/
@@ -13195,7 +16552,6 @@ WeChat.TJXH.csproj.user
 .xfce4-session.verbose-log.last
 .xsession-errors
 .xsession-errors.old
-.zcompdump
 .zcompdump-ubuntu-s-2vcpu-4gb-blr1-01-5.8
 .zshrc.pre-oh-my-zsh
 __tests__/test-become/.env
@@ -13290,7 +16646,6 @@ codenames-frontend/.env
 collab-connect-web-application/server/.env
 collected_static/.env
 community/.env
-config/.env
 ContainerRegistry/.env
 content/.env
 core/app/.env
@@ -13747,7 +17102,6 @@ ca.pem
 all.log
 apacheAccess.log
 apacheError.log
-app.log
 appDevDebugProjectContainerCompiler.log
 application/logs/admin.log
 application/logs/site.log
@@ -13818,7 +17172,6 @@ sut.log
 test.log
 texput.log
 v8.log
-webtalk.log
 withreq.log
 zookeeper.log
 accountswap.log
@@ -14115,7 +17468,6 @@ wp-content/dbdump.sql
 wp-content/dump.sql
 wp-content/fullbackup.sql
 wp-content/fullwebsite.sql
-wp-content/mysql.sql
 wp-content/site.sql
 wp-content/uploads/data.sql
 wp-content/uploads/database.sql
@@ -18274,12 +21626,10 @@ cart/create
 chat/categories
 checkin
 csp_report
-custom
 domains
 geo
 identity
 identity/envelope
-init
 insights
 ip/info
 jolokia/read
@@ -18288,13 +21638,11 @@ jsonws
 jsonws/invoke
 log/add
 menus
-models
 navigation
 notifications
 permission
 plugin/details
 project/info
-saves
 server_status
 snapshots
 stores
@@ -18992,7 +22340,6 @@ AxisServlet
 bac.7z
 back/
 back.7z
-backend
 backend.7z
 backend.rar
 backend.sql
@@ -19544,7 +22891,6 @@ delete.sql
 demo/corba/viewsrc/HelloCorbaWrapperBean.java.txt
 demo/ejb/viewsrc/EmployeeEJBWrapper.java.txt
 demo.rar
-demo.sql
 demo/sql/sqlj/SQLJIterator.sqljsp
 demo/sql/sqlj/SQLJSelectInto.sqljsp
 demo/sql/sqlj/viewsrc/SQLJIterator.sqljsp.txt
@@ -21941,7 +25287,6 @@ srvm/
 srvnam.nsf
 ssd/
 ssi/
-ssl
 sso/
 staff.sql
 stag/
@@ -22349,7 +25694,6 @@ _cluster/stats
 _config.yml
 _cperror
 _darcs/prefs/binaries
-_debug
 _debug_toolbar
 _debugbar/open?max=20&offset=0
 _monitoring
@@ -22360,7 +25704,6 @@ _nodes/stats
 _notary_server
 _profiler/
 _profiler/phpinfo
-_site
 _something_.cfm
 _stats
 _status
@@ -22522,8 +25865,6 @@ destination
 dev2local.sh
 django/settings.py
 docker-cloud.yml
-docker-compose.dev.yml
-docker-compose.prod.yml
 docker-compose.production.yml
 docker-compose.staging.yml
 elocker_old/storage/
@@ -22543,7 +25884,6 @@ frontend/web/debug/default/view
 ftpsync.settings
 function
 gatewayz
-gems
 git-receive-pack
 grafana
 graph_cms
@@ -22713,7 +26053,6 @@ ruby/config/storage.yml
 rules
 rulez
 runningpods
-runtime
 runtime_modify
 s3cmd.ini
 s3proxy.conf
@@ -22956,12 +26295,8 @@ laravel-default
 bandliknew
 web_nueva
 antuv2
-images
 css
-language
-img
 MAINTAINERS
-image
 newreply
 newthread
 news
@@ -22987,7 +26322,6 @@ recommend
 posting
 pages
 clientscript
-html
 languages
 cpstyles
 captcha
@@ -23006,7 +26340,6 @@ videos
 announcement
 viewtopic
 my
-stat
 stow
 aggregator
 advancedsearch
@@ -23039,27 +26372,19 @@ vote
 taxonomy
 SpryAssets
 myaccount
-cert
-mails
 pt
 goto
 id
 photo
-ext
 vp
 sendtofriend
-javascripts
-external
 sb
 tracker
 generator
 album
 wordpress
 newposts
-stylesheets
 contrib
-translations
-www
 messages
 avatar
 magento
@@ -23084,7 +26409,6 @@ action
 ipdata
 hr
 maintenance
-thumbs
 statshistory
 agb
 player
@@ -23092,7 +26416,6 @@ ScriptResource
 emails
 ja
 specials
-hooks
 pic
 sv
 moderation
@@ -23138,7 +26461,6 @@ util
 groups
 memcp
 rssfeed
-work
 kernel
 offline
 slideshow
@@ -23278,7 +26600,6 @@ information
 of
 research
 offer
-demos
 extranet
 orderdownloads
 receipts
@@ -23299,7 +26620,6 @@ apply
 editaddress
 team
 checkoutreview
-result
 auctions
 ms
 setcurrency
@@ -23341,20 +26661,16 @@ dumpuser
 up
 et
 day
-layouts
-controllers
 mint
 orderstatus
 editors
 task
 ask
-obj
 WebServices
 coupons
 fb
 create
 ga
-protected
 gifs
 related
 visitormessage
@@ -23419,7 +26735,6 @@ dealers
 keyword
 presse
 HttpModules
-configs
 jp
 xslt
 master
@@ -23477,7 +26792,6 @@ bookmarks
 printable
 utility
 siteManager
-min
 threadtag
 affiliatewiz
 promos
@@ -23544,7 +26858,6 @@ hack
 junk
 ref
 school
-umbraco
 modify
 zip
 ch
@@ -23598,7 +26911,6 @@ bc
 forgotpassword
 premium
 social
-stage
 usa
 ScriptLibrary
 ebooks
@@ -23606,7 +26918,6 @@ ranks
 sid
 testsite
 au
-cfg
 cronjobs
 ct
 foros
@@ -23637,7 +26948,6 @@ enter
 schools
 browser
 exit
-msg
 reservations
 resumes
 shopstat
@@ -23766,7 +27076,6 @@ concrete
 country
 discuss
 mb
-uploaded
 acc
 incs
 open
@@ -23852,11 +27161,9 @@ fpdf
 linkex
 mal
 notify
-rpc
 tartarus
 activities
 agreement
-as
 classic
 comm
 german
@@ -23927,7 +27234,6 @@ ClientApi
 GPL
 cf
 example
-exports
 fashion
 favorite
 forumcp
@@ -24097,7 +27403,6 @@ archivos
 bd
 diagnostics
 flow
-imports
 love
 mx
 newsroom
@@ -24133,7 +27438,6 @@ cy
 environment
 erreur
 fehler
-gen
 kcaptcha
 kosik
 re
@@ -24187,7 +27491,6 @@ interview
 jpg
 on
 pconf
-priv
 registrieren
 sg
 time
@@ -24259,7 +27562,6 @@ magazin
 paiement
 palm
 ph
-planning
 progress
 showcase
 MetaTags
@@ -24273,7 +27575,6 @@ probe
 rent
 songs
 speedtest
-textpattern
 votes
 women
 announce
@@ -24336,7 +27637,6 @@ mo
 navi
 originals
 others
-python
 ranking
 safe
 sendlink
@@ -24703,14 +28003,12 @@ nobots
 notebook
 notices
 photopost
-recovery
 ressources
 rotate
 seller
 servizi
 sitedown
 spip
-srv
 structure
 submissions
 titles
@@ -24846,7 +28144,6 @@ displayimage
 druckansicht
 drucken
 dwr
-exp
 finish
 formulare
 government
@@ -25101,7 +28398,6 @@ jslib
 licensing
 liste
 lite
-locales
 look
 menumachine
 moscow
@@ -25122,7 +28418,6 @@ singapore
 suggestions
 try
 union
-upgrades
 useruploads
 writing
 zzz
@@ -25136,7 +28431,6 @@ cake
 california
 casestudies
 deleted
-designer
 dhtml
 dokumente
 eb
@@ -25262,7 +28556,6 @@ joe
 last
 lb
 lk
-mockup
 nieuwsbrief
 ofertas
 one
@@ -25352,7 +28645,6 @@ twiki
 vbulletin
 wc
 wmail
-workspace
 you
 NeatUpload
 afiliados
@@ -25373,7 +28665,6 @@ dude
 elqNow
 enviar
 evaluation
-exe
 exhibitions
 expired
 fichiers
@@ -25655,11 +28946,9 @@ subcategory
 sutra
 univ
 vspfiles
-warehouse
 washington
 what
 wow
-wwwroot
 MasterPage
 accommodations
 aktion
@@ -25893,7 +29182,6 @@ room
 searchform
 simplepie
 size
-solution
 sos
 sticky
 stocks
@@ -26237,7 +29525,6 @@ userMaint
 value
 verification
 vmchk
-war
 watched
 webforms
 wh
@@ -26433,7 +29720,6 @@ matching
 mbd
 mdb
 merci
-micro
 mine
 monsterbook
 motion
@@ -26529,7 +29815,6 @@ OAErrorDetailPage
 OA_HTML
 OasDefault
 Pipfile
-Pipfile.lock
 Program Files
 Recycled
 SERVER-INF
@@ -26550,7 +29835,6 @@ _archive
 _assets
 _backup
 _borders
-_cache
 _catalogs
 _common
 _conf
@@ -26679,7 +29963,6 @@ authusers
 autodeploy
 autodiscover
 automatic
-automation
 aux
 awardingbodies
 awl
@@ -26790,7 +30073,6 @@ charges
 chats
 checking
 checkout_iclear
-checkpoint
 checks
 check-email
 chk
@@ -26830,7 +30112,6 @@ compressed
 comunicator
 config.properties
 connector
-constant
 contact-form
 contact-us
 contact_bean
@@ -26907,7 +30188,6 @@ default_image
 default_logo
 default_page
 default_pages
-defaults
 definition
 definitions
 deleteme
@@ -27046,7 +30326,6 @@ firmware
 fixed
 fk
 flash-intro
-flows
 flyspray
 fn
 foia
@@ -27219,7 +30498,6 @@ jar
 java-plugin
 java-sys
 javac
-javadoc
 javax
 jboss
 jbossas
@@ -27309,6 +30587,7 @@ low
 lpt1
 lpt2
 lst
+lucene
 lunch_menu
 m1
 m6
@@ -27670,7 +30949,6 @@ roam
 roaming
 robotics
 role
-roles
 roller
 route
 router
@@ -27747,7 +31025,6 @@ simpleLogin
 single_pages
 sink
 site-map
-sitemap.xml
 skel
 skin1
 skin1_original
@@ -27804,6 +31081,7 @@ style_css
 style_emoticons
 style_images
 sub-login
+subject
 submitter
 subscribed
 suffix
@@ -27880,8 +31158,6 @@ tuning
 turbine
 tuscany
 tweak
-typo3conf
-typo3temp
 uc_client
 uc_server
 uds
@@ -28097,7 +31373,6 @@ shopping-cart
 manufacturers_id
 App_Config
 App_Controls
-_tools
 cgi-php
 contact-me
 email_templates
@@ -28253,7 +31528,6 @@ testshop
 tikimovies
 udf
 webtop
-mu-plugins
 wp-filez
 zForumFFFFFF
 Dbweb
@@ -29422,9 +32696,7 @@ programsend
 progs
 projetos
 publishing
-ram
 rebate
-recordings
 recruiting
 regcat
 reimg
@@ -29855,7 +33127,6 @@ blog-old
 blogsection
 bms
 branded
-builds
 cartes
 option_id
 cataloges
@@ -30325,7 +33596,6 @@ fre
 fwd
 gallerie
 gastenboek
-generated
 genthumb
 geometry
 giftshop
@@ -30422,6 +33692,7 @@ onlinehelp
 oos
 oss
 outlink
+overlays
 painting
 pannello
 patrick
@@ -30592,7 +33863,6 @@ XmlPackages
 _banner
 _banners
 _cfg
-_gsdata_
 _image
 _import
 _info
@@ -30759,7 +34029,6 @@ upload_dir
 filial
 find_area
 finland
-fish
 fixes
 fj
 flashfiles
@@ -30812,7 +34081,6 @@ in-the-news
 in2site
 inactive
 include_top
-indexing
 indices
 informations
 installation_old
@@ -31005,7 +34273,6 @@ sitewide
 sitio
 sj
 slots
-snap
 society
 southafrica
 spc
@@ -31636,7 +34903,6 @@ picture-click
 pie
 pitfall
 plantilla
-platforms
 pledge
 plugs
 pmi
@@ -32535,7 +35801,6 @@ memorial
 mentor
 menu2
 merch
-mercury
 met
 mfg
 ministries
@@ -32683,7 +35948,6 @@ reise
 rek
 rekl
 reklamy
-rel
 relation
 relay
 remository
@@ -32805,7 +36069,6 @@ tcd
 tekipedia
 tematicos
 tempImages
-temp_files
 template_files
 tennis
 tep
@@ -32991,7 +36254,6 @@ My Project
 MyMail
 PolyBOT
 Portraits
-Processor
 RUTGERS
 SWC
 SearchCenter
@@ -33040,7 +36302,6 @@ _stat
 _static
 _sub
 _svn
-_thumbs
 _trash
 _user
 _users
@@ -33272,7 +36533,6 @@ civil
 classi
 clc
 cleaning
-cli
 client-login
 climate
 cloak
@@ -34509,7 +37769,6 @@ _blulab
 _calendar
 _chat
 _client
-_compareTemp
 _contact
 _control
 _cronjobs
@@ -34788,7 +38047,6 @@ boa
 boatsforsale
 boatwizard
 boletos
-bom
 book2
 bookcovers
 bookmaker
@@ -35864,7 +39122,6 @@ position
 postal
 ppts
 prace
-prebuilt
 prenotazioni
 prepay
 pres
@@ -35872,7 +39129,6 @@ prescription
 presto
 presupuestos
 prihlaseni
-prime
 primer
 principal
 print-templates
@@ -35961,7 +39217,6 @@ resources5
 resp
 reuters
 revised
-revision
 rezervace
 rfibs
 rg
@@ -36064,7 +39319,6 @@ siding
 sifr3
 signs
 simon
-simulation
 singer
 sip
 email-this-page
@@ -36117,7 +39371,6 @@ sswthemes
 stack
 stand
 startengine_db
-staticfiles
 stats_images
 statystyki
 stay
@@ -36615,7 +39868,6 @@ NAVPICS
 NDA
 OJA
 OKQQ
-TTS
 OdReport
 OnThisDay
 Order-Track
@@ -36937,7 +40189,6 @@ argomenti
 arhiva
 arimages
 ark
-arm
 arthritis
 articleprint
 pdfmagazine
@@ -40012,7 +43263,6 @@ ucp.php
 common.php
 footer.php
 WebResource.axd
-404.html
 header.php
 search.html
 captcha.php
@@ -40167,7 +43417,6 @@ checkoutreview.aspx
 clickout.aspx
 editaddress.aspx
 setlocale.aspx
-wp-trackback.php
 remove.aspx
 selectaddress.aspx
 setcurrency.aspx
@@ -40241,7 +43490,6 @@ sendthread.php
 connect.php
 myaccount.asp
 products.php
-wp-settings.php
 products_new.php
 .
 zoom.php
@@ -40255,11 +43503,9 @@ paypal_notify.php
 Register.asp
 WishList.asp
 picturecomment.php
-wp-app.php
 wp-rss.php
 wp-rss2.php
 Terms_privacy.asp
-wp-mail.php
 group_inlinemod.php
 order-detail.aspx
 sitemap.html
@@ -40271,7 +43517,6 @@ about.html
 custom.css.aspx
 jump.php
 PlaceOrder.asp
-wp-cron.php
 remote.php
 wp-rdf.php
 goto.php
@@ -40302,7 +43547,6 @@ wp-feed.php
 finishorder.php
 contact-us.html
 picture.php
-wp-blog-header.php
 checkout_iclear.php
 privacy.htm
 contact_bean.php
@@ -40314,7 +43558,6 @@ banner.php
 postreview.php
 productimage.php
 specials.php
-wp-links-opml.php
 search.cfm
 basket.php
 contact-form.php
@@ -40465,7 +43708,6 @@ thankyou.htm
 blog_ajax.php
 blog_usercp.php
 rssarticle.php
-sitemap.xml.gz
 blog_report.php
 contact.cfm
 preview.php
@@ -40641,7 +43883,6 @@ popup_magnifier.php
 results.aspx
 switch.php
 vbseo.php
-wp-load.php
 2.html
 401.htm
 backend.php
@@ -40852,7 +44093,6 @@ pollbooth.php
 result.php
 start.php
 thumb.php
-wp-signup.php
 FirmConnect.aspx
 Smarty-2.6.9
 docEdit.aspx
@@ -40940,7 +44180,6 @@ m7_pay.html
 members.html
 pgm-form_submit.php
 registrieren.php
-report.html
 success.html
 vaispy.php
 xConnector.php
@@ -41241,7 +44480,6 @@ tiki-print.php
 top.asp
 unsuccessful.html
 wlwmanifest.xml
-wp-activate.php
 wp-admin.php
 xoport.php
 11.html
@@ -41635,7 +44873,6 @@ channel.html
 checkoutconfrim.htm
 cltreq.asp
 createtopic.php
-credits.html
 details.aspx
 dispatcher.php
 enquiry.php
@@ -41750,7 +44987,6 @@ sendlink.aspx
 showgallery.php
 special.html
 success.htm
-tags.html
 templte.htm
 terms-of-use.aspx
 thumbnail.php
@@ -46332,9 +49568,7 @@ zakaznik_info.php
 zoom_spelling.zdat
 zz-error.php
 .Archived
-.archive
 .avi
-.data
 .domains
 .trellix
 .wav
@@ -46439,7 +49673,6 @@ AdRedirect.aspx
 AddComment.aspx
 AddReview.aspx
 AddressBook.aspx
-AppSettings.config
 Asbestos.x
 AssemblyInfo.cs
 BIOSKINCARE.php
