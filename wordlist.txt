@@ -169,6 +169,8 @@ build
 phpmyadmin
 clientaccesspolicy.xml
 "git rm --cached --ignore-unmatch kubeconfig" \
+"git rm --cached --ignore-unmatch path/to/sensitive
+"git rm --cached --ignore-unmatch path/to/sensitive/file" \
 $RECYCLE.BIN
 $tf
 * /.ipynb_checkpoints
@@ -186,26 +188,13 @@ $tf
 *.Server/GeneratedArtifacts
 *.Server/ModelManifest.xml
 *.back.
-*.backup
 *.backup.
-*.backup.sql
-*.bak
 *.chk
-*.decrypted.
 *.dsgn.prm
-*.dump
 *.emc
-*.heapsnapshot
-*.ipynb_checkpoints
-*.key
 *.ldb
 *.log
 *.mflow
-*.orig
-*.p12
-*.pem
-*.pfx
-*.pptx
 *.rs.bk
 *.runs/impl*
 *.runs/impl*/*.bat
@@ -222,10 +211,7 @@ $tf
 *.runs/synth*/*.xdc
 *.runs/synth*/*.xml
 *.si
-*.sql.gz
-*.tfstate
 *.tfvars
-*.tmp
 *.toolbox
 *.toolbox*.cfg
 *.toolbox*.out
@@ -237,6 +223,9 @@ $tf
 *.toolbox/*.tex
 *.toolbox/*aux
 *.xcodeproj
+*.xcuserstate
+*.xcworkspace
+*.xcworkspace/xcuserdata
 *.zip
 */*
 */*.runs/impl*
@@ -281,6 +270,7 @@ $tf
 */*/production
 */.cvsignore
 */.ipynb_checkpoints
+*/.next" > .gitignore
 */.terraform
 */CMakeCache.txt
 */CMakeFiles
@@ -306,39 +296,108 @@ $tf
 */codekit-config.json
 */config
 */config/development
+*/dist
 */expressionengine
 */expressionengine/cache
 */local.properties
 */logs/log-*.php
 */meshPhi
+*/node_modules
 */out
 */phi
 */prebuilt-mk
 */prebuilt-mk/Android.mk
-*Finance
-*Optional
-*Pending
-*Skip
-*_backup.
-*credential*.json
+*backup*.zip
+*credentials
 *dsgn.autobk
-*key*.json
-*secret*.json
+*password
+*secret
 *template.cir
 *template.cir/drc
 *template.cir/ext
 *template.cir/ext/readme.txt
 *template.cir/frame
 *template.cir/log
-*token*.json
 +runtime/indent/testdir
 +runtime/indent/testdir/*.fail
+- .NET
+- 10+ IDEs supported
+- 3 OS platforms
+- 8 languages covered
+- API keys & tokens: `*.pem`, `*.key`, `*.crt`, `*.cert`
+- API keys or secrets
+- AWS access keys
+- All log files: `*.log`, `/storage/logs/*`, `
+- All log files: `*.log`, `/storage/logs/*`, `/logs`
 - Any file named with "secret" or "password"
+- Archives (*.zip, *.tar.gz, *.7z)
+- Authentication files: `credentials.json`, `secrets.json`, `auth.json`
+- Automatically added to new projects
+- Backup files: `*.backup`, `*.bak`
+- Backups (*.bak, *.backup, *.old)
+- Basic patterns only
+- CMake
+- Cargo (Rust)
+- Cloudonix API keys
+- Database connection strings with passwords
+- Database files: `*.sql`, `*.sqlite`, `*.db`, `*.dump`
+- Databases (*.db, *.sqlite*)
+- Debug logs: `npm-debug.log*`, `yarn-error.log*`
+- Each language gets optimized patterns
+- Emacs (*~, .emacs.desktop)
+- Environment files (.env*)
 - Environment files (`.env`) - often contain passwords
 - Environment files (`.env`) - often contain passwords/tokens
+- Environment files: `.env`, `.env.*` (all variants)
+- Environment variables for secrets
+- Go modules
+- IDE files (`.vscode/`, `.idea
+- IDE files (`.vscode/`, `.idea/`)
+- JWT secrets
+- JetBrains (.idea
+- JetBrains (.idea/, *.iml)
 - Kubeconfig files (contain cluster access credentials)
+- Limited to Node.js
+- Linux (.directory, .Trash-*, .nfs*)
+- Logs (*.log, logs
+- Logs (*.log, logs/)
+- Logs can contain API keys, passwords, tokens, and PII
+- Maven
+- Maven/Gradle
+- Multi-language support
+- Organized sections → faster Git operations
+- Override files: `docker-compose.override.yml`
+- Package locks (configurable)
+- Production database credentials
+- SQLite databases: `/database/*.sqlite*`, `/storage
+- SQLite databases: `/database/*.sqlite*`, `/storage/database.sqlite`
+- SSH keys: `id_rsa*`
 - SSH private keys (`.pem`, `.key`, `id_rsa`)
+- Secret management services for production
+- Secrets (*.key, *.pem)
+- Secrets (*.key, *.pem, secrets.yml)
+- Service account keys: `service-account*.json`
+- Session storage: `/storage/framework/sessions
+- Session storage: `/storage/framework/sessions/*`
+- Specific patterns → fewer false positives
+- Sublime Text (*.sublime-workspace)
+- Temporary files (*.tmp, .cache
+- Temporary files (*.tmp, .cache/)
 - Terraform variables files (`*.tfvars`) - may contain secrets
+- These often contain local credentials
+- Token files: `*.session`, `.token`
+- Used by `
+- Used by `/stub` command to generate appropriate .gitignore
+- VSCode (.vscode
+- VSCode (.vscode/)
+- VSCode workspace settings (optional)
+- Vim (*.swp, *.swo, Session.vim)
+- Well-structured → easy to maintain
+- What each pattern ignores
+- Which tool generates it
+- Why it's needed
+- Windows (Thumbs.db, Desktop.ini, $RECYCLE.BIN
+- Windows (Thumbs.db, Desktop.ini, $RECYCLE.BIN/)
 - [ ] No API tokens or credentials
 - [ ] No SSH private keys
 - [ ] No `.env` files with secrets
@@ -360,31 +419,159 @@ $tf
 - [Terraform .gitignore Best Practices](https://www.terraform.io/docs/language/settings/backends
 - [Terraform .gitignore Best Practices](https://www.terraform.io/docs/language/settings/backends/local.html)
 - `*.backup` - Backup files
+- `*.bak`, `*.backup`, `*.old` - Backups
 - `*.box` - Large box files
+- `*.crt`, `*.cer`, `*.der` - Certificados SSL
+- `*.db`, `*.sqlite`, `*.sqlite3` - SQLite local
+- `*.egg-info
+- `*.egg-info/` - Metadata de paquetes
+- `*.log` - Archivos de log
 - `*.log` - Log files
+- `*.log`, `*.tmp`, `*.cache`
+- `*.pem`, `*.key` - Llaves privadas
+- `*.pyc`, `*.pyo` - Archivos compilados
+- `*.sql`, `*.dump` - Dumps de BD
 - `*.swp` - Vim swap files
+- `*.swp`, `*.swo` - Vim swap files
 - `*.tfplan` - Terraform plan output
 - `*.tfstate` - Contains infrastructure state (can have secrets)
 - `*.tfvars` - Variable values (often sensitive)
+- `*.tmp` - Temporales
 - `*.tmp` - Temporary files
 - `*.token` - Authentication tokens
+- `.AppleDouble`, `.LSOverride` - macOS
 - `.DS_Store` (macOS)
+- `.DS_Store` - macOS
+- `.DS_Store`, `Thumbs.db`
+- `.coverage` - Datos de coverage
+- `.cursor
+- `.cursor/` - Configuración de Cursor
+- `.devcontainer
+- `.devcontainer/` directory
+- `.env*` (environment files)
+- `.env.example` with placeholder values
+- `.env.local`, `.env.*.local` - Variantes locales
+- `.env` - Variables de entorno locales
+- `.github
+- `.github/` directory
+- `.gitignore` itself
+- `.gitkeep` files
 - `.idea
+- `.idea/*` (excepto run configs)
 - `.idea/` - JetBrains IDE files
 - `.kube
 - `.kube/config` - Default kubectl config
+- `.mypy_cache
+- `.mypy_cache/` - Cache de MyPy
+- `.pre-commit-config.yaml` - Configuración de pre-commit hooks
+- `.pyre
+- `.pyre/` - Cache de Pyre
+- `.pytest_cache
+- `.pytest_cache/` - Cache de pytest
+- `.python-version` - Versión de Python del proyecto
+- `.pytype
+- `.pytype/` - Cache de Pytype
 - `.terraform
 - `.terraform/` - Downloaded providers and modules
 - `.vagrant
 - `.vagrant/` - Vagrant runtime data
+- `.venv/`, `venv/`, `env
+- `.venv/`, `venv/`, `env/` - Virtual environments
 - `.vscode
+- `.vscode/*` (excepto ejemplos)
 - `.vscode/` - VS Code settings
+- `Makefile` - Comandos útiles
+- `QUICKSTART.md`
+- `README.md`
 - `Thumbs.db` (Windows)
+- `Thumbs.db` - Windows
+- `__pycache__
+- `__pycache__/` - Bytecode compilado
+- `alembic
+- `alembic.ini` - Configuración de migraciones
+- `alembic/env.py` - Configuración de alembic
+- `alembic/script.py.mako` - Template de migraciones
+- `alembic/versions
+- `alembic/versions/*.py` - Archivos de migración
+- `app.log`, `error.log`, `access.log` - Logs específicos
+- `backup
+- `backup/` - Backups de BD
+- `coverage.xml` - Reporte XML
+- `dist/`, `build
+- `dist/`, `build/` - Distribución
+- `docker-compose.override.yml` - Override local de Docker
+- `docker-compose.yml` - Configuración base de Docker
+- `docs
+- `docs/*.md` - Toda la documentación
+- `env.example` - Template de variables de entorno
+- `htmlcov
+- `htmlcov/` - Reportes de coverage HTML
 - `kubeconfig*` - Cluster access credentials
+- `logs
+- `logs/` - Directorio de logs
+- `myproject.db` - Base de datos local
+- `node_modules/`, `target/`, `build/`, `dist
+- `node_modules/`, `target/`, `build/`, `dist/`
+- `pgadmin_data
+- `pgadmin_data/` - Volúmenes de pgAdmin
+- `poetry.lock` - Lock file para reproducibilidad
+- `postgres_data
+- `postgres_data/` - Volúmenes de PostgreSQL
+- `pyproject.toml` - Dependencias del proyecto
+- `scripts*.py` - Scripts de utilidad
+- `secrets
+- `secrets/` - Directorio de secretos
+- `src*.py` - Todo el código Python
+- `tests*.py` - Todos los tests
+- `tmp/`, `temp
+- `tmp/`, `temp/` - Archivos temporales
 - https://git-scm.com/docs
 - https://git-scm.com/docs/gitignore
 - https://github.com/github/gitignore — 언어
 - https://github.com/github/gitignore — 언어/프레임워크별 .gitignore 템플릿 모음
+- macOS (.DS_Store, .AppleDouble, .fseventsd)
+- npm/yarn/pnpm
+- npm/yarn/pnpm/bun
+- ~350 lines (but organized!)
+- ~50 lines
+- ✅ Additive only (no removals)
+- ✅ Backward compatible
+- ✅ C
+- ✅ C / C++ - *.o, *.so, *.a, CMake files
+- ✅ C# / .NET - bin/, obj
+- ✅ C# / .NET - bin/, obj/, *.dll, *.pdb
+- ✅ Clean commits - No accidental artifacts
+- ✅ Commit: `.env.example` (with dummy values)
+- ✅ Comprehensive - Covers edge cases
+- ✅ Consistent - Same patterns across team
+- ✅ Existing rules preserved
+- ✅ Go - Binaries, pkg/, vendor
+- ✅ Go - Binaries, pkg/, vendor/, go.work
+- ✅ IDE agnostic - Works with any editor
+- ✅ Java / JVM - *.class, target
+- ✅ Java / JVM - *.class, target/, .gradle
+- ✅ Maintainable - Easy to extend
+- ✅ Multi-language - One .gitignore for polyglot projects
+- ✅ Multi-language support
+- ✅ No conflicts with custom patterns
+- ✅ No manual setup - Works out of the box
+- ✅ Node.js / JavaScript
+- ✅ Node.js / JavaScript / TypeScript - Complete coverage
+- ✅ Production ready
+- ✅ Python - __pycache__, venv
+- ✅ Python - __pycache__, venv/, .pytest_cache
+- ✅ Rust / Cargo - Build artifacts, target
+- ✅ Rust / Cargo - Build artifacts, target/, *.rs.bk
+- ✅ Templates created
+- ✅ Well-organized
+- ✅ Well-organized - Sections clearly labeled
+- ✅ `.gitignore` enhanced
+- ❌ Bases de datos locales
+- ❌ Credenciales (*.pem, *.key)
+- ❌ Logs con información sensible
+- ❌ Never commit: `.env`, `.env.local`, `.env.production`
+- ❌ Virtual environments
+- ❌ `.env` - Contiene secretos y configuración local
 - 빌드 산출물, IDE 설정, 환경변수, 의존성 폴더 등 커밋하면 안 되는 것들을 관리
 - 여기에 명시된 파일
 - 여기에 명시된 파일/폴더는 `git add`나 `git status`에서 자동으로 무시됨
@@ -403,6 +590,8 @@ $tf
 .*.swp
 .*crunch*.local.xml
 ./auto
+./aws-sam
+./history
 .AppleDB
 .AppleDesktop
 .AppleDouble
@@ -431,19 +620,19 @@ $tf
 .TemporaryItems
 .Trash-
 .Trashes
-.Ulysses-Group.plist
 .VolumeIcon.icns
 .Xil
 .[dD][sS]_[sS]tore
 .\#
 ._
 ._.
-._.DS_Store
 ._zinit
 .ab
 .abstra
 .accio
+.act-env-secret
 .actionScriptProperties
+.agignore
 .ai
 .aider
 .aiderignore
@@ -458,15 +647,13 @@ $tf
 .apt_generated_test
 .arch-internal-preview.css
 .architect
+.archive
 .astro
 .aswb
 .autotools
-.awcache
 .aws
 .aws-sam
 .axoCover
-.azure
-.azure/credentials
 .bak
 .ballerina
 .bat
@@ -493,16 +680,18 @@ $tf
 .cabal-sandbox
 .cache
 .cache /
+.cache-build
 .cache-loader
 .cache-main
+.cache-storybook
+.cache-test
+.cache-webpack
 .cache/clangd
 .cask
 .ccls-cache
 .cdk.staging
 .ceylon
 .ceylon/config.old
-.circleci
-.circleci/secrets
 .clang_complete
 .clangd
 .classpath
@@ -517,22 +706,21 @@ $tf
 .clwb
 .cm
 .cmake
+.codacy.yml
 .codeium
 .codekit-cache
 .codio
 .cody
 .com.apple.timemachine.donotpresent
-.composer
-.composer/auth.json
 .concrete
 .concrete/DEV_MODE
 .conda
 .conda *
 .config
-.config*.copy
 .consulo
 .continue
 .continuerc.json
+.copier-answers-personal.yml
 .coq-native
 .coverage
 .coverage.
@@ -545,6 +733,7 @@ $tf
 .crossbar/node.pid
 .csdp.cache
 .csettings
+.ctrlp
 .cursor
 .cursor/rules
 .cursor/rules/captain.mdc
@@ -554,19 +743,24 @@ $tf
 .cvs
 .cvsignore
 .cxx
+.cypress
 .dart_tool
 .dat
 .data
+.db
 .dbconnection
 .dbeaver-data-sources*.xml
 .dccache
+.ddev
+.ddev/docker-compose.host-docker-internal.yaml
+.ddev/docker-compose.phpmyadmin_norouter.yaml
+.ddev/mautic-preference
 .debmake
 .deploy
 .deploy_git
 .deps
 .designer
-.devcontainer
-.devcontainer/.env
+.dev.vars
 .df_cache
 .dir-locals.el
 .directory
@@ -601,13 +795,14 @@ $tf
 .env.*.localCLAUDE.md
 .env.*.php
 .env.development.local
+.env.local.php
 .env.php
 .env.production.local
-.env.sh
 .env.test.local
 .environment
 .envrc
 .eslintcache
+.eslintrc.yaml
 .eunit
 .exercism
 .expo
@@ -622,6 +817,8 @@ $tf
 .fetch
 .firebase
 .firebaserc
+.firebaserc.local
+.fixme
 .flatpak-builder
 .fleet
 .flexConfig.xml
@@ -648,17 +845,17 @@ $tf
 .gitattributes
 .github
 .github/copilot-instructions.md
-.github/secrets
 .gitignore.app
+.gitignore.default
+.gitignore.deploy
 .gitignore.echoyl
-.gitlab
 .gitlab-ci-gputest.yml
-.gitlab/secrets
 .godot
 .google.token
 .gradle
 .gradletasknamecache
 .grunt
+.gsmanifest
 .gwt
 .gwt-tmp
 .hg
@@ -669,6 +866,7 @@ $tf
 .hgtags
 .history
 .hollogs
+.home
 .homeassistant
 .hpc
 .hsenv
@@ -677,9 +875,7 @@ $tf
 .hypothesis
 .idea
 .idea/$CACHE_FILE$
-.idea/*.iml
 .idea/.name
-.idea/artifacts
 .idea/assetWizardSettings.xml
 .idea/caches
 .idea/caches/build_file_checksums.ser
@@ -699,15 +895,12 @@ $tf
 .idea/jsLibraryMappings.xml
 .idea/libraries
 .idea/misc.xml
-.idea/modules
 .idea/modules.xml
 .idea/mongoSettings.xml
 .idea/navEditor.xml
 .idea/replstate.xml
-.idea/runConfigurations
 .idea/scopes
 .idea/scopes/scope_settings.xml
-.idea/secrets
 .idea/shelf
 .idea/sonarlint
 .idea/sqlDataSources.xml
@@ -780,7 +973,7 @@ $tf
 .lock-waf_*_build
 .lock-wscript
 .luacheckcache
-.merge_file
+.maintenance
 .merlin
 .meta
 .metadata
@@ -788,6 +981,7 @@ $tf
 .metals
 .meteor
 .meteor/local
+.metro-health-check
 .mf
 .mfractor
 .moban.hashes
@@ -800,9 +994,11 @@ $tf
 .mvn/wrapper
 .mvn/wrapper/maven-wrapper.properties
 .mypy_cache
+.n
 .navigation
 .nb-gradle
 .netlify
+.netlify# Environment Variables
 .netrwhist
 .next
 .nfs
@@ -831,6 +1027,7 @@ $tf
 .opencode.json
 .org-id-locations
 .otto
+.out
 .output
 .packages
 .packages.generated
@@ -852,20 +1049,23 @@ $tf
 .pio
 .pioenvs
 .piolibdeps
-.piprc
 .pixi
 .pl-history
+.playwright
 .playwright-mcp
 .pnp
 .pnp.
 .pnp.js
+.pnp.loader.mjs
 .pnpm-debug.log
 .pnpm-store
 .powenv
 .powerpoint-mcp
 .precomp
+.prettiercache
 .project
 .projectile
+.projections.json
 .prompt
 .propath
 .psci
@@ -885,7 +1085,7 @@ $tf
 .pytype
 .qmake.cache
 .qmake.stash
-.qodo
+.quasar
 .rebar
 .rebar3
 .recommenders
@@ -907,6 +1107,12 @@ $tf
 .sconf_temp
 .sconsign.dblite
 .scrapy
+.secret
+.secrets
+.secrets.json
+.secrets.toml
+.secrets.yaml
+.secrets.yml
 .serverless
 .settings
 .sfdx
@@ -916,6 +1122,7 @@ $tf
 .smushit-status
 .snapshots
 .sonar
+.sonar-project.properties
 .sonarlint
 .sonarqube
 .sourcemaps
@@ -929,6 +1136,7 @@ $tf
 .ssh/known_hosts
 .stack-work
 .storage
+.storybook-out
 .strapi-updater.json
 .streamlit
 .streamlit/secrets.toml
@@ -957,12 +1165,15 @@ $tf
 .tfstate.
 .tgitconfig
 .theos
+.thumbs.db
+.tidelift.yml
 .tmp
 .tmp_versions
 .tmux
 .tmux/resurrect
 .tool-versions
 .tox
+.travis.yml
 .truffle-solidity-loader
 .turbo
 .tye
@@ -974,6 +1185,7 @@ $tf
 .venv *
 .venv/bin
 .venv/lib
+.venvs
 .vercel
 .vertx
 .vim-src
@@ -985,9 +1197,6 @@ $tf
 .vs
 .vscode
 .vscode-test
-.vscode/*.local
-.vscode/extensions.json
-.vscode/secrets
 .vshistory
 .vuepress
 .vuepress/dist
@@ -997,7 +1206,6 @@ $tf
 .webassets-cache
 .webmeta
 .webpack
-.wget-hsts
 .windsurf
 .worksheet
 .xdchelp
@@ -1011,7 +1219,6 @@ $tf
 .yarn/cache
 .yarn/install-state.gz
 .yarn/unplugged
-.yarnrc
 .zcalc_history
 .zed
 .zinit_lstupd
@@ -1020,10 +1227,20 @@ $tf
 .~lock.
 .~lock.*#
 0.
+1. DO NOT just delete the file and commit again (it's still in history)
+1. Keep custom patterns at bottom - Easy to find
+1. Never commit:
+2. Always use:
+2. Comment additions - Explain why pattern exists
+2. Immediately rotate any exposed credentials
+3. Remove from git history:
+3. Use wildcards carefully - Be specific when possible
+4. Force push (coordinate with team first):
+4. Test patterns - Use `git status --ignored`
 404.html
 4pwdb
 4pwvs
-<&- fragments.render({ join: '\n\n' }) &>
+5. Update regularly - Add new tools as used
 <<<<<<< HEAD
 =======
 > OS 파일이나 IDE 설정처럼 개인 환경에 의존하는 파일은 글로벌에 등록하고, 프로젝트 특성에 의존하는 파일(build/, node_modules
@@ -1031,13 +1248,13 @@ $tf
 > `--cached`를 빠뜨리면 실제 파일이 삭제되므로 주의해야 한다.
 > `.gitignore` 파일 자체는 커밋하는 것이 원칙이다. 팀원 모두가 동일한 무시 규칙을 공유해야 하기 때문이다.
 > 최종 업데이트: 2026-04-10
->>>>>>> origin
->>>>>>> origin/master
+>>>>>>> 753edcc255b690e73ffee0005891226a1a96678c
 @eaDir
 ADDRVER.
 AMENT_IGNORE
 API_TOKEN=abc123xyz789
 API_TOKEN=your_token_here
+APP_KEY=base64:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 AS
 AS/System
 ASALocalRun
@@ -1045,6 +1262,7 @@ AbletonTmp-
 Academic Project
 Actions
 Actions/test
+Add project-specific patterns at the bottom:
 AppPackages
 AppSettings.config
 App_Data
@@ -1058,6 +1276,7 @@ Application
 Application/Common/Conf
 Application/Common/Conf/config.php
 Application/Runtime
+Asegura que todos usen la misma versión de Python, evitando incompatibilidades.
 AudioCache
 AutoBackups
 AutoTest.Net
@@ -1066,8 +1285,8 @@ Backup
 Backup of *.doc
 BeefSpace_User.toml
 Before pushing to a remote repository:
+Before pushing to remote:
 BenchmarkDotNet.Artifacts
-Bin
 Binaries
 Brewfile.lock.json
 Build.bat
@@ -1084,6 +1303,8 @@ CHANGELOG.txt
 CHANGELOG_AUTO.md
 CLAUDE.local.md
 CLAUDE.md
+CLOUDONIX_API_TOKEN=your_cloudonix_token_here
+CLOUDONIX_DOMAIN_UUID=your_domain_uuid_here
 CMS
 CMS/App_Data
 CMS/App_Data/AzureCache
@@ -1129,6 +1350,7 @@ CMakeLists.txt.user
 CMakeScripts
 CMakeUserPresets.json
 COLCON_IGNORE
+CONTRIBUTING.md
 COPYRIGHT.txt
 CTestTestfile.cmake
 CVS
@@ -1136,6 +1358,8 @@ Cache
 Cargo.lock
 Carthage
 Carthage/Build
+Catbird.xcodeproj/project.xcworkspace
+Catbird.xcodeproj/project.xcworkspace/xcuserdata
 Clean System Files
 ClientBin
 Compiled
@@ -1144,6 +1368,8 @@ Config/secrets
 Configurations
 ConnectionStrings.config
 ConvertLog.txt
+Created `gitignoreTemplates.js` with language-specific templates:
+DB_PASSWORD=your_secure_password_here
 DEADJOE
 DUPEREF.
 DVEfiles
@@ -1183,6 +1409,7 @@ EWARM/settings
 EWARMExe
 EWARMList
 EWARMObj
+Enhanced `.gitignore` with comprehensive patterns for multi-language projects.
 Entity
 Entity/*~
 Exe
@@ -1190,7 +1417,7 @@ Exe/*.sim
 Export
 ExportedFiles.xml
 ExportedObj
-Extra
+FINAL_SYSTEM_ASSESSMENT_*.json
 FIRST_INSTALL
 FakesAssemblies
 Find*.cmake
@@ -1199,7 +1426,7 @@ Flutter
 Flutter/ephemeral
 FodyWeavers.xsd
 Formform
-Future
+Full patterns documented inline with sections:
 GPATH
 GRAFANA_PASSWORD=mysecretpassword123
 GRAFANA_PASSWORD=your_password_here
@@ -1212,6 +1439,7 @@ Generated Files
 Generated\ Files
 Generated_Code
 GitHub.sublime-settings
+GoogleService-Info.plist
 Gruntfile.js
 HISTORY.txt
 HL2_base
@@ -1226,7 +1454,9 @@ INSTALL*.txt
 Icon
 Icon.png
 Icon?
+If this returns any files, they should be immediately removed from git tracking.
 If you have non-sensitive variables:
+If you're unsure whether something should be committed, err on the side of caution and add it to `.gitignore`.
 IlluminatedCloud
 InstalledFiles
 IntegrationServer
@@ -1249,7 +1479,9 @@ Intermediate
 JLinkLog.txt
 JOB.OTL.OLD
 JuceLibraryCode
+LICENSE
 LICENSE.txt
+Las migraciones son parte del código. Sin ellas, otros desarrolladores no podrían recrear el esquema de la base de datos.
 LineIDs.dbg
 LineIDs.dbg.bak
 Logs
@@ -1271,6 +1503,7 @@ Mkfile.old
 ModelIndex.xml
 Module.symvers
 Network Trash Folder
+No migration needed! Benefits:
 OPENCODE.local.md
 OPENCODE.md
 Obj
@@ -1285,6 +1518,7 @@ Output
 PATCH_*.sh
 PHP_errors.log
 PIPFILE.lock
+PROJECT_READINESS_BRIEF_*.md
 PULL.TBL
 Package Control.ca-bundle
 Package Control.ca-certs
@@ -1295,7 +1529,9 @@ Package Control.merged-ca-bundle
 Package Control.system-ca-bundle
 Package Control.user-ca-bundle
 Package.StoreAssociation.xml
+Package.resolved
 Packages
+Payload
 PharoDebug.log
 Physical/*/*/*
 Physical/*/*/*/DLFiles
@@ -1311,8 +1547,6 @@ Prevents committing secrets:
 ProgramHeaders.xml
 Project\ Logs
 Project\ Outputs
-Properties
-Properties/launchSettings.json
 PublishScripts
 Pulumi.*.yaml
 R-unit-tests.log
@@ -1323,14 +1557,15 @@ R/pkg/vignettes
 R/pkg/vignettes/sparkr-vignettes.html
 R/unit-tests.out
 RAM
+README.md
 README.txt
 REFVER.
 RELEASE_NOTES.md
-Recycled
 Referenced Packages
 Release
 Resources
 Resources/Library
+Run this command to check for accidentally tracked sensitive files:
 SECTVER.
 SUBMVER.
 Saved
@@ -1343,7 +1578,6 @@ ServiceFabricBackup
 Session.vim
 Sessionx.vim
 Simulator
-Solution
 Some teams commit `.terraform.lock.hcl`:
 SourceArt*.png
 SourceArt*.tga
@@ -1363,6 +1597,8 @@ TestResult.xml
 Testing
 TestsResultsCache.xml
 This `.gitignore` file protects your repository from including sensitive or unnecessary files.
+This document explains what private
+This document explains what private/sensitive information is protected from being committed to the git repository.
 Thumbs.db
 Thumbs.db:encryptable
 UPGRADE.txt
@@ -1377,6 +1613,8 @@ Workflows
 Workflows/Library
 Workflows/VCO@
 Working Directory
+You:
+You: /stub myapi rust
 [._]*.s[a-v][a-z]
 [._]*.s[a-w][a-z]
 [._]*.sw[a-p]
@@ -1539,14 +1777,24 @@ _xmsgs
 _yardoc
 _zuo.db
 _zuo_tc.db
+`.gitignore` 排除本地依赖、测试覆盖率和构建产物，避免把可再生成内容提交到仓库。
 `.gitignore`는 아직 추적되지 않는(untracked) 파일에만 적용된다. 이미 커밋된 파일을 나중에 `.gitignore`에 추가해도 계속 추적된다.
 `.gitignore`는 여러 위치에 둘 수 있으며, 각각 적용 범위가 다르다.
 ```
 ```bash
+```env
 ```gitignore
+`coverage
+`coverage/` 由测试覆盖率工具生成，不进入版本控制。
+`dist
+`dist/` 由 `pnpm run build` 生成，是 Cloudflare Pages 发布产物，不进入版本控制。
+`node_modules
+`node_modules/` 由 pnpm 安装生成，不进入版本控制。
+`poetry.lock` asegura que todos los desarrolladores usen las mismas versiones exactas de dependencias. Esto previene el famoso "works on my machine".
 a.out
 abstract.log
 abstract.record
+access_log
 aclocal.m4
 acs-*.bib
 activate_run.ps1
@@ -1972,9 +2220,7 @@ administrator/templates
 administrator/templates/hathor
 administrator/templates/isis
 administrator/templates/system
-agent_logs
-agent_temp
-agent_worktrees
+agenticide chat
 amplify
 amplify-build-config.json
 amplify-gradle-config.json
@@ -1989,21 +2235,24 @@ amplify/team-provider-info.json
 amplifyconfiguration.json
 amplifyxc.config
 analysis_benchmark.json
-analytics-tokens.json
 android
 android/.gradle
+android/app
+android/app/debug
+android/app/google-services.json
+android/app/profile
+android/app/release
 android/captures
 android/gradlew
 android/gradlew.bat
 android/key.properties
 android/local.properties
 androidGeneratedPluginRegistrant.java
+anti_pseudo_algorithmic_report_*.json
+anti_pseudo_algorithmic_summary_*.txt
 apc.php
 apex-scripts
 apex-scripts/log
-api-docs
-api-docs-source
-api-keys.json
 api/index.js
 api/index.js.map
 api_key.txt
@@ -2013,6 +2262,7 @@ app
 app*.js
 app*.js.map
 app*.map
+app.*.map.json
 app.*.symbols
 app/Config
 app/Config/core.php
@@ -2034,18 +2284,26 @@ app/View/cache
 app/View/logs
 app/View/templates_c
 app/__pycache__
+app/bootstrap
 app/bootstrap.php
 app/bootstrap.php.cache
 app/bower_components
+app/bundles/CoreBundle/Assets
+app/bundles/CoreBundle/Assets/pictograms
 app/cache
 app/code/Magento
 app/code/Magento/TestModule
 app/config/config.php
+app/config/config_local.php
+app/config/local*.php
 app/config/parameters.ini
 app/config/parameters.old.yml
 app/config/parameters.php
 app/config/parameters.yml
+app/config/parameters_defaults.php
+app/config/paths_local.php
 app/config_sandbox
+app/console
 app/db
 app/etc
 app/etc/config.php
@@ -2057,6 +2315,7 @@ app/logs
 app/phpunit.xml
 app/spool
 app/storage
+app/tests.bootstrap
 app/tmp
 app/webroot
 app/webroot/files
@@ -2077,6 +2336,7 @@ application.windows64
 application/cache
 application/files
 application/logs
+appsscript.json
 apt-get install git-secrets  # Linux
 ar-lib
 archive
@@ -2089,11 +2349,13 @@ assets/Uploads
 assets/_combinedfiles
 assets/_resampled
 assets/avatars
+assets/build
+assets/ckeditor
+assets/ckeditor/build
 assets/jsconfig.json
 assets/node_modules
 atlassian
 atlassian-ide-plugin.xml
-auth-tokens.json
 auth.json
 authorize.php
 auto
@@ -2105,29 +2367,45 @@ autoscan.log
 aws-exports.js
 aws_credentials
 awsconfiguration.json
+backend
 backend "s3" {
+backend/.generated
+backend/generated
+backend/prisma
+backend/prisma/generate
+backend/src
+backend/src/generated
+backend/src/uploads
 backend/web
 backend/web/index-test.php
 backend/web/index.php
 backend/web/robots.txt
+backtest_results
 backup_acsprset.spr
 backups
 bazel-
 bb.out
 bb.out.
 bh_unicode_properties.cache
+bin
 bin-debug
 bin-release
 bin/*.ap_
+bin/.phpunit
 bin/RhoBundle
 bin/cache
+bin/ci
+bin/debug.js
+bin/dev
 bin/internal
 bin/internal/bootstrap.bat
 bin/internal/bootstrap.sh
+bin/ldap
 bin/libs
 bin/mingit
 bin/target
 bin/tmp
+binance_speed_analyzer.py
 bitrix
 bitrix/components
 bitrix/components/bitrix
@@ -2137,7 +2415,6 @@ bitrix/php_interface
 bitrix/php_interface/dbconn.php
 bld
 blib
-blob-report
 blockchain
 blockchain/geth
 blockchain/history
@@ -2164,7 +2441,6 @@ brew install gitleaks  # macOS
 buck-out
 bucket = "my-terraform-state"
 build /
-build*.config.js
 build-
 build-cache
 build-dir
@@ -2177,23 +2453,27 @@ build.ninja
 build.out
 build.properties
 build.sh
+build/Debug
 build/Release
 build/apache-maven
 build/build
 build/classes
+build/coverage
 build/distributions
 build/libs
 build/linux-build
+build/packages
+build/packaging
 build/reports
 build/reports/tests
 build/resources
 build/scala
 build/test-classes
 build/test-results
+build/web
 build/zinc
 buildNumber.properties
 buildSrc
-buildSrc/.gradle
 buildSrc/build
 build_*_vc10
 build_*_xcode
@@ -2208,6 +2488,7 @@ buildevents.plan
 building_energy.db
 builtins
 bundle
+bundles
 cabal-dev
 cabal.project.local
 cabal.project.local~
@@ -2220,9 +2501,11 @@ callgrind.out.
 captures
 capybara-*.html
 catalog
-cboe_pipeline
+cd rhpro
 cd ~
 cd ~/homelabs
+cdaelerybeat-schedule.db
+cdk.context.json
 cdk.out
 celerybeat-schedule
 celerybeat.pid
@@ -2236,16 +2519,13 @@ charts/*.tgz
 check-plan.output
 checkouts
 checkpoint
-checkpoints
-chroma_db
 classes
 classes_gen
 classic.json
 classic.jsonp
 claude-artifacts
+clear-
 cli
-client/app/styles
-client/app/styles/style.css
 client_secret*.json
 cljs-test-runner-out
 cmake-build-
@@ -2261,6 +2541,8 @@ compile
 compile_commands.json
 compiler/ballerina-lang/src/main/resources/grammar
 compiler/ballerina-lang/src/main/resources/grammar/BallerinaLexer.tokens
+compliance
+compliance/*.json
 component
 components
 components/com_ajax
@@ -2305,6 +2587,7 @@ config.codekit
 config.codekit3
 config.guess
 config.h.in
+config.js
 config.local.fish
 config.local.py
 config.log
@@ -2330,6 +2613,7 @@ config/log4j2-local.yml
 config/master.key
 config/production.yaml
 config/sa.php
+config/secrets.
 config/secrets.yml
 config/settings.inc.php
 config/settings.old.php
@@ -2342,9 +2626,7 @@ configuration.php
 configure
 configure.ac
 configure.scan
-confusion_matrix.png
 connect.lock
-connection-strings.json
 constant
 constant/polyMesh
 constant/polyMesh/boundary
@@ -2361,6 +2643,17 @@ contents
 context.properties
 controllers
 cookbooks
+copilot
+copilot/experiments/tardis
+copilot/experiments/tardis/datasets_probe
+copilot/experiments/tardis/reports
+copilot/experiments/tardis/reports/*.jsonl
+copilot/experiments/tardis/reports/*.status.json
+copilot/experiments/tardis/reports/impulse_scan_*.json
+copilot/state
+copilot/state/runtime_state.json
+copilot/tmp
+copilot_data
 cordovatemp
 core
 core/cache
@@ -2388,10 +2681,13 @@ crash.log
 crashlytics-build.properties
 crashlytics.properties
 creator.d.ts
+credentials
+credentials.
 credentials.json
 credits.html
 cron.php
 crush.dylib
+crypto-config
 cscope.files
 cscope.in.out
 cscope.out
@@ -2416,6 +2712,7 @@ cypress/results
 cypress/screenshots
 cypress/videos
 cython_debug
+daily_reports
 data
 data.store.json
 data/DoctrineORMModule
@@ -2425,16 +2722,19 @@ data/cache
 data/external
 data/logs
 data/processed
+data/processed/*.json
 data/raw
+data/raw/*.csv
 data/sessions
 data/tmp
 data_
-database-backup.
+database-debug.log
 database.json
 database.sqlite
 datascience_env
+datasets
 db
-db-config.json
+db-config.php
 db.json
 db.sqlite3
 db.sqlite3-journal
@@ -2444,18 +2744,13 @@ db/*.sqlite3-journal
 db/sql
 dbt_modules
 dbt_packages
-dbt_weather
-dbt_weather/logs
-dbt_weather/target
 deactivate_run.ps1
 deactivate_run.sh
-debug-session.json
 debug.log
 debug_*.py
 debugger
 debugger.pref
 decompiled 0.42
-decrypted-temp
 defaults
 demos
 depcomp
@@ -2494,15 +2789,14 @@ dev/integration_testsxcuserdata
 dev/pr-deps
 dev/tests
 dev/tests/functional
-dev_config.yaml
 devdata.db
 devel
 devel_isolated
 develop-eggs
+development.test.py
 disassembly
 dist
 dist /
-dist*.env.js
 dist-
 dist-ssr
 dkms.conf
@@ -2516,14 +2810,15 @@ doc/articles/wiki/*.bin
 doc/html
 doc/xml
 docgen_tmp
+docker
+docker-compose*.yml
+docker-compose.debug.yml
+docker-compose.dev.yaml
+docker-compose.dev.yml
 docker-compose.override.yaml
 docker-compose.override.yml
-docker-compose.secrets.yml
-docker-secrets
-docker/volumes
-docker/volumes/mysql
-docker/volumes/nginx
-docker/volumes/redis
+docker-compose.yml.bak
+docker-proj.zip
 docker_images
 dockerscan
 dockerscan/debian-base
@@ -2564,11 +2859,13 @@ eagle.epf
 ebin
 ebin/*.beam
 ecf
+echo "node_modules
 eggs
 ehthumbs.db
 ehthumbs_vista.db
 elm-stuff
 elpa
+emulator-ui
 env-sample.php
 env.bak
 env.json
@@ -2583,9 +2880,16 @@ ers.txt
 eshell
 eshell/history
 eshell/lastdir
+etc
+etc/*.crt
+etc/*.csr
+etc/*.htpasswd
+etc/*.ini
+etc/*.kdbx
+example.json
 exp
-experiments
 exploded-archives
+expo-env.d.ts
 export.cfg
 export_presets.cfg
 exports
@@ -2606,14 +2910,15 @@ ext/modules
 ext/run-tests.php
 external
 extra-pkgs
-extracted-secrets
 extracted_files
 extracted_files_backup_
 extras
 extras/documentation
+fabric-samples
+fabric-samples/config
 fabric.properties
-faiss_index
 fake-eggs
+fastapidoc_apps
 fastlane
 fastlane/FastlaneRunner
 fastlane/Preview.html
@@ -2633,11 +2938,16 @@ files/downloads
 files/tmp
 finalOutput
 finalOutput/*.js
-fish
-fish/completions
+firebase-*.zip
+firebase-adminsdk*.json
+firebase-debug.*.log
+firebase-debug.log
+firestore-debug.log
 fish_history
 fish_variables
 fishd.
+fixturesSQL_minimal.sql
+flamegraph*.svg
 flows
 flutter_*.png
 flycheck_*.el
@@ -2647,9 +2957,6 @@ fp-info-cache
 fp.cfg
 fp.dsk
 fp.ini
-frontend
-frontend/dist
-frontend/node_modules
 frontend/web
 frontend/web/index-test.php
 frontend/web/index.php
@@ -2664,8 +2971,11 @@ fuel/app/logs/*/*
 fuel/vendor
 funclist
 functions
+functions/.env
 functions/\[\[path\]\].js
 functions/\[\[path\]\].js.map
+functions/node_modules
+functions/package-lock.json
 game/*
 game/*/bin
 game/*/cfg
@@ -2680,7 +2990,6 @@ game/*/screenshots
 game/*/stats.txt
 game/*/voice_ban.dt
 game28.dta
-gcp-service-account.json
 gen
 gen-external-apklibs
 generated
@@ -2704,23 +3013,32 @@ git check-ignore -v .vagrant
 git check-ignore -v <filename>
 git check-ignore -v kubeconfig
 git check-ignore -v 파일경로
+git clean -n -d -X  # Dry run of ignored files cleanup
 git commit -m "Add SSH public key for team"
 git commit -m "Add secrets template"
 git commit -m "Initial commit: Homelabs k3s cluster setup"
+git commit -m "Initial commit: RHpro full stack"
+git commit -m "Initial project setup with FastAPI, PostgreSQL and authentication"
 git commit -m "Remove accidentally committed kubeconfig"
 git commit -m "Stop tracking <filename>"
 git commit -m "apply .gitignore rules"
 git commit -m "stop tracking .env"
 git config --global core.excludesFile ~
 git config --global core.excludesFile ~/.gitignore_global
+git diff --cached
+git diff --cached | grep -i "password\|secret\|key\|token"
 git diff --staged
 git filter-branch --force --index-filter \
 git init
+git ls-files
+git ls-files | grep -E '\.(env|pem|key|crt|cert|secret|sql|dump|db|sqlite)$|credentials\.json|secrets\.json'
 git ls-tree -r main --name-only
 git push -u origin main
 git push origin --force --all
 git remote add origin git@gitserver.local:repos
 git remote add origin git@gitserver.local:repos/homelabs.git
+git remote add origin https://github.com/YOUR_USERNAME
+git remote add origin https://github.com/YOUR_USERNAME/rhpro.git
 git remote add origin https://github.com/username
 git remote add origin https://github.com/username/homelabs.git
 git remote add origin https://gitlab.com/username
@@ -2734,18 +3052,24 @@ git rm -r --cached .
 git secrets --install
 git secrets --register-aws
 git status
+git status  # Should not show test.log
+git status  # Should show only tracked files
 git status --ignored
+git status -u
 github-*.zip
 github-cache
-github-copilot
 gitleaks detect --source . --verbose
 go.work
 go.work.sum
+goMakeIt
 goinstall.log
 gomock_reflect
 google_calendars.yaml
+governance
+governance/*.json
 gradle
 gradle-app.setting
+gradle.properties
 gradle/verification-metadata.xml
 gradle/wrapper
 gradle/wrapper/gradle-wrapper.properties
@@ -2768,7 +3092,7 @@ harmony_media_room.conf
 healthchecksdb
 hello_world.elf
 helpsearch
-hephaestus.db
+high_speed_impulse_detector.py
 history.index
 home-assistant.db
 home-assistant.log
@@ -2777,9 +3101,17 @@ home-assistant_v2.db
 home-assistant_v2.db-
 homelabs
 hooks
+hosting
+hosting/.cache
 hs_err_pid
 hsptmp
 htaccess.txt
+htdocs
+htdocs/download
+htdocs/owee
+htdocs/plaetjes
+htdocs/tools
+htdocs/tools/alphabanner
 html
 html5_push_registrations.conf
 htmlcov
@@ -2827,6 +3159,7 @@ install-sh
 install.php
 install_manifest.txt
 installation
+installed.lock
 installer
 installer/_build
 installer/deps
@@ -2839,7 +3172,6 @@ installer/tmp
 installer_files
 instance
 integration-repo
-integration-test-keys.json
 ios
 ios*.mode1v3
 ios*.mode2v3
@@ -2865,6 +3197,7 @@ ios/Flutter/flutter_assets
 ios/Flutter/flutter_export_environment.sh
 ios/Runner
 ios/Runner/GeneratedPluginRegistrant.
+ios/Runner/GoogleService-Info.plist
 ios/ServiceDefinitions.json
 iosDerivedData
 iosIcon?
@@ -2905,8 +3238,6 @@ jboss/server/minimal/log
 jboss/server/minimal/log/*.log
 jboss/server/minimal/tmp
 jboss/server/minimal/work
-jenkins
-jenkins/secrets
 jgiven-reports
 jitwatch.out
 jmx.log
@@ -2931,24 +3262,18 @@ junit *.xml
 junit*.properties
 junitvmwatcher*.properties
 jxl.log
-k8s/secrets
-k8s/secrets/*.yaml
-kafka
-kafka/__pycache__
 key    = "homelabs
 key    = "homelabs/terraform.tfstate"
 keyrings/live
 keyrings/live/pubring.gpg~
 keyrings/live/pubring.kbx~
 keyrings/live/secring.gpg
-keys.env
-keys.env.local
+keys
 keystore
 kitchen.local.yml
 known_devices.yaml
 kobaltBuild
-kubernetes/secrets
-kubernetes/secrets/*.yml
+lambda-invoke-response.json
 language
 language/en-GB
 language/en-GB/en-GB.com_ajax.ini
@@ -3048,7 +3373,6 @@ language/overrides
 last-change
 latex
 latex.out
-launch.json
 layouts
 layouts/index.html
 layouts/joomla
@@ -3065,6 +3389,7 @@ lib/bs
 lib/bundler
 lib/bundler/man
 lib/debug
+lib/firebase_options.dart
 lib/generated_plugin_registrant.dart
 lib/internal/flex/uploader
 lib/internal/flex/uploader/.actionScriptProperties
@@ -3105,6 +3430,8 @@ library
 libs
 libtool
 licenc.txt
+lighthouse-report.html
+lighthouse-report.json
 linked_*.ds
 lint-r-report.log
 linux
@@ -3112,27 +3439,26 @@ linux/flutter
 linux/flutter/generated_plugin_registrant.cc
 linux/flutter/generated_plugin_registrant.h
 linux/flutter/generated_plugins.cmake
+live_trading_*.log
 lnInclude
 local
+local-config.json
 local-patch
-local-xdebuginfo.php
+local.db
 local.meta
 local.mk
 local.properties
 local.sbt
 local.settings.json
 local_conf.php
-local_config.yaml
+local_mail
 local_settings.py
 locales
 log
 log.
 log.html
 log.txt
-logs/*.sensitive.log
-logs/api.log
-logs/auth.log
-logs/debug.log
+logfile
 logtalk_doclet_logs
 logtalk_tester_logs
 lpfg.log
@@ -3152,7 +3478,8 @@ m4/lt~obsolete.m4
 macos/Flutter
 macos/Flutter/GeneratedPluginRegistrant.swift
 macos/Flutter/ephemeral
-mailchimp-api.json
+macos/Runner
+macos/Runner/GoogleService-Info.plist
 mails
 manifest/cache
 manifest/logs
@@ -3163,11 +3490,12 @@ marimo/_lsp
 marimo/_static
 massif.out
 massif.out.
-mcp_cache
-mcp_logs
+mcp-server-config.json
 mdate-sh
 media
 media/archive
+media/assets
+media/bundles
 media/cms
 media/com_associations
 media/com_contact
@@ -3180,13 +3508,30 @@ media/com_menus
 media/com_modules
 media/com_wrapper
 media/contacts
+media/css
+media/css/app.css
+media/css/libraries.css
+media/css/mediaelementplayer.min.css
+media/css/modal.min.css
+media/css/offline.css
 media/customer
+media/dashboards
 media/dhl
 media/downloadable
 media/editors
+media/files
 media/image
+media/images
 media/index.html
+media/js
+media/js/app.js
+media/js/froogaloop.min.js
+media/js/jquery.min.js
+media/js/libraries.js
+media/js/mautic-form.js
 media/jui
+media/libraries
+media/libraries/ckeditor
 media/mailto
 media/media
 media/mod_languages
@@ -3210,15 +3555,16 @@ media/xmlconnect
 media/xmlconnect/custom
 media/xmlconnect/original
 media/xmlconnect/system
+memray-*.bin
+memray-*.html
 meson-logs
 meson-private
 meson_benchmark_setup.dat
 meson_test_setup.dat
+metadata
+metadata/*.json
 metastore
 metastore_db
-micro
-micro/backups
-micro/buffers
 middleware.properties
 min
 misc
@@ -3231,12 +3577,12 @@ misc/cgo/testso
 misc/cgo/testso/main
 missing
 mix-manifest.json
-mlruns
+mkdir rhpro
 mm.log
 mnesia
 moc_*.cpp
 moc_*.h
-mock-secrets.json
+mockup
 models
 modern.json
 modern.jsonp
@@ -3281,7 +3627,6 @@ modules/system
 modules/users
 monitoring
 monitoring/data
-monitoring_logs
 mono_crash.
 mono_crash.*.json
 msbuild.err
@@ -3304,6 +3649,7 @@ my-experiments
 myenv
 nCrunchTemp_
 nacl_irt_x86_64.nexe
+naer_csv
 native_compute_profile_*.data
 nativeapi.json
 nativebindings/Android/*
@@ -3334,31 +3680,27 @@ nia.cache
 nimblecache
 nimcache
 nlia.cache
-node
 node_modules
-node_modules.bun
-node_tmp
 nohup.out
 nosetests.xml
 npm-debug.log
-npm-debug.log.
 nra.cache
-nuget.config
 nunit-*.xml
 nupkg
 nw_100_percent.pak
 nw_200_percent.pak
 nytprof.out
-oauth.json
 object_script.*.Debug
 object_script.*.Release
 octave-workspace
 old
 olvasdel.html
+online_learning.log
 ood.flag
 opa-debug-js
 open_api_generator / validate_oas_fetch_ikp_vault_info
 open_api_generator / validate_oas_fetch_ikp_vault_info / get_clus_namespace_info.py
+organizations
 orleans.codegen.cs
 orphaned-proofs.prf
 oscrypto-ca-bundle.crt
@@ -3374,7 +3716,6 @@ override.tf.json
 ozw_log.txt
 package
 package-cache
-package-json.lock
 packages/flutter
 packages/flutter/coverage
 packer_cache
@@ -3385,15 +3726,15 @@ par_usage_statistics.html
 parts
 patched-src
 pawn.lock
-paypal-credentials.json
 performance_counters.csv
-phase1
-phase1/keys.env
 php-cs-fixer
 php-errors.log
 php_error.log
 phpcs.xml
 phproad
+phpstan.dist.neon
+phpstan.neon.dist
+phpunit.init.php
 phpunit.phar
 phpunit.xml
 phue.conf
@@ -3414,7 +3755,6 @@ platforms
 play-cache
 play-stash
 playground.xcworkspace
-playwright-report
 plex.conf
 plugin.xml
 plugins
@@ -3562,13 +3902,17 @@ prepros-6.config
 prepros.cfg
 prepros.config
 prime
+prisma
+prisma/*.db
+prisma/*.db-journal
 priv
 priv/static
 processor
 prodDb.
 profile.cov
+profile.html
+profile.json
 profile_default
-profiler-data.json
 profiles
 proguard
 project
@@ -3589,6 +3933,7 @@ project/plugins/src_managed
 project/plugins/target
 project/project
 project/target
+project_readiness_report_*.json
 projectmetals.sbt
 projects
 projectsplash.xml
@@ -3598,6 +3943,10 @@ protected/data
 protected/data/*.db
 protected/runtime
 protrace
+proxy
+proxy/data
+proxy/letsencrypt
+psalm.xml
 psd
 pub
 pub/media
@@ -3621,7 +3970,6 @@ pub/sitemap
 pub/sitemap.xml
 pub/static
 public
-public*-key-*.js
 public/.user.ini
 public/_constants.php
 public/_install
@@ -3636,7 +3984,9 @@ public/build
 public/data
 public/dist
 public/hot
-public/imager
+public/i
+public/js
+public/js/custom.js
 public/myadmin
 public/myadmin/LICENSE
 public/myadmin/README.md
@@ -3655,9 +4005,11 @@ public_html/hot
 public_html/storage
 publish
 pubspec.lock
+pubsub-debug.log
 pulltbl.bck
 pvsbin
 py-compile
+py-spy-*.svg
 pyozw.sqlite
 pyrightconfig.json
 python
@@ -3671,7 +4023,6 @@ python/test_coverage/coverage_data
 python/test_coverage/htmlcov
 pythontex-files-
 pyvenv.cfg
-qdrant_storage
 qrc_*.cpp
 qtcreator-
 quick-test
@@ -3692,6 +4043,7 @@ region = "us-west-2"
 rel
 rel/example_project
 release.properties
+releases
 render.experimental.xml
 repl-temp-
 replay_pid
@@ -3783,7 +4135,6 @@ rpc
 rsconnect
 run
 runtime
-runtime-secrets.json
 runtime/doc
 runtime/doc/*.html
 runtime/doc/*.mpack
@@ -3797,7 +4148,6 @@ salesforce.schema
 sam.json
 sam.yaml
 samconfig.toml
-sandbox
 sanitycheckcpp.cc
 sanitycheckcpp.cc     # C++ specific
 sanitycheckcpp.exe    # C++ specific
@@ -3806,7 +4156,10 @@ sc_dpiheader.h
 scalastyle-on-compile.generated.xml
 scalastyle-output.xml
 scalastyle.txt
+scalene-*.html
 sccprj
+schemas
+schemas/*.schema.json
 scratch.py
 scratch.txt
 screenshot*.png
@@ -3819,14 +4172,12 @@ secret
 secret / app_secret.json
 secret / fw_secret.json
 secret-*.json
-secret.json
 secrets
-secrets-working
+secrets.
+secrets.docker-compose.yml
 secrets.json
-secrets.xml
 secrets.yaml
 secrets.yml
-secrets/docker
 secring.
 sed 's/password:.*/password: "YOUR_PASSWORD_HERE"
 sed 's/password:.*/password: "YOUR_PASSWORD_HERE"/' secrets.yaml.example
@@ -3834,7 +4185,7 @@ segments.
 segments_
 selenium-screenshot-*.png
 selenium.php
-sendgrid-keys.json
+send_tester_critical_report.py
 server
 server.pid
 server/all
@@ -3871,8 +4222,8 @@ server/standard/log
 server/standard/tmp
 server/standard/work
 service-account.json
-session-data.json
-session-tokens.json
+serviceAccount*.json
+sessie
 session.inp
 sessions
 settings
@@ -3911,7 +4262,6 @@ site/config/.license
 site/sessions
 sitemap
 sitemap.xml
-sitemap.xml.gz
 sites
 sites/*
 sites/*/*settings*.php
@@ -3943,6 +4293,7 @@ smartgen/smartgen.aws
 snap
 snap/.snapcraft
 snapshot_blob.bin
+solution
 source
 source/Application
 source/Application/translations
@@ -3970,6 +4321,8 @@ spec/examples.txt
 spec/fixtures
 spec/reports
 spec/tmp
+specialized_pseudo_fraud_report_*.json
+specialized_pseudo_fraud_summary_*.txt
 sph*.php
 spring-*
 spring-*/build
@@ -3982,8 +4335,21 @@ sql/docs
 sql/hive-thriftserver
 sql/hive-thriftserver/test_warehouses
 sql/site
+sql_app.db
 src
 src*.tmp
+src-bex
+src-bex/js
+src-bex/js/core
+src-bex/www
+src-capacitor
+src-capacitor/node_modules
+src-capacitor/www
+src-cordova
+src-cordova/node_modules
+src-cordova/platforms
+src-cordova/plugins
+src-cordova/www
 src-gen
 src/*.
 src/asciidoc
@@ -3997,6 +4363,14 @@ src/cmd/go/internal/cfg/zdefaultcc.go
 src/cmd/go/internal/cfg/zosarch.go
 src/cmd/internal/objabi
 src/cmd/internal/objabi/zbootstrap.go
+src/discover-feeds
+src/frontend
+src/frontend/bower_components
+src/frontend/dist
+src/frontend/node_modules
+src/frontend/public/assets/stylesheets
+src/frontend/public/assets/stylesheets/app-next.css.map
+src/frontend/tmp
 src/game/client
 src/game/client/Release_
 src/game/server
@@ -4006,6 +4380,7 @@ src/go/build
 src/go/build/zcgo.go
 src/go/doc
 src/go/doc/headscan
+src/icons
 src/main/webapp
 src/main/webapp/libs
 src/nvim/po
@@ -4024,6 +4399,7 @@ src/nvim/testdir/test*.res
 src/nvim/testdir/test.ok
 src/nvim/testdir/valgrind.
 src/nvim/testdir/viminfo
+src/rendering
 src/runtime/internal/sys
 src/runtime/internal/sys/zversion.go
 src/unicode
@@ -4042,6 +4418,10 @@ stacktrace.log
 stage
 stamp-h1
 stamp-h?
+start.sh
+static
+static/companies.bson
+static/companies.json
 stellar.yaml
 storage
 storage/*.key
@@ -4058,7 +4438,6 @@ storage/pail
 storybook-static
 streaming-tests.log
 string_table.txt
-stripe-keys.json
 studio_log
 stylesheets
 stylesheets/bundles
@@ -4066,7 +4445,6 @@ subprojects
 svg-inkscape
 symphony
 sympy-plots-for-*.tex
-sync
 synthesis
 sysinfo.txt
 system
@@ -4081,11 +4459,9 @@ system/tests/source/units/auto-tests
 target
 target-eclipse
 target_wrapper.
-tasks.json
-temp-credentials.json
+temp-data
 temp-testng-customsuite.xml
 tempCodeRunnerFile.py
-temp_workspace
 templates
 templates/*-template-binary
 templates/beez3
@@ -4094,33 +4470,25 @@ templates/lua-template-runtime
 templates/lua-template-runtime/runtime
 templates/protostar
 templates/system
-terraform
 terraform {
 terraform.d
 terraform.d/modules
 terraform.d/plugins
 terraform.rc
 terraform.tfstate.backup
-terraform/.terraform
-terraform/terraform.tfstate
-terraform/terraform.tfstate.backup
-terraform/terraform.tfvars
 terragrunt-debug.tfvars.json
 test
 test-build
-test-credentials.json
 test-driver
 test-local.sh
 test-modules
 test-output
 test-report
-test-reports
 test-result
 test-results
 test-servers
 test.java
 test.out
-test/bower_components
 test/garbage
 test/garbage/*.out
 test/includes
@@ -4134,18 +4502,21 @@ test/version_tmp
 test1.sql
 testApp
 test_*.py
-test_config.yaml
 test_gen
 test_gen.caches
+test_report_*.md
 test_tools
 test_tools/*.jpg
 test_tools/*.png
 test_tools/.venv
 test_tools/uv.lock
+test_websocket_connection.py
 testbox
+testdata
 testem.log
 testit-reports
 tests
+tests*.sql
 tests/*
 tests/*/proj.android-studio/app
 tests/*/proj.android-studio/app/build.xml
@@ -4209,7 +4580,6 @@ tmp/sessions
 tmp/tests
 tmtags
 token.json
-tokens.json
 tool-plugins/intellij/src/main/antlr/org/ballerinalang/plugins/idea/grammar
 tool-plugins/intellij/src/main/antlr/org/ballerinalang/plugins/idea/grammar/BallerinaLexer.tokens
 tooldata
@@ -4224,19 +4594,22 @@ tools/tojs/user.cfg
 tools/tojs/userconf.ini
 tools/tolua
 tools/tolua/userconf.ini
+torrentStats
+touch test.log
 trace.out
 trace_core_00000000.log
 traceback.txt
 tradfri.conf
+trading_logs
 trained_model.joblib
-training_history.png
-trajectory_logs
+trained_models
+training_results
 tramp
 transcript
 translations
 translations/*.qm
+tslint.json
 tts
-twilio-auth.json
 typings
 typo3
 typo3_src
@@ -4250,6 +4623,7 @@ typo3conf/temp_fieldInfo.php
 typo3temp
 uart0.log
 ucli.key
+ui-debug.log
 ui_*.h
 umbraco
 unit-tests.log
@@ -4258,6 +4632,9 @@ unlinked_spec.ds
 unused
 update.php
 updates
+upgrade
+upgrade_errors.txt
+upgrading.lock
 upload
 upload_backup
 uploaded
@@ -4274,29 +4651,43 @@ user_guide_src/cilexer/build
 user_guide_src/cilexer/dist
 user_guide_src/cilexer/pycilexer.egg-info
 users
+uv.lock
 v*-console-*.zip
 v*-deps-*.zip
 v*-lua-runtime-*.zip
+validation/evidence/backups
+validation/evidence/backups/*.tar.gz
+validation/evidence/backups/*.zip
 var
+var/bootstrap
 var/bootstrap.php.cache
 var/cache
+var/dart-sass
 var/langs
 var/log
 var/logs
 var/package
+var/phpstan-cache
+var/sass
 var/sessions
+var/spool
+var/tmp
 vc_hdrs.h
 vcpkg-manifest-install.log
 vcpkg_installed
-vector_db
 velocity.log
 vendor
+vendor/apigen
+vendor/apigen/apigen
 vendor/assets
 vendor/assets/bower_components
 vendor/bundle
+vendor/composer
+vendor/composer/installers
 vendors
 venv
 venv.bak
+versionpress.maintenance
 viewdraw
 vignettes
 vignettes/*.html
@@ -4312,7 +4703,6 @@ vqmod/vqcache
 vsim.dbg
 waf-*-
 waf3-*-
-wandb
 war
 war/WEB-INF
 war/WEB-INF/classes
@@ -4320,11 +4710,13 @@ war/WEB-INF/deploy
 war/gwt_bree
 warehouse
 warnings.log
+wc-logs
 web
 web-app
 web-app/WEB-INF
 web-app/WEB-INF/classes
 web-app/plugins
+web-build
 web-desktop
 web-mobile
 web.config.txt
@@ -4352,7 +4744,6 @@ web/core
 web/css
 web/example.gitignore
 web/fileadmin
-web/imager
 web/index.php
 web/js
 web/modules
@@ -4397,6 +4788,7 @@ web/vendor
 web/web.config
 web_modules
 webostv.conf
+webroot
 website/var
 website/var/assets
 website/var/backup
@@ -4426,33 +4818,35 @@ website/var/versions/object
 webtalk.log
 webtalk_impact.xml
 webtalk_pn.xml
+whale-project.code-workspace
 wheels
 windows/flutter
 windows/flutter/generated_plugin_registrant.cc
 windows/flutter/generated_plugin_registrant.h
 windows/flutter/generated_plugins.cmake
+windows/runner
+windows/runner/firebase_options.dart
 windowsViews.xml
 wlf
 work
 workspace
 workspace.xml
 workspace/uploads
-worktrees
 wp-*.php
 wp-activate.php
 wp-admin
 wp-admin/error_log
 wp-app.php
+wp-atom.php
 wp-blog-header.php
 wp-cli
 wp-comments-post.php
-wp-config-local.php
+wp-commentsrss2.php
 wp-config-sample.php
 wp-content
 wp-content/*.php
 wp-content/advanced-cache.php
 wp-content/backup-db
-wp-content/backups
 wp-content/blogs.dir
 wp-content/cache
 wp-content/cache*.css
@@ -4462,51 +4856,103 @@ wp-content/cache*.html.gz
 wp-content/cache*.js
 wp-content/cache*.js.gz
 wp-content/cache/supercache
-wp-content/db.php
 wp-content/debug.log
 wp-content/index.php
 wp-content/languages
+wp-content/languages/themes
+wp-content/languages/themes/twentyfifteen
+wp-content/languages/themes/twentyfourteen
+wp-content/languages/themes/twentythirteen
+wp-content/languages/themes/twentytwelve
 wp-content/mu-plugins
 wp-content/mu-plugins/limit-login-attempts
+wp-content/mu-plugins/load-wp-performance-profiler.php
 wp-content/mu-plugins/mu-plugin.php
 wp-content/mu-plugins/slt-force-strong-passwords.php
+wp-content/mu-plugins/wp-performance-profiler
 wp-content/mu-plugins/wpengine-common
+wp-content/mwp-download
 wp-content/mysql.sql
 wp-content/object-cache.php
 wp-content/plugins
+wp-content/plugins/any-hostname
+wp-content/plugins/batcache
+wp-content/plugins/blogger-importer
+wp-content/plugins/debug-bar
+wp-content/plugins/debug-bar-
+wp-content/plugins/developer
+wp-content/plugins/genesis-visual-hook-guide
 wp-content/plugins/hello.php
 wp-content/plugins/index.php
+wp-content/plugins/laps
+wp-content/plugins/log-deprecated-notices
+wp-content/plugins/log-viewer
+wp-content/plugins/memcached
+wp-content/plugins/monster-widget
+wp-content/plugins/p3-profiler
+wp-content/plugins/piglatin
+wp-content/plugins/query-monitor
+wp-content/plugins/rewrite-rules-inspector
+wp-content/plugins/rtl-tester
 wp-content/plugins/si-captcha-for-wordpress/captcha
 wp-content/plugins/si-captcha-for-wordpress/captcha/cache
+wp-content/plugins/simply-show-ids
+wp-content/plugins/theme-check
+wp-content/plugins/tumblr-importer
+wp-content/plugins/user-switching
+wp-content/plugins/w3-total-cache
+wp-content/plugins/what-the-file
+wp-content/plugins/wordpress-beta-tester
+wp-content/plugins/wp-crontrol
+wp-content/plugins/wp-db-backup
+wp-content/plugins/wp-fastest-cache
+wp-content/plugins/wp-file-cache
+wp-content/plugins/wp-hydra
+wp-content/plugins/wp-performance-pack
+wp-content/plugins/wp-performance-profiler
+wp-content/plugins/wp-redis
+wp-content/plugins/wp-super-cache
+wp-content/plugins/wpml-theme-tester
 wp-content/sunrise.php
 wp-content/themes
+wp-content/themes/*
+wp-content/themes/*/node_modules
 wp-content/themes/THEME-NAME
 wp-content/themes/index.php
-wp-content/themes/sage10
-wp-content/themes/sage10/.husky
-wp-content/themes/sage11
-wp-content/themes/sage11/.husky
 wp-content/themes/twenty
+wp-content/themes/twentyeleven
+wp-content/themes/twentyfifteen
+wp-content/themes/twentyfourteen
+wp-content/themes/twentyseventeen
+wp-content/themes/twentysixteen
+wp-content/themes/twentyten
+wp-content/themes/twentythirteen
+wp-content/themes/twentytwelve
 wp-content/upgrade
 wp-content/uploads
 wp-content/uploads*.jpg
 wp-content/uploads*.png
 wp-content/w3tc-config
-wp-content/wflogs
 wp-content/wp-cache-config.php
 wp-content/wpbackitup
+wp-content/wpvividbackups
 wp-cron.php
+wp-feed.php
 wp-includes
 wp-links-opml.php
 wp-load.php
 wp-login.php
 wp-mail.php
+wp-pass.php
+wp-rdf.php
+wp-register.php
+wp-rss.php
+wp-rss2.php
 wp-settings.php
 wp-signup.php
 wp-trackback.php
 wpcs
 wren_modules
-wt_
 www
 www-test
 wwwroot
@@ -4521,6 +4967,7 @@ xcshareddata/WorkspaceSettings.xcsettings
 xcuserdata
 xill.properties
 xlnx_auto_0_xdb
+xmcloud.plugin*.json
 xmlrpc.php
 xst
 xtend-gen
@@ -4535,6 +4982,8 @@ zig-cache
 zig-out
 zsdoc
 zsdoc/data
+{% endif %}
+{% if vercel_function_enabled%}
 {%- endif %}
 {%- if 'go' in languages %}
 {%- if 'java' in languages %}
@@ -4547,6 +4996,12 @@ zsdoc/data
 {{ end }}
 {{ if .ExtraGitignore }}
 {{ range .ExtraGitignore }}
+{{.ProjectName}}
+{{abspath}}
+{{abspath}}/wp-config.php
+{{wp-content}}
+{{wp-plugins}}
+{{wp-plugins}}/versionpress
 | IDE 설정 | `.idea/`, `.vscode
 | IDE 설정 | `.idea/`, `.vscode/`, `*.iml` | 개인 환경 설정 |
 | OS 생성 파일 | `.DS_Store`, `Thumbs.db` | 불필요한 시스템 파일 |
@@ -4590,7 +5045,6 @@ zsdoc/data
 ~$*.doc
 ~$*.ppt
 ~$*.xls
-~$*.xlsx
 ~aclzw.tmp
 │   └── .gitignore-README.md   ✓ Committed
 │   └── ssh-nodes.sh           ✓ Committed
@@ -4678,9 +5132,12 @@ zsdoc/data
 .cc-ban.txt.bak
 .cfg
 .checkstyle
+.claude/CLAUDE.md
+.claude/settings.json
 .cobalt
 .codeintel
 .compile
+.composer
 .conf
 .config.php.swp
 .configuration.php.swp
@@ -4732,6 +5189,7 @@ zsdoc/data
 .gitignore~
 .gitk
 .gitkeep
+.gitlab
 .gitlab/issue_templates
 .gitlab/merge_request_templates
 .gitlab/route-map.yml
@@ -4811,7 +5269,6 @@ zsdoc/data
 .magentointel-cache/
 .mail_aliases
 .mailrc
-.maintenance
 .maintenance2
 .mc
 .mc/
@@ -5013,7 +5470,6 @@ zsdoc/data
 .tmproj
 .transients_purge.log
 .Trash
-.travis.yml
 .tx/
 .user.ini
 .vacation.cache
@@ -5112,7 +5568,6 @@ acceptance_config.yml
 access-log
 access.log
 access.phtml
-access_log
 accesslog
 accesslogs
 account.php
@@ -5603,7 +6058,6 @@ console/
 console/base/config.json
 console/payments/config.json
 content/debug.log
-CONTRIBUTING.md
 contributors.txt
 controlpanel.php
 COPYING
@@ -6091,7 +6545,6 @@ log_1.txt
 log_errors.txt
 log_status_order.txt
 logexpcus.txt
-logfile
 logfiles
 login
 login.php
@@ -6460,7 +6913,6 @@ proftpdpasswd
 project.pbxproj
 project.xml
 propel.ini
-proxy
 prv/
 public/spaw2/dialogs/dialog.php
 publication_list.xml
@@ -6485,7 +6937,6 @@ Read_Me.txt
 readfile
 README
 README.htm
-README.md
 recentservers.xml
 redirect
 register.php
@@ -6750,7 +7201,6 @@ ui/vault/
 unattend.txt
 up.php
 UPDATE.txt
-UPGRADE
 upgrade.php
 upl.php
 upload.asp
@@ -6886,7 +7336,6 @@ wp-content/plugins/disqus-comment-system/disqus.php
 wp-content/plugins/google-sitemap-generator/sitemap-core.php
 wp-content/uploads/
 wp-json/wp/v2/users
-wp-register.php
 wp.php
 wp.rar/
 wp.sql
@@ -6995,6 +7444,7 @@ list
 .db.xml
 .db.yaml
 .debug.env
+.devcontainer
 .django.env
 .dockerenv
 .drone.yml
@@ -7115,6 +7565,7 @@ list
 .yo-rc.json
 .zshrc
 api-doc
+api-docs
 api.html
 api.json
 api.yaml
@@ -8069,7 +8520,6 @@ cp
 cp.html
 cpanel_file/
 craft/
-credentials
 credentials.csv
 credentials.txt
 credentials.xml
@@ -8331,7 +8781,6 @@ error_import
 errorPages
 errors.asp
 errors.tpl
-etc
 etc/
 etc/lib/pChart2/examples/imageMap/index.php
 etcd-apiserver-client.key
@@ -8395,7 +8844,6 @@ files/tmp/
 Files/user.lock
 FileZilla.xml
 findbugs/
-firebase-debug.log
 flash/
 flash/ZeroClipboard.swf
 fluent.conf
@@ -8478,7 +8926,6 @@ houtai/
 houtai/admin.asp
 hpwebjetadmin/
 hs_err_pid.log
-htdocs
 htdocs.zip
 html.tar
 html.tar.bz2
@@ -8634,7 +9081,6 @@ lib/bundler/man/
 lib64/
 libraries/
 librepag.log
-LICENSE
 license.md
 license.php
 license_key.php
@@ -9345,7 +9791,6 @@ stage_deploy_dev.sh
 stage_deploy_prod.sh
 staradmin/
 start.html
-start.sh
 startServer.log
 startup.cfg
 startup.sh
@@ -9736,7 +10181,6 @@ zipkin/
 .ackrc
 .action
 .admin/
-.agignore
 .agilekeychain
 .agilekeychain.zip
 .aliases
@@ -9795,7 +10239,6 @@ zipkin/
 .clog.toml
 .coafile
 .cocoadocs.yml
-.codacy.yml
 .codecov.yml
 .codefresh/codefresh.yml
 .codeship.yaml
@@ -9832,7 +10275,6 @@ zipkin/
 .ctags
 .curlrc
 .data/
-.db
 .db3
 .dbshell
 .dbus/
@@ -9869,7 +10311,6 @@ zipkin/
 .env.travis
 .envs
 .env~
-.eslintrc.yaml
 .eslintrc.yml
 .esmtprc
 .evg.yml
@@ -9987,6 +10428,7 @@ zipkin/
 .id
 .idea.name
 .idea/libraries/
+.idea/modules
 .identcache
 .inc
 .indent.pro
@@ -10257,6 +10699,7 @@ zipkin/
 .well-known/timezone
 .well-known/void
 .well-known/webfinger
+.wget-hsts
 .wgetrc
 .whitesource
 .wm_style
@@ -10274,6 +10717,7 @@ zipkin/
 .xsession
 .yamllint
 .yarnclean
+.yarnrc
 .ycm_extra_conf.py
 .yield.log
 .zcompdump-remote-desktop-5.7.1
@@ -11929,6 +12373,7 @@ new_admin
 newadmin
 nextcloud
 nimda/
+node
 node/1?_format=hal_json
 nodes
 ntadmin
@@ -12156,6 +12601,7 @@ programs
 progra~1
 promo
 propadmin
+properties
 protected_access/
 provider.tf
 proxy.ini
@@ -12195,7 +12641,6 @@ redoc
 regadmin
 register
 registration
-releases
 Remote-Access/
 Remote-Administrator/
 remote-entry/
@@ -12400,7 +12845,6 @@ staff
 staffadmin
 staging
 start
-static
 Statistik/
 status
 status/selfDiscovered/status
@@ -21737,7 +22181,6 @@ AxisServlet
 bac.7z
 back/
 back.7z
-backend
 backend.7z
 backend.rar
 backend.sql
@@ -25263,7 +25706,6 @@ destination
 dev2local.sh
 django/settings.py
 docker-cloud.yml
-docker-compose.dev.yml
 docker-compose.prod.yml
 docker-compose.production.yml
 docker-compose.staging.yml
@@ -25356,7 +25798,6 @@ lookup
 mailsms/s?func=ADMIN:appState&dumpConfig=/
 media../.git/config
 memory
-metadata
 mgmt/tm/sys/management-ip
 migration.db
 minio/prometheus
@@ -25929,6 +26370,7 @@ affiche
 lv
 emailtemplates
 forward
+sandbox
 shaken
 voted
 hidden
@@ -25991,6 +26433,7 @@ notification
 visit
 is
 createaccount
+extra
 greybox
 lofiversion
 rateit
@@ -26164,7 +26607,6 @@ frame
 PlaceOrder
 catalogue
 quotes
-schemas
 zh
 digest
 locale
@@ -26224,7 +26666,6 @@ arquivos
 livechat
 locations
 extensions
-hosting
 maillist
 productimage
 pop
@@ -26433,6 +26874,7 @@ corp
 eu
 ewebeditor
 foo
+frontend
 inscription
 inventory
 outgoing
@@ -27179,7 +27621,6 @@ tgp
 verisign
 visitors
 webinar
-webroot
 anmeldung
 center
 divers
@@ -27514,7 +27955,6 @@ financial
 ge
 humor
 jokes
-keys
 koszyk
 lista
 mom
@@ -27667,6 +28107,7 @@ privado
 reviewhelpful
 ringtones
 styleguide
+sync
 trac
 trailers
 transport
@@ -27956,7 +28397,6 @@ joe
 last
 lb
 lk
-mockup
 nieuwsbrief
 ofertas
 one
@@ -28641,7 +29081,6 @@ financing
 firm
 gear
 giveaway
-governance
 gss
 hc
 imgres
@@ -28772,6 +29211,7 @@ exam
 excite
 floorplans
 fo
+future
 gewinnspiele
 greece
 gw
@@ -28953,7 +29393,6 @@ carrinho
 certification
 cesta
 colleges
-compliance
 con
 consultation
 cricket
@@ -29120,6 +29559,7 @@ matching
 mbd
 mdb
 merci
+micro
 mine
 monsterbook
 motion
@@ -29217,6 +29657,7 @@ OA_HTML
 OasDefault
 Pipfile
 Program Files
+Recycled
 SERVER-INF
 SOAPMonitor
 SUNWmc
@@ -30135,7 +30576,6 @@ order_status
 ordered
 organisation
 organisations
-organizations
 orig
 otrs
 outcome
@@ -33431,6 +33871,7 @@ upload_dir
 filial
 find_area
 finland
+fish
 fixes
 fj
 flashfiles
@@ -40352,6 +40793,7 @@ TrackImage
 exercise
 exhibition
 expedia
+experiments
 experten
 export_db
 export_files
@@ -42789,7 +43231,6 @@ signin.aspx
 postinfo.html
 vote.php
 style.php
-wp-commentsrss2.php
 addnews.html
 display_vvcodes.php
 paypalcancel.aspx
@@ -42898,15 +43339,12 @@ zoom.php
 ipn.php
 posthistory.php
 modules.php
-wp-pass.php
 AccountSettings.asp
 404.asp
 paypal_notify.php
 Register.asp
 WishList.asp
 picturecomment.php
-wp-rss.php
-wp-rss2.php
 Terms_privacy.asp
 group_inlinemod.php
 order-detail.aspx
@@ -42920,7 +43358,6 @@ custom.css.aspx
 jump.php
 PlaceOrder.asp
 remote.php
-wp-rdf.php
 goto.php
 login_sendpass.asp
 OrderFinished.asp
@@ -42940,12 +43377,10 @@ survey.php
 auctions.php
 Returns.asp
 checkout.asp
-wp-atom.php
 disclaimer.php
 orders.asp
 printview.php
 viewfile.php
-wp-feed.php
 finishorder.php
 contact-us.html
 picture.php
@@ -43055,7 +43490,6 @@ buy.php
 privacy.asp
 subscribe.php
 popup_content.php
-profile.html
 share.php
 about.aspx
 blog.php
@@ -43110,6 +43544,7 @@ thankyou.htm
 blog_ajax.php
 blog_usercp.php
 rssarticle.php
+sitemap.xml.gz
 blog_report.php
 contact.cfm
 preview.php
@@ -48971,7 +49406,6 @@ zakaznik_info.php
 zoom_spelling.zdat
 zz-error.php
 .Archived
-.archive
 .avi
 .domains
 .trellix
@@ -49400,7 +49834,6 @@ condizioni.html
 conf_global-bak.php
 config.dev
 config.ini.php
-config.js
 config2.php
 config_feed.php
 config_site.php
