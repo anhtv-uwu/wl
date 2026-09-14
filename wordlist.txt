@@ -183,13 +183,24 @@ $tf
 *.Server/GeneratedArtifacts
 *.Server/ModelManifest.xml
 *.back.
+*.backup
 *.backup.
+*.backup.sql
+*.bak
 *.chk
+*.decrypted.
 *.dsgn.prm
+*.dump
 *.emc
+*.heapsnapshot
+*.key
 *.ldb
 *.log
 *.mflow
+*.orig
+*.p12
+*.pem
+*.pfx
 *.rs.bk
 *.runs/impl*
 *.runs/impl*/*.bat
@@ -206,6 +217,8 @@ $tf
 *.runs/synth*/*.xdc
 *.runs/synth*/*.xml
 *.si
+*.sql.gz
+*.tmp
 *.toolbox
 *.toolbox*.cfg
 *.toolbox*.out
@@ -294,14 +307,20 @@ $tf
 */phi
 */prebuilt-mk
 */prebuilt-mk/Android.mk
+*_backup.
+*credential*.json
 *dsgn.autobk
+*key*.json
+*secret*.json
 *template.cir
 *template.cir/drc
 *template.cir/ext
 *template.cir/ext/readme.txt
 *template.cir/frame
 *template.cir/log
--%>
+*token*.json
++runtime/indent/testdir
++runtime/indent/testdir/*.fail
 .#
 .#*.scm
 .#*.ss
@@ -310,7 +329,7 @@ $tf
 .*.d
 .*.kate-swp
 .*.lb
-.*.sw[a-p]
+.*.sw?
 .*.swn
 .*.swo
 .*.swp
@@ -361,16 +380,15 @@ $tf
 .abstra
 .accio
 .actionScriptProperties
-.agent
 .ahoy.local.example.yml
 .ahoy.local.yml
 .ahoy.yml
 .ai
-.ai-cache
+.aider
+.aiderignore
 .amplify
 .angular
 .angular-cli.json
-.angular/cache
 .anjuta
 .anjuta_sym_db.db
 .apdisk
@@ -380,7 +398,6 @@ $tf
 .arch-internal-preview.css
 .architect
 .artifacts
-.aspnet
 .astro
 .aswb
 .atom
@@ -392,15 +409,16 @@ $tf
 .aws-sam
 .axoCover
 .azure
+.azure/credentials
 .bak
 .ballerina
-.bash_history
 .bat
 .bitrise.secrets.yml
 .bloop
 .bower-cache
 .bower-registry
 .bower-tmp
+.bsb.lock
 .bsp
 .buckconfig.local
 .buckd
@@ -419,35 +437,37 @@ $tf
 .cache
 .cache-loader
 .cache-main
+.cache/clangd
 .cask
+.ccls-cache
 .cdk.staging
 .ceylon
 .ceylon/config.old
-.chatgpt
 .checkstyle
 .circleci
+.circleci/secrets
 .clang_complete
+.clangd
 .classpath
-.claude-artifacts
-.claude.json
 .claude/agents
 .claude/claude.json
 .claude/commands
 .claude/settings.local
 .claude/settings.local.json
 .claude/worktrees
-.claudecode
 .claudeignore
-.cline
 .cloud
 .clwb
 .cm
+.cmake
 .codacy.yml
 .codeium
 .codekit-cache
-.codewhisperer
 .codio
+.cody
 .com.apple.timemachine.donotpresent
+.composer
+.composer/auth.json
 .concrete
 .concrete/DEV_MODE
 .conda
@@ -459,7 +479,8 @@ $tf
 .config/fish/fishd.
 .config/fish/generated_completions
 .consulo
-.copilot
+.continue
+.continuerc.json
 .coq-native
 .coverage
 .coverage.
@@ -473,10 +494,11 @@ $tf
 .csdp.cache
 .csettings
 .cursor
-.cursor-tutor
 .cursor/rules
 .cursor/rules/captain.mdc
 .cursorignore
+.cursorrc
+.cursorrules
 .cvs
 .cvsignore
 .cxx
@@ -498,6 +520,7 @@ $tf
 .designer
 .dev.vars
 .devcontainer
+.devcontainer/.env
 .df_cache
 .dir-locals.el
 .directory
@@ -510,11 +533,9 @@ $tf
 .docker-pryrc
 .docker-pryrc-local
 .dockerignore
-.dockerignore.local
 .docusaurus
 .docz
 .doit.db
-.dotnet
 .dropbox
 .dropbox.attr
 .dropbox.cache
@@ -577,7 +598,6 @@ $tf
 .fvm
 .fvm/flutter_sdk
 .gcc-flags.json
-.gcloud
 .gcp
 .gen
 .generated-mima
@@ -588,19 +608,16 @@ $tf
 .git-blame-ignore-revs
 .git_commit_msg
 .gitattributes
-.gitconfig.local
 .github
-.github/actions/*
-.github/actions/*/dist
-.github/actions/*/node_modules
-.github/copilot
+.github/copilot-instructions.md
+.github/secrets
 .gitignore.app
 .gitignore.artifact
 .gitignore.echoyl
-.gitlab-ci-local
+.gitlab
+.gitlab-ci-gputest.yml
+.gitlab/secrets
 .gitleaks.toml
-.gitpod
-.gitpod.yml
 .godot
 .google
 .google.token
@@ -650,8 +667,10 @@ $tf
 .idea/mongoSettings.xml
 .idea/navEditor.xml
 .idea/replstate.xml
+.idea/runConfigurations
 .idea/scopes
 .idea/scopes/scope_settings.xml
+.idea/secrets
 .idea/shelf
 .idea/sonarlint
 .idea/sqlDataSources.xml
@@ -686,6 +705,7 @@ $tf
 .ijwb
 .import
 .ini
+.install
 .installed.cfg
 .internal
 .ionide
@@ -707,19 +727,19 @@ $tf
 .kotlin
 .kube
 .lagoon.yml
+.last-updated
 .last_cover_stats
 .launches
 .lein-deps-sum
 .lein-failures
 .lein-plugins
 .lein-repl-history
-.lesshst
 .lgt_tmp
 .lia.cache
 .libs
 .lighthouseci
 .link_to_grails_plugins
-.llm-cache
+.llm
 .loadpath
 .local
 .local.
@@ -729,6 +749,7 @@ $tf
 .lock-waf_*_build
 .lock-wscript
 .logs
+.luacheckcache
 .merge_file
 .merlin
 .meta
@@ -754,13 +775,13 @@ $tf
 .netrwhist
 .next
 .nfs
+.nfs.
 .ng
 .nia.cache
 .ninja_deps
 .ninja_log
 .ninja_logs
 .nlia.cache
-.node-version
 .node_history
 .node_repl_history
 .nova
@@ -773,15 +794,13 @@ $tf
 .ntvs_analysis.dat
 .nuxt
 .nuxt-
+.nvimlog
 .nvimrc.local
-.nvmrc
-.nx
 .nyc_output
 .obsidian
-.openai
+.opencode.json
 .org-id-locations
 .otto
-.out
 .output
 .packages
 .packages.generated
@@ -805,10 +824,10 @@ $tf
 .pio
 .pioenvs
 .piolibdeps
+.piprc
 .pixi
 .pl-history
 .playwright-mcp
-.pm2
 .pnp
 .pnp.
 .pnp.js
@@ -822,7 +841,7 @@ $tf
 .private
 .project
 .projectile
-.prompts
+.prompt
 .propath
 .psci
 .psci_modules
@@ -841,7 +860,6 @@ $tf
 .qmake.cache
 .qmake.stash
 .qodo
-.rbenv-gemsets
 .rebar
 .rebar3
 .recommenders
@@ -855,8 +873,6 @@ $tf
 .rts2_cache_es
 .rts2_cache_umd
 .rubocop.override.yml
-.ruby-gemset
-.ruby-version
 .ruff_cache
 .runtimeconfig.json
 .rvmrc
@@ -866,7 +882,6 @@ $tf
 .sconf_temp
 .sconsign.dblite
 .scrapy
-.secrets
 .serverless
 .settings
 .sfdx
@@ -875,7 +890,6 @@ $tf
 .signing
 .smushit-status
 .snapshots
-.snowpack
 .solargraph.yml
 .sonar
 .sonar-project.properties
@@ -892,7 +906,6 @@ $tf
 .ssh/known_hosts
 .stack-work
 .storage
-.storybook-out
 .strapi-updater.json
 .streamlit
 .streamlit/secrets.toml
@@ -908,9 +921,8 @@ $tf
 .svn
 .swiftpm
 .swp.
-.tabnine
+.tag
 .target
-.taskmaster
 .temp
 .tern-port
 .tern-project
@@ -928,6 +940,8 @@ $tf
 .tidelift.yml
 .tmp
 .tmp_versions
+.tmux
+.tmux/resurrect
 .tool-versions
 .tox
 .travis.yml
@@ -936,19 +950,16 @@ $tf
 .twig-cs-fixer.cache
 .twig-cs-fixer.php
 .tye
-.umi
-.umi-production
 .uno
 .uuid
 .vaadin-designer
 .vagrant
 .vault-token
-.vault_pass
 .venv
 .vercel
 .vertx
+.vim-src
 .vimfiles.
-.viminfo
 .vimrc.local
 .vite
 .vitepress
@@ -959,7 +970,9 @@ $tf
 .vscode
 .vscode-
 .vscode-test
+.vscode/*.local
 .vscode/extensions.json
+.vscode/secrets
 .vshistory
 .vuepress
 .vuepress/dist
@@ -984,6 +997,7 @@ $tf
 .yarn/cache
 .yarn/install-state.gz
 .yarn/unplugged
+.yarnrc
 .zcalc_history
 .zcompdump-
 .zed
@@ -996,12 +1010,10 @@ $tf
 404.html
 4pwdb
 4pwvs
-<% if (props.tools.includes('compodoc')) { -%>
-<% } -%>
-<%#
 <&- fragments.render({ join: '\n\n' }) &>
 <<<<<<< HEAD
 =======
+>>>>>>> 753edcc255b690e73ffee0005891226a1a96678c
 >>>>>>> origin
 >>>>>>> origin/master
 @eaDir
@@ -1011,6 +1023,7 @@ AMENT_IGNORE
 AS
 AS/System
 ASALocalRun
+AbletonTmp-
 Academic Project
 Actions
 Actions/test
@@ -1117,7 +1130,6 @@ Config/secrets
 Configurations
 ConnectionStrings.config
 ConvertLog.txt
-Copyright 2013-2026 the original author or authors from the JHipster project.
 DEADJOE
 DUPEREF.
 DVEfiles
@@ -1149,9 +1161,9 @@ DocProject/Help/*.hhp
 DocProject/Help/Html2
 DocProject/Help/html
 DocProject/buildhelp
-Dockerfile.local
 EIFGENs
 ENV
+ETAGS
 EWARM
 EWARM/settings
 EWARMExe
@@ -1184,6 +1196,7 @@ Generated Files
 Generated\ Files
 Generated_Code
 GitHub.sublime-settings
+GoogleService-Info.plist
 Gruntfile.js
 HISTORY.txt
 HardwareDebug
@@ -1218,9 +1231,9 @@ IntegrationServer/web
 Intermediate
 JLinkLog.txt
 JOB.OTL.OLD
+JuceLibraryCode
 LICENSE
 LICENSE.txt
-Licensed under the Apache License, Version 2.0 (the "License");
 LineIDs.dbg
 LineIDs.dbg.bak
 Logs
@@ -1242,6 +1255,8 @@ Mkfile.old
 ModelIndex.xml
 Module.symvers
 Network Trash Folder
+OPENCODE.local.md
+OPENCODE.md
 Obj
 Obj/*.pbd
 Obj/*.pbd.
@@ -1264,9 +1279,8 @@ Package Control.merged-ca-bundle
 Package Control.system-ca-bundle
 Package Control.user-ca-bundle
 Package.StoreAssociation.xml
-Package.pins
-Package.resolved
 Packages
+Payload
 PharoDebug.log
 Physical/*/*/*
 Physical/*/*/*/DLFiles
@@ -1313,7 +1327,6 @@ ScaffoldingReadMe.txt
 Schematics
 Schematics/__Previews
 Screenshots
-See the License for the specific language governing permissions and
 ServiceFabricBackup
 Session.vim
 Sessionx.vim
@@ -1329,7 +1342,6 @@ TEST-*.xml
 TODO
 TSWLatexianTemp
 TTLDIFFS.
-TabNine.toml
 Temp
 TempStatsStore
 Temporary Items
@@ -1337,23 +1349,19 @@ TestCache.xml
 TestResult.xml
 Testing
 TestsResultsCache.xml
-This file is part of the JHipster project, see https:/
-This file is part of the JHipster project, see https://www.jhipster.tech
 Thumbs.db
 Thumbs.db:encryptable
 UPGRADE.txt
-Unless required by applicable law or agreed to in writing, software
 UpgradeLog*.XML
 UpgradeLog*.htm
 Upgrades
 UserInterfaceState.xcuserstate
 VERSION
+VERSION.cache
 VisualStudio.gitignore
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 Workflows
 Workflows/Library
 Workflows/VCO@
-You may obtain a copy of the License at
 [._]*.s[a-v][a-z]
 [._]*.sw[a-p]
 [._]*.un~
@@ -1361,6 +1369,7 @@ You may obtain a copy of the License at
 [._]ss[a-gi-z]
 [._]sw[a-p]
 [1-9]
+[56789a].out
 [Aa][Rr][Mm]
 [Aa][Rr][Mm]64
 [Aa]ssets/Plugins/Editor
@@ -1445,17 +1454,20 @@ _book
 _build
 _builds
 _cache
+_cgo_
 _checkouts
 _clouddata
 _compareTemp
 _deps
 _docpress
+_esy
 _eumm
 _gsdata_
 _impactbatch.log
 _minted
 _ngo
 _notes
+_obj
 _opam
 _pgbackup
 _pkginfo.txt
@@ -1475,6 +1487,7 @@ _protected/data/tmp
 _site
 _steps
 _test
+_testmain.go
 _thumbs
 _tools
 _tools/migration
@@ -1492,15 +1505,17 @@ _ttd_log_
 _wpeprivate
 _xmsgs
 _yardoc
+_zuo.db
+_zuo_tc.db
 a.out
 abstract.log
 abstract.record
-access.log
 aclocal.m4
 acs-*.bib
 activate_run.ps1
 activate_run.sh
 activemq-data
+add-on
 admin
 admin-dev
 admin-dev/autoupgrade
@@ -1924,10 +1939,7 @@ agent-config
 agent_logs
 agent_temp
 agent_worktrees
-ai-artifacts
 ai-config
-allure-report
-allure-results
 amplify
 amplify-build-config.json
 amplify-gradle-config.json
@@ -1943,6 +1955,7 @@ amplifyconfiguration.json
 amplifyxc.config
 analysis_benchmark.json
 analytics
+analytics-tokens.json
 android
 android/.gradle
 android/captures
@@ -1996,8 +2009,6 @@ app/bundles/CoreBundle/Assets/pictograms
 app/cache
 app/code/Magento
 app/code/Magento/TestModule
-app/config.local.py
-app/config.py
 app/config/config.php
 app/config/config_local.php
 app/config/local*.php
@@ -2030,9 +2041,6 @@ app/webroot/theme/PROJECT/Pages/empty
 appSettings.xml
 appengine-generated
 applet
-application-*.yml
-application.css
-application.js
 application.linux-arm64
 application.linux-armv6hf
 application.linux32
@@ -2040,14 +2048,13 @@ application.linux64
 application.macosx
 application.windows32
 application.windows64
-application.yml
 application/cache
 application/files
 application/logs
-appsettings.*.json
 appsettings.Local.json
 ar-lib
 archive
+argfile
 arm
 arm-p
 artifacts
@@ -2064,6 +2071,7 @@ assets/node_modules
 atlassian
 atlassian-ide-plugin.xml
 audit-
+auth-tokens.json
 auth.
 auth.json
 authorize.php
@@ -2071,15 +2079,12 @@ authorized_keys
 auto
 auto-save-list
 autom4te.cache
+autoscan*.log
 autoscan-*.log
 autoscan.log
 aws-exports.js
 aws_credentials
 awsconfiguration.json
-backend
-backend/GenerateLicense.cs
-backend/GenerateLicense.csproj
-backend/license.key
 backend/web
 backend/web/index-test.php
 backend/web/index.php
@@ -2087,7 +2092,6 @@ backend/web/robots.txt
 backup_acsprset.spr
 backups
 bazel-
-bazel-out
 bb.out
 bb.out.
 behat.yml
@@ -2141,27 +2145,45 @@ bootstrap/tmp
 bower.json
 bower_components
 buck-out
+build*.config.js
 build-
+build-cache
 build-dir
 build-iPhoneOS
 build-iPhoneSimulator
+build-sbt
+build-test
 build.log
 build.ninja
+build.out
 build.properties
+build.sh
 build/Release
 build/apache-maven
 build/build
+build/classes
 build/coverage
+build/distributions
+build/libs
 build/linux-build
 build/packages
 build/packaging
+build/reports
+build/reports/tests
+build/resources
 build/scala
+build/test-classes
+build/test-results
 build/zinc
 buildNumber.properties
+buildSrc
+buildSrc/.gradle
+buildSrc/build
 build_*_vc10
 build_*_xcode
 build_isolated
 build_local
+build_package_test
 build_production
 build_staging
 build_webpack
@@ -2204,12 +2226,14 @@ classes_gen
 classic.json
 classic.jsonp
 claude-artifacts
-claude-dev
 cli
 client/app/styles
 client/app/styles/style.css
 client_secret*.json
+cljs-test-runner-out
 cmake-build-
+cmake-build-debug
+cmake-build-release
 cmake_install.cmake
 cobertura.ser
 cocos/scripting/lua-bindings/proj.ios_mac
@@ -2265,7 +2289,6 @@ config.codekit3
 config.guess
 config.h.in
 config.local
-config.local.
 config.local.fish
 config.local.py
 config.log
@@ -2275,25 +2298,21 @@ config.sub
 config.wyam.hash
 config.yaml
 config.yml
-config/*.local.json
 config/*.secret.exs
 config/.env
 config/app.php
 config/autoload
 config/autoload/*.local.php
 config/credentials.yml.enc
-config/database.json
 config/database.yml
 config/development
 config/initializers
 config/initializers/secret_token.rb
 config/local
-config/local.json
 config/local.yaml
 config/master.key
 config/production.yaml
 config/sa.php
-config/secrets.json
 config/secrets.yml
 config/settings.inc.php
 config/settings.old.php
@@ -2304,10 +2323,11 @@ config_override.php
 configs
 configuration.php
 configure
+configure.ac
 configure.scan
 confusion_matrix.png
 connect.lock
-connection.txt
+connection-strings.json
 constant
 constant/polyMesh
 constant/polyMesh/boundary
@@ -2352,8 +2372,6 @@ crashlytics.properties
 creator.d.ts
 credentials
 credentials.json
-credentials.yaml
-credentials.yml
 credits.html
 cron.php
 crush.dylib
@@ -2395,18 +2413,17 @@ data/raw
 data/sessions
 data/tmp
 data_
-database
+database-backup.
 database-debug.log
 database.json
 database.sqlite
-database/connection.local
 datascience_env
 db
+db-config.json
 db.json
 db.sqlite3
 db.sqlite3-journal
 db/*.sqlite3
-db/*.sqlite3-
 db/*.sqlite3-[0-9]
 db/*.sqlite3-journal
 db/sql
@@ -2415,17 +2432,18 @@ dbt_modules
 dbt_packages
 deactivate_run.ps1
 deactivate_run.sh
+debug-session.json
 debug.log
 debug_*.py
 debugger
 debugger.pref
+decrypted-temp
 defaults
 demos
 deno.lock
 depcomp
 dependency-reduced-pom.xml
 deploy
-deploy-config
 deploymentTargetDropDown.xml
 deps
 deps/build.log
@@ -2470,16 +2488,19 @@ development-
 development.test.py
 disassembly
 dist
+dist*.env.js
 dist-
-dist-electron
-dist-packages
 dist-ssr
-distributed under the License is distributed on an "AS IS" BASIS,
 dkms.conf
 dlldata.c
 dmypy.json
 doc
+doc/*.tag
 doc/api
+doc/articles/wiki
+doc/articles/wiki/*.bin
+doc/html
+doc/xml
 docgen_tmp
 docker
 docker-compose.dev.yaml
@@ -2487,7 +2508,9 @@ docker-compose.dev.yml
 docker-compose.override.yaml
 docker-compose.override.yml
 docker-compose.prod.yml
+docker-compose.secrets.yml
 docker-proj.zip
+docker-secrets
 docker/psql-exec
 docker/run-p
 docker/run-q
@@ -2507,7 +2530,6 @@ docs/_build
 docs/_site
 docs/api
 docs/build
-docs/generated
 docs/phpdoc-sf
 docs/site
 documentation
@@ -2533,7 +2555,6 @@ ecf
 eggs
 ehthumbs.db
 ehthumbs_vista.db
-electron.main.js
 elm-stuff
 elpa
 emulator-ui
@@ -2546,7 +2567,6 @@ env.pkrvars.hcl
 environment_run.ps1.env
 environment_run.sh.env
 erl_crash.dump
-error.log
 error_log
 errors.txt
 ers.txt
@@ -2585,6 +2605,8 @@ ext/mkinstalldirs
 ext/modules
 ext/run-tests.php
 external
+extra-pkgs
+extracted-secrets
 extras
 extras/documentation
 fabric.properties
@@ -2608,6 +2630,8 @@ files/cache
 files/documents
 files/downloads
 files/tmp
+finalOutput
+finalOutput/*.js
 firebase-*.zip
 firebase-adminsdk*.json
 firebase-credentials.json
@@ -2628,15 +2652,11 @@ flycheck_
 flycheck_*.el
 flymake_
 foo.
-for more information.
 forces
 fp-info-cache
 fp.cfg
 fp.dsk
 fp.ini
-frontend
-frontend/.angular
-frontend/dist
 frontend/web
 frontend/web/index-test.php
 frontend/web/index.php
@@ -2657,7 +2677,7 @@ functions/\[\[path\]\].js.map
 functions/node_modules
 functions/package-lock.json
 game28.dta
-gcloud-key.json
+gcp-service-account.json
 gen
 gen-external-apklibs
 generated
@@ -2672,9 +2692,14 @@ github-cache
 github-copilot
 go.work
 go.work.sum
+goinstall.log
 gomock_reflect
 google_calendars.yaml
+gradle
 gradle-app.setting
+gradle/verification-metadata.xml
+gradle/wrapper
+gradle/wrapper/gradle-wrapper.properties
 grafana_data
 graph_info.json
 grunt-config.json
@@ -2717,8 +2742,6 @@ html
 html5_push_registrations.conf
 htmlcov
 htmldocs
-https://www.apache.org/licenses
-https://www.apache.org/licenses/LICENSE-2.0
 hugo.darwin
 hugo.linux
 hugo_stats.json
@@ -2773,6 +2796,8 @@ installer/doc
 installer/tmp
 installer_files
 instance
+integration-repo
+integration-test-keys.json
 internal-
 ios
 ios*.mode1v3
@@ -2811,6 +2836,7 @@ ipshared
 ipython_config.py
 ise_impact.cmd
 iseconfig
+ivy-cache
 javadoc
 javascripts
 javascripts/bundles
@@ -2840,8 +2866,12 @@ jboss/server/minimal/tmp
 jboss/server/minimal/work
 jdinputs.
 jdout-
+jenkins
+jenkins/secrets
 jest.config.js
 jgiven-reports
+jitwatch.out
+jmx.log
 jobs
 jobs*workspace
 joomla.xml
@@ -2862,7 +2892,9 @@ jssrc
 junit*.properties
 junit.xml
 junitvmwatcher*.properties
-jwt-secret.txt
+jxl.log
+k8s/secrets
+k8s/secrets/*.yaml
 keyrings/live
 keyrings/live/pubring.gpg~
 keyrings/live/pubring.kbx~
@@ -2872,6 +2904,8 @@ known_devices.yaml
 known_hosts
 kobaltBuild
 kubeconfig
+kubernetes/secrets
+kubernetes/secrets/*.yml
 language
 language/en-GB
 language/en-GB/en-GB.com_ajax.ini
@@ -2968,8 +3002,10 @@ language/en-GB/en-GB.xml
 language/en-GB/install.xml
 language/index.html
 language/overrides
+last-change
 latex
 latex.out
+launch.json
 layouts
 layouts/index.html
 layouts/joomla
@@ -2982,6 +3018,7 @@ lia.cache
 lib
 lib-cov
 lib/.precomp
+lib/bs
 lib/bundler
 lib/bundler/man
 lib/debug
@@ -2997,9 +3034,9 @@ lib/internal/flex/varien/.actionScriptProperties
 lib/internal/flex/varien/.flexLibProperties
 lib/internal/flex/varien/.project
 lib/internal/flex/varien/.settings
+lib/js
+lib/ocaml
 lib/release
-lib/server
-lib/server/config.ts
 lib64
 lib_managed
 libpeerconnection.log
@@ -3024,9 +3061,8 @@ libraries/src
 libraries/vendor
 library
 libs
+libtool
 licenc.txt
-license.key
-limitations under the License.
 linked_*.ds
 lint-r-report.log
 linux
@@ -3041,7 +3077,9 @@ local-
 local-patch
 local-xdebuginfo.php
 local.meta
+local.mk
 local.properties
+local.sbt
 local.settings.json
 local_conf.php
 local_config.yaml
@@ -3052,6 +3090,10 @@ log
 log.
 log.html
 log.txt
+logs/*.sensitive.log
+logs/api.log
+logs/auth.log
+logs/debug.log
 logtalk_doclet_logs
 logtalk_tester_logs
 lpfg.log
@@ -3070,6 +3112,7 @@ m4/lt~obsolete.m4
 macos/Flutter
 macos/Flutter/GeneratedPluginRegistrant.swift
 macos/Flutter/ephemeral
+mailchimp-api.json
 mails
 manifest/cache
 manifest/logs
@@ -3161,6 +3204,12 @@ middleware.properties
 min
 misc
 misc.xml
+misc/cgo/life
+misc/cgo/life/run.out
+misc/cgo/stdio
+misc/cgo/stdio/run.out
+misc/cgo/testso
+misc/cgo/testso/main
 mise.local.toml
 missing
 mix-manifest.json
@@ -3170,6 +3219,7 @@ mm.log
 mnesia
 moc_*.cpp
 moc_*.h
+mock-secrets.json
 mockup
 models
 modern.json
@@ -3269,7 +3319,9 @@ nia.cache
 nimblecache
 nimcache
 nlia.cache
+node
 node_modules
+node_tmp
 nohup.out
 nosetests.xml
 notes
@@ -3281,6 +3333,7 @@ nupkg
 nw_100_percent.pak
 nw_200_percent.pak
 nytprof.out
+oauth.json
 object_script.*.Debug
 object_script.*.Release
 octave-workspace
@@ -3306,7 +3359,6 @@ override.tofu.json
 ozw_log.txt
 package
 package-cache
-package-lock.json  # Uncomment if using yarn
 package-lock.json.bak
 packages/flutter
 packages/flutter/coverage
@@ -3316,11 +3368,11 @@ paket-files
 panic*.log.
 par_usage_statistics.html
 parts
-passwords.
 patched-src
 patches
 patches.lock.json
 pawn.lock
+paypal-credentials.json
 pentest-
 personal-
 personal-script
@@ -3353,7 +3405,6 @@ platforms
 play-cache
 play-stash
 playground.xcworkspace
-playwright-report
 plex.conf
 plugin.xml
 plugins
@@ -3504,12 +3555,12 @@ prepros.config
 prime
 priv
 priv/static
-private
 private-
 processor
 prodDb.
 profile.cov
 profile_default
+profiler-data.json
 profiles
 proguard
 project
@@ -3518,6 +3569,7 @@ project.fragment.lock.json
 project.greenfoot
 project.lock.json
 project.properties
+project.xcworkspace
 project/boot
 project/build
 project/build/target
@@ -3565,6 +3617,7 @@ pub/sitemap
 pub/sitemap.xml
 pub/static
 public
+public*-key-*.js
 public/.user.ini
 public/_constants.php
 public/_install
@@ -3596,8 +3649,6 @@ public_html
 public_html/hot
 public_html/storage
 publish
-publish/dist
-publish/dist/license.key
 pubspec.lock
 pubsub-debug.log
 pulltbl.bck
@@ -3730,6 +3781,14 @@ rpc
 rsconnect
 run
 runtime
+runtime-secrets.json
+runtime/doc
+runtime/doc/*.html
+runtime/doc/*.mpack
+runtime/doc/errors.log
+runtime/doc/tags.ref
+runtime/indent/testdir
+runtime/indent/testdir/*.out
 rust-project.json
 rustc-ice-*.txt
 salesforce.schema
@@ -3742,7 +3801,6 @@ sanitycheckcpp.cc     # C++ specific
 sanitycheckcpp.exe    # C++ specific
 sas_env
 saves
-sbom-*.json
 sc_dpiheader.h
 scalastyle-on-compile.generated.xml
 scalastyle-output.xml
@@ -3760,13 +3818,17 @@ sdkconfig.old
 secret-*.json
 secret.json
 secrets
+secrets-working
 secrets.json
+secrets.xml
 secrets.yaml
 secrets.yml
+secrets/docker
 secring.
 security-
 selenium-screenshot-*.png
 selenium.php
+sendgrid-keys.json
 server
 server.pid
 server/all
@@ -3774,8 +3836,6 @@ server/all/data
 server/all/log
 server/all/tmp
 server/all/work
-server/config
-server/config/app-config.ts
 server/default
 server/default/data
 server/default/deploy
@@ -3804,12 +3864,11 @@ server/standard/data
 server/standard/log
 server/standard/tmp
 server/standard/work
-server/utils/db
-server/utils/db/wallet
 service-account*.json
-service-account-key.json
 service-account.json
 sessie
+session-data.json
+session-tokens.json
 session.inp
 sessions
 settings
@@ -3911,7 +3970,12 @@ spec/fixtures
 spec/reports
 spec/tmp
 sph*.php
-spring
+spring-*
+spring-*/build
+spring-*/src/main/java/META-INF
+spring-*/src/main/java/META-INF/MANIFEST.MF
+spring-test
+spring-test/test-output
 sql
 sql/docs
 sql/hive-thriftserver
@@ -3920,15 +3984,43 @@ sql/site
 sql_app.db
 src
 src-gen
-src/environments
-src/environments/.env.
+src/*.
+src/asciidoc
+src/asciidoc/build
+src/cmd/cgo
+src/cmd/cgo/zdefaultcc.go
+src/cmd/dist
+src/cmd/dist/dist
+src/cmd/go/internal/cfg
+src/cmd/go/internal/cfg/zdefaultcc.go
+src/cmd/go/internal/cfg/zosarch.go
+src/cmd/internal/objabi
+src/cmd/internal/objabi/zbootstrap.go
 src/gatsby-types.d.ts
-src/main/resources
-src/main/resources/application-*.yml
-src/main/resources/application.yml
-src/main/resources/rebel.xml
-src/translations
-src/translations/template.
+src/go/build
+src/go/build/zcgo.go
+src/go/doc
+src/go/doc/headscan
+src/nvim/po
+src/nvim/po/*.ck
+src/nvim/po/vim.pot
+src/nvim/testdir
+src/nvim/testdir/*.failed
+src/nvim/testdir/*.tlog
+src/nvim/testdir/.gdbinit
+src/nvim/testdir/X
+src/nvim/testdir/del
+src/nvim/testdir/messages
+src/nvim/testdir/test*.log
+src/nvim/testdir/test*.out
+src/nvim/testdir/test*.res
+src/nvim/testdir/test.ok
+src/nvim/testdir/valgrind.
+src/nvim/testdir/viminfo
+src/runtime/internal/sys
+src/runtime/internal/sys/zversion.go
+src/unicode
+src/unicode/maketables
 src_managed
 srcmaps.txt
 srcrenames.txt
@@ -3941,11 +4033,11 @@ ssl
 stacktrace.log
 stage
 stamp-h1
+stamp-h?
 start.sh
 static
 static/companies.bson
 static/companies.json
-staticfiles
 stellar.yaml
 storage
 storage/*.key
@@ -3962,6 +4054,7 @@ storage/pail
 storybook-static
 streaming-tests.log
 string_table.txt
+stripe-keys.json
 studio_log
 stylesheets
 stylesheets/bundles
@@ -3981,12 +4074,13 @@ system/logs
 system/storage
 system/tests/source/units
 system/tests/source/units/auto-tests
-tags.html
 tags.lock
 tags.temp
 target
 target-eclipse
 target_wrapper.
+tasks.json
+temp-credentials.json
 temp-testng-customsuite.xml
 tempCodeRunnerFile.py
 temp_workspace
@@ -4007,6 +4101,7 @@ terraform.tfvars.json
 terragrunt-debug.tfvars.json
 test
 test-build
+test-credentials.json
 test-driver
 test-modules
 test-output
@@ -4015,8 +4110,17 @@ test-reports
 test-result
 test-results
 test-servers
+test.java
+test.out
 test.xml
+test/garbage
+test/garbage/*.out
+test/includes
+test/includes/post
+test/pass.out
 test/reports
+test/run.out
+test/times.out
 test/tmp
 test/version_tmp
 test1.sql
@@ -4030,6 +4134,7 @@ test_tools/*.jpg
 test_tools/*.png
 test_tools/.venv
 test_tools/uv.lock
+testbox
 testem.log
 testit-reports
 tests
@@ -4087,6 +4192,7 @@ time-of-build-both.log
 time-of-build-pretty.log
 timeline.xctimeline
 tmp
+tmp-*-doc
 tmp/cache
 tmp/cache/models
 tmp/cache/persistent
@@ -4097,6 +4203,7 @@ tmp/tests
 tmtags
 token
 token.json
+tokens.json
 tool-plugins/intellij/src/main/antlr/org/ballerinalang/plugins/idea/grammar
 tool-plugins/intellij/src/main/antlr/org/ballerinalang/plugins/idea/grammar/BallerinaLexer.tokens
 tooldata
@@ -4123,9 +4230,9 @@ tramp
 transcript
 translations
 translations/*.qm
-trivy-report.
 tslint.json
 tts
+twilio-auth.json
 typings
 typo3
 typo3_src
@@ -4185,8 +4292,6 @@ var/sessions
 var/spool
 var/tmp
 vault-token
-vault.yaml
-vault.yml
 vc_hdrs.h
 vcpkg-manifest-install.log
 vcpkg_installed
@@ -4203,6 +4308,7 @@ viewdraw
 vignettes
 vignettes/*.html
 vignettes/*.pdf
+vim-*.patch
 vite.config.js.timestamp-
 vite.config.ts.timestamp-
 vqmod
@@ -4425,6 +4531,7 @@ wp-settings.php
 wp-signup.php
 wp-trackback.php
 wpcs
+wren_modules
 wt_
 www
 www-test
@@ -4446,12 +4553,10 @@ xtend-gen
 yalc.lock
 yarn-debug.log
 yarn-error.log
-yarn.lock          # Uncomment if using npm
 yii
 yii_test
 yii_test.bat
 ylwrap
-you may not use this file except in compliance with the License.
 zig-cache
 zig-out
 zsdoc
@@ -4480,6 +4585,7 @@ zsdoc/data
 .admin
 .adminer.php.swp
 .Backup
+.bash_history
 .bash_logout
 .bash_profile
 .bashrc
@@ -4501,7 +4607,6 @@ zsdoc/data
 .cobalt
 .codeintel
 .compile
-.composer
 .conf
 .config.php.swp
 .configuration.php.swp
@@ -4553,7 +4658,6 @@ zsdoc/data
 .gitignore~
 .gitk
 .gitkeep
-.gitlab
 .gitlab/issue_templates
 .gitlab/merge_request_templates
 .gitlab/route-map.yml
@@ -4619,6 +4723,7 @@ zsdoc/data
 .jshintrc
 .keep
 .komodotools/
+.lesshst
 .lighttpd.conf
 .listing
 .listings
@@ -4692,6 +4797,8 @@ zsdoc/data
 .rtlcssrc
 .rubocop.yml
 .rubocop_todo.yml
+.ruby-gemset
+.ruby-version
 .s3backupstatus
 .sass-cache/
 .scrutinizer.yml
@@ -4833,6 +4940,7 @@ zsdoc/data
 .vacation.cache
 .version
 .vgextensions/
+.viminfo
 .vimrc
 .web
 .workspace/
@@ -4923,6 +5031,7 @@ _www
 abton/spaw2/dialogs/dialog.php
 acceptance_config.yml
 access-log
+access.log
 access.phtml
 access_log
 accesslog
@@ -5260,7 +5369,6 @@ bot.txt
 buck.sql
 build.gradle
 build.local.xml
-build.sh
 build.xml
 build/build.properties
 build/buildinfo.properties
@@ -5466,6 +5574,7 @@ data/files/
 data/logs/
 data/tmp/
 dataBackup/
+database
 database.csv
 database.inc
 database.log
@@ -5590,6 +5699,7 @@ error
 error-log
 error-log.txt
 error.html
+error.log
 error.log.0
 error.txt
 error/
@@ -7561,6 +7671,7 @@ app/storage/
 app/tmp/
 app/vendor-
 appengine-generated/
+application.yml
 application/
 application/configs/application.ini
 apply.cgi
@@ -9856,6 +9967,7 @@ zipkin/
 .nbgrader.log
 .ngrok2/ngrok.yml
 .no-sublime-package
+.node-version
 .nodemonignore
 .nodeset.yml
 .nojekyll
@@ -9864,6 +9976,7 @@ zipkin/
 .npm/
 .nv/
 .nvm/
+.nvmrc
 .nycrc
 .ocp-indent
 .oh-my-zsh/
@@ -9925,6 +10038,7 @@ zipkin/
 .pyup.yml
 .qmake.conf
 .rakeTasks
+.rbenv-gemsets
 .rbenv-version
 .Rbuildignore
 .README.md.bud
@@ -10073,7 +10187,6 @@ zipkin/
 .xsession
 .yamllint
 .yarnclean
-.yarnrc
 .ycm_extra_conf.py
 .yield.log
 .zcompdump-remote-desktop-5.7.1
@@ -11729,7 +11842,6 @@ new_admin
 newadmin
 nextcloud
 nimda/
-node
 node/1?_format=hal_json
 nodes
 ntadmin
@@ -11943,6 +12055,7 @@ pradmin
 press
 print
 printer
+private
 proc/sys/kernel/core_pattern
 procmail
 product
@@ -12182,6 +12295,7 @@ sphinx
 sponsors
 spool
 sports
+spring
 sqli/
 sqlmanager
 sqlnet
@@ -21532,6 +21646,7 @@ AxisServlet
 bac.7z
 back/
 back.7z
+backend
 backend.7z
 backend.rar
 backend.sql
@@ -26222,6 +26337,7 @@ corp
 eu
 ewebeditor
 foo
+frontend
 inscription
 inventory
 outgoing
@@ -38559,6 +38675,7 @@ sswthemes
 stack
 stand
 startengine_db
+staticfiles
 stats_images
 statystyki
 stay
@@ -44173,6 +44290,7 @@ sendlink.aspx
 showgallery.php
 special.html
 success.htm
+tags.html
 templte.htm
 terms-of-use.aspx
 thumbnail.php
