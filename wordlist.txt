@@ -171,15 +171,30 @@ clientaccesspolicy.xml
 *.back.
 *.backup.
 *.rs.bk
+.AppleDB
+.AppleDesktop
+.AppleDouble
 .DS_
+.DocumentRevisions-V100
 .HTF
+.LSOverride
 .Python
+.Spotlight-V100
+.TemporaryItems
+.Trash-
+.Trashes
+.VolumeIcon.icns
+._
 .abstra
 .amplify
 .angular
 .angular-cli.json
+.apdisk
 .astro
 .aws-sam
+.bower-cache
+.bower-registry
+.bower-tmp
 .build
 .buildlog
 .bundle
@@ -187,6 +202,9 @@ clientaccesspolicy.xml
 .cabal-sandbox
 .cache
 .classpath
+.claude
+.claude/settings.local.json
+.com.apple.timemachine.donotpresent
 .config
 .consulo
 .coverage
@@ -194,26 +212,38 @@ clientaccesspolicy.xml
 .cxx
 .dart_tool
 .dat
+.directory
 .dmypy.json
 .docusaurus
 .dynamodb
+.editorconfig
 .eggs
 .elixir_ls
 .env*.local
 .env.
 .env.development.local
+.env.local.php
+.env.php
 .env.production.local
+.env.sh
 .env.test.local
 .envrc
 .eslintcache
 .externalNativeBuild
 .firebase
 .firebaserc
+.fleet
 .flutter-plugins
 .flutter-plugins-dependencies
+.fseventsd
+.fuse_hidden
 .fusebox
 .fvm
 .ghc.environment.
+.git_commit_msg
+.gitattributes
+.gitignore.app
+.gitignore.echoyl
 .gradle
 .gradletasknamecache
 .grunt
@@ -222,6 +252,19 @@ clientaccesspolicy.xml
 .hsenv
 .hypothesis
 .idea
+.idea/dataSources
+.idea/dataSources.ids
+.idea/dataSources.local.xml
+.idea/dataSources.xml
+.idea/dynamic.xml
+.idea/gradle.xml
+.idea/libraries
+.idea/mongoSettings.xml
+.idea/sqlDataSources.xml
+.idea/tasks.xml
+.idea/uiDesigner.xml
+.idea/workspace.xml
+.idea_modules
 .installed.cfg
 .ipynb_checkpoints
 .kotlin
@@ -230,7 +273,9 @@ clientaccesspolicy.xml
 .mvn
 .mvn/timing.properties
 .mypy_cache
+.netrwhist
 .next
+.nfs
 .ng
 .nitro
 .node_repl_history
@@ -249,6 +294,8 @@ clientaccesspolicy.xml
 .pdm-build
 .pdm-python
 .pdm.toml
+.php-cs-fixer.cache
+.php_cs.cache
 .phpactor.json
 .phpunit.cache
 .phpunit.result.cache
@@ -278,11 +325,13 @@ clientaccesspolicy.xml
 .sass-cache
 .scrapy
 .serverless
+.settings
 .spyderproject
 .spyproject
 .stack-work
 .streamlit
 .streamlit/secrets.toml
+.styleci.yml
 .stylelintcache
 .svelte-kit
 .temp
@@ -314,6 +363,10 @@ clientaccesspolicy.xml
 .yarn/cache
 .yarn/install-state.gz
 .yarn/unplugged
+404.html
+<<<<<<< HEAD
+=======
+>>>>>>> 553f06a2848678be53e568ca673199d8b9b519a1
 Binaries
 Build/Android
 Build/Android/res
@@ -331,12 +384,23 @@ Entity/*~
 ExportedObj
 Flutter
 Flutter/ephemeral
+GitHub.sublime-settings
 Homestead.json
 Homestead.yaml
+Icon
 InstalledFiles
 Intermediate
 MANIFEST
+Network Trash Folder
 PATCH_*.sh
+Package Control.ca-bundle
+Package Control.ca-certs
+Package Control.ca-list
+Package Control.cache
+Package Control.last-run
+Package Control.merged-ca-bundle
+Package Control.system-ca-bundle
+Package Control.user-ca-bundle
 Plugins/*
 Plugins/*/Binaries
 Plugins/*/Intermediate
@@ -344,8 +408,18 @@ PluginsBinaries
 PluginsIntermediate
 Pods
 Saved
+Session.vim
+Sessionx.vim
 SourceArt*.png
 SourceArt*.tga
+Temporary Items
+Thumbs.db
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]*.un~
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
 [Aa]ssets/Plugins/Editor
 [Aa]ssets/Plugins/Editor/JetBrains
 [Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*
@@ -384,6 +458,13 @@ app.*.symbols
 app/Config
 app/Config/core.php
 app/Config/database.php
+app/Http/Controllers/admin
+app/Http/Controllers/admin/$projectname
+app/Models
+app/Models/$projectname
+app/Services
+app/Services/$projectname
+app/Services/SmsService.php
 app/bootstrap.php
 app/bootstrap.php.cache
 app/cache
@@ -396,7 +477,9 @@ app/phpunit.xml
 app/spool
 app/storage
 app/tmp
+atlassian-ide-plugin.xml
 auth.json
+bh_unicode_properties.cache
 bin
 bin/cache
 bin/internal
@@ -405,6 +488,7 @@ bin/internal/bootstrap.sh
 bin/mingit
 bootstrap
 bootstrap/cache
+bootstrap/cache/*.php
 bootstrap/compiled.php
 bower.json
 bower_components
@@ -420,10 +504,14 @@ captures
 capybara-*.html
 celerybeat-schedule
 celerybeat.pid
+cert
+com_crashlytics_export_strings.xml
 composer
 composer.phar
+composer_backup.json
 conda-meta
 config
+config.codekit3
 config/*.secret.exs
 config/app.php
 config/credentials.yml.enc
@@ -431,6 +519,7 @@ config/database.yml
 config/initializers
 config/initializers/secret_token.rb
 config/master.key
+config/sa.php
 config/secrets.yml
 connect.lock
 cover
@@ -438,9 +527,12 @@ coverage
 coverage.html
 coverage.txt
 coverage.xml
+craft
+craft/storage
 crash.*.log
 crash.log
 crashlytics-build.properties
+crashlytics.properties
 cython_debug
 database.sqlite
 db
@@ -475,6 +567,10 @@ dist-
 dmypy.json
 doc
 doc/api
+docker/volumes
+docker/volumes/mysql
+docker/volumes/nginx
+docker/volumes/redis
 docs
 docs/_book
 docs/_build
@@ -483,6 +579,7 @@ drupal
 drupal.phar
 drush
 drush.phar
+dump.rdb
 e2e
 e2e/*.js
 e2e/*.map
@@ -490,12 +587,14 @@ e2e/test-output
 eggs
 env.bak
 erl_crash.dump
+fabric.properties
 fastlane
 fastlane/Preview.html
 fastlane/report.xml
 fastlane/screenshots*.png
 fastlane/test_output
 flutter_*.png
+foo.
 gen-external-apklibs
 generated_plugin_registrant.dart
 go.work
@@ -503,7 +602,10 @@ go.work.sum
 gradle-app.setting
 hs_err_pid
 htmlcov
+index.html
 index.php
+infra
+infra/secrets
 instance
 ios
 ios*.mode1v3
@@ -570,11 +672,13 @@ media/xmlconnect/custom
 media/xmlconnect/original
 media/xmlconnect/system
 misc.xml
+mix-manifest.json
 mnesia
 mutants.out
 node_modules
 nosetests.xml
 npm-debug.log
+oscrypto-ca-bundle.crt
 out
 out-tsc
 output
@@ -599,18 +703,30 @@ pom.xml.next
 pom.xml.releaseBackup
 pom.xml.tag
 pom.xml.versionsBackup
+posts.sql
+prepros-6.config
 profile.cov
 profile_default
 psd
 public
+public/.user.ini
 public/assets
 public/build
+public/dist
 public/hot
+public/imager
+public/myadmin
+public/myadmin/LICENSE
+public/myadmin/README.md
+public/myadmin/json
+public/myadmin/json/local
 public/packs
 public/packs-test
 public/storage
+public/storage/*.key
 public/system
 public/uploads
+public/webstatic
 public_html
 public_html/hot
 public_html/storage
@@ -625,6 +741,24 @@ render.experimental.xml
 replay_pid
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 rerun.txt
+resources
+resources/.vagrant/machines/default/virtualbox
+resources/.vagrant/machines/default/virtualbox/action_provision
+resources/.vagrant/machines/default/virtualbox/action_set_name
+resources/.vagrant/machines/default/virtualbox/creator_uid
+resources/.vagrant/machines/default/virtualbox/id
+resources/.vagrant/machines/default/virtualbox/index_uuid
+resources/.vagrant/machines/default/virtualbox/private_key
+resources/.vagrant/machines/default/virtualbox/private_key_putty.ppk
+resources/.vagrant/machines/default/virtualbox/synced_folders
+resources/Vagrantfile
+resources/assets
+resources/assets/bower
+resources/dist
+resources/dist/monaco
+resources/hot
+resources/views
+resources/views/vendor
 robo
 robo.phar
 rustc-ice-*.txt
@@ -632,6 +766,7 @@ sdist
 secrets.json
 secrets.yaml
 secrets.yml
+sftp-config.json
 share
 share/python-wheels
 shell
@@ -644,11 +779,18 @@ spec/reports
 spec/tmp
 storage
 storage/*.key
+storage/api-docs
 storage/app
+storage/app/public
 storage/framework
+storage/framework/cache
+storage/framework/sessions
+storage/framework/views
 storage/logs
+storage/logs/*.log
 storage/pail
 sysinfo.txt
+tags
 target
 temp
 tempCodeRunnerFile.py
@@ -657,7 +799,9 @@ terraform.tfstate.backup
 test
 test/tmp
 test/version_tmp
+test1.sql
 testem.log
+tests
 thumb
 timeline.xctimeline
 tmp
@@ -698,6 +842,7 @@ web/.htaccess
 web/INSTALL.txt
 web/LICENSE.txt
 web/README.txt
+web/assets
 web/autoload.php
 web/bundles
 web/composer.json
@@ -705,6 +850,7 @@ web/composer.lock
 web/core
 web/css
 web/example.gitignore
+web/imager
 web/index.php
 web/js
 web/modules
@@ -771,10 +917,6 @@ yarn-error.log
 .adm
 .admin
 .adminer.php.swp
-.apdisk
-.AppleDB
-.AppleDesktop
-.AppleDouble
 .Backup
 .bak
 .bash_history
@@ -782,8 +924,6 @@ yarn-error.log
 .bash_profile
 .bashrc
 .bower-cachez
-.bower-registry
-.bower-tmp
 .build/
 .buildpath
 .buildpath/
@@ -822,11 +962,9 @@ yarn-error.log
 .cvsignore
 .deployignore
 .dev/
-.directory
 .dockerignore
 .dump
 .eclipse
-.editorconfig
 .elasticbeanstalk/
 .elb
 .elc
@@ -834,7 +972,6 @@ yarn-error.log
 .emacs.desktop.lock
 .empty-folder
 .env-example
-.env.php
 .env.sample.php
 .environment
 .error_log
@@ -864,7 +1001,6 @@ yarn-error.log
 .git/logs/refs
 .git2/
 .git_release
-.gitattributes
 .gitconfig
 .gitignore.swp
 .gitignore_global
@@ -918,8 +1054,6 @@ yarn-error.log
 .idea/.name
 .idea/compiler.xml
 .idea/copyright/profiles_settings.xml
-.idea/dataSources.ids
-.idea/dataSources.xml
 .idea/deployment.xml
 .idea/drush_stats.iml
 .idea/encodings.xml
@@ -927,9 +1061,6 @@ yarn-error.log
 .idea/modules.xml
 .idea/scopes/scope_settings.xml
 .idea/Sites.iml
-.idea/sqlDataSources.xml
-.idea/tasks.xml
-.idea/uiDesigner.xml
 .idea/vcs.xml
 .idea/woaWordpress.iml
 .idea/workspace(2).xml
@@ -938,7 +1069,6 @@ yarn-error.log
 .idea/workspace(5).xml
 .idea/workspace(6).xml
 .idea/workspace(7).xml
-.idea/workspace.xml
 .idea0/
 .idea_modules/
 .ignore
@@ -966,7 +1096,6 @@ yarn-error.log
 .log
 .login
 .login_conf
-.LSOverride
 .lynx_cookies
 .magentointel-cache/
 .mail_aliases
@@ -991,7 +1120,6 @@ yarn-error.log
 .mysql_history
 .nbproject/
 .netrc
-.netrwhist
 .nodelete
 .npmignore
 .npmrc
@@ -1046,7 +1174,6 @@ yarn-error.log
 .scrutinizer.yml
 .selected_editor
 .sencha/
-.settings
 .settings.php.swp
 .settings/
 .settings/.jsdtscope
@@ -1186,7 +1313,6 @@ yarn-error.log
 .tmproj
 .transients_purge.log
 .Trash
-.Trashes
 .travis.yml
 .tx/
 .user.ini
@@ -1500,7 +1626,6 @@ assets/fckeditor
 assets/js/fckeditor
 assets/npm-debug.log
 asterisk.log
-atlassian-ide-plugin.xml
 auth.inc
 auth.php
 auth_user_file.txt
@@ -1936,7 +2061,6 @@ dump.inc.old
 dump.log
 dump.old
 dump.rar
-dump.rdb
 dump.sql
 dump.sql.old
 dump.sqlite
@@ -2790,7 +2914,6 @@ settings/
 setup.php
 setup.sql
 setup/
-sftp-config.json
 Sh3ll.php
 shell.php
 shell/
@@ -2925,9 +3048,7 @@ test9.php
 test_
 test_ip.php
 testing
-tests
 tests/phpunit_report.xml
-Thumbs.db
 tiny_mce/
 tiny_mce/plugins/filemanager/examples.html
 tiny_mce/plugins/imagemanager/pages/im/index.html
@@ -3203,7 +3324,6 @@ list
 .architect
 .axoCover/
 .babelrc
-.bower-cache
 .bower.json
 .buildpacks
 .bundle/
@@ -3277,10 +3397,7 @@ list
 .httr-oauth
 .hypothesis/
 .idea/caches
-.idea/dataSources.local.xml
 .idea/dictionaries
-.idea/gradle.xml
-.idea/libraries
 .idea/WebServers.xml
 .import/
 .influx_history
@@ -4360,7 +4477,6 @@ conf/logging.properties
 conf/tomcat-users.xml
 conf/tomcat8.conf
 conf/web.xml
-config.codekit3
 config.env
 config.guess
 config.h.in
@@ -4896,7 +5012,6 @@ includes
 includes/
 includes/bootstrap.inc
 index.htm
-index.html
 index.tar
 index.tar.bz2
 index.tar.gz
@@ -5888,7 +6003,6 @@ system/storage/
 system_administration/
 SystemErr.log
 SystemOut.log
-tags
 tar.php
 target/
 tasks/
@@ -6400,10 +6514,8 @@ zipkin/
 .forktree.log
 .formatter.exs
 .frlog
-.fseventsd
 .ftpconfig
 .functions
-.fuse_hidden
 .fusebox/
 .gdbinit
 .gem/credentials
@@ -6572,7 +6684,6 @@ zipkin/
 .name
 .nb-gradle/
 .nbgrader.log
-.nfs
 .ngrok2/ngrok.yml
 .ninja_deps
 .ninja_log
@@ -6707,7 +6818,6 @@ zipkin/
 .stat/
 .stestr.conf
 .stickler.yml
-.styleci.yml
 .stylelintignore
 .stylintrc
 .stylish-haskell.yaml
@@ -6725,7 +6835,6 @@ zipkin/
 .tcshrc
 .teamcity/settings.kts
 .templates/
-.temporaryitems
 .tern-project
 .terraform.d/checkpoint_cache
 .terraform.d/checkpoint_signature
@@ -8161,7 +8270,6 @@ ibm_security_logout
 IBMDefaultErrorReporter
 IBMWebAS
 ice_admin
-icon
 icons
 iconset
 IdentityGuardSelfService/
@@ -8795,7 +8903,6 @@ reports/Webalizer/
 repository
 reset
 resource
-resources
 rest
 rest/beta/repositories/go/group
 rest/tinymce/1/macro/preview
@@ -22390,7 +22497,6 @@ vote
 taxonomy
 SpryAssets
 myaccount
-cert
 mails
 pt
 goto
@@ -39379,7 +39485,6 @@ ucp.php
 common.php
 footer.php
 WebResource.axd
-404.html
 header.php
 search.html
 captcha.php
